@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  {{ sidebar_content|safe }}
+</aside>
+
+<main class="content">
+  <h1>{{ page_data.title }}</h1>
+  <p>{{ page_data.lead }}</p>
+
+  <div class="formula-card-container">
+    {% for card in page_data.cards %}
+    <div class="formula-card" id="{{ slug(card.name) }}">
+      <h3>{{ card.name }}</h3>
+      <button class="copy-btn" data-tex="{{ card.tex|e }}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\({{ card.tex }}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        {% for v in card.vars %}<li>\({{ v }}\)</li>{% endfor %}
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">{{ card.desc }}</p>
+      
+      {% if card.visual %}
+      <div class="visual-placeholder">{{ card.visual }}</div>
+      {% endif %}
+      
+      {% if card.derivation %}
+      <details class="derivation">
+        <summary>Show Derivation</summary>
+        <div class="derivation-content">{{ card.derivation }}</div>
+      </details>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %} 

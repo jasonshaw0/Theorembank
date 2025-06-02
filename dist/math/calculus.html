@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+        <ul class="sidebar-nav">
+            <!-- Mathematics Section -->
+            <li class="section-header">Mathematics</li>
+            <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+            <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+            <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+            <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+            <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+            <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+            <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+            <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+            <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+            <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+            <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+            <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+            <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+            <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+            <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+            <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+            <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+            <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+            
+            <!-- Physics Section -->
+            <li class="section-header">Physics</li>
+            <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+            <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+            <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+            <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+            <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+            <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+            <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+            <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+            <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+            <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+  <h1>Calculus</h1>
+  <p>Essential formulas and concepts in calculus</p>
+
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="definition-of-derivative">
+      <h3>Definition of Derivative</h3>
+      <button class="copy-btn" data-tex="f&#39;(x) = \displaystyle \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(f'(x) = \displaystyle \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(f(x) is a function, f'(x) is its derivative. h is an increment in x (approaching 0 in the limit).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Defines the derivative as the instantaneous rate of change or slope of the function \(f(x)\) at point \(x\). Graphically, it’s the slope of the tangent line to \(y=f(x)\) at \(x\).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="power-rule-for-derivatives">
+      <h3>Power Rule (for derivatives)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \frac{d}{dx}\big(x^n\big) = n x^{n-1}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \frac{d}{dx}\big(x^n\big) = n x^{n-1}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(n is a constant exponent, x is the variable.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Provides a quick way to differentiate monomials. For example, if \(f(x)=x^5\), then \(f'(x)=5x^4\). This rule is fundamental for polynomial differentiation.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="indefinite-integral-power-rule">
+      <h3>Indefinite Integral (Power Rule)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \int x^n\,dx = \frac{x^{n+1}}{n+1} + C \qquad(n \neq -1)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \int x^n\,dx = \frac{x^{n+1}}{n+1} + C \qquad(n \neq -1)\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(n is a constant exponent (not -1); C is the constant of integration (since antiderivatives are determined up to an additive constant).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="integration-by-parts">
+      <h3>Integration by Parts</h3>
+      <button class="copy-btn" data-tex="\displaystyle \int u\,dv = uv - \int v\,du" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \int u\,dv = uv - \int v\,du\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(u and v are functions of x such that du and dv are their differentials (derivatives times dx). Often one sets u=f(x) and dv = g(x)dx.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html> 

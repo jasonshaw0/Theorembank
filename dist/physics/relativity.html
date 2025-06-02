@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+        <ul class="sidebar-nav">
+            <!-- Mathematics Section -->
+            <li class="section-header">Mathematics</li>
+            <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+            <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+            <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+            <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+            <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+            <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+            <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+            <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+            <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+            <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+            <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+            <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+            <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+            <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+            <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+            <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+            <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+            <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+            
+            <!-- Physics Section -->
+            <li class="section-header">Physics</li>
+            <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+            <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+            <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+            <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+            <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+            <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+            <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+            <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+            <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+            <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+  <h1>Relativity</h1>
+  <p>Essential formulas and concepts in relativity</p>
+
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="length-contraction">
+      <h3>Length Contraction</h3>
+      <button class="copy-btn" data-tex="L = \frac{L_0}{\gamma} = L_0 \sqrt{1 - \frac{v^2}{c^2}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(L = \frac{L_0}{\gamma} = L_0 \sqrt{1 - \frac{v^2}{c^2}}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Objects are measured to be shorter along the direction of motion relative to an observer for whom they are moving. For instance, a fast-moving rod or spaceship appears foreshortened. Like time dilation, this effect is only significant at speeds close to \(c\).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="mass-energy-equivalence">
+      <h3>Mass–Energy Equivalence</h3>
+      <button class="copy-btn" data-tex="E = m c^2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(E = m c^2\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Shows mass is a concentrated form of energy. A small amount of mass can convert to a huge amount of energy (because \(c^2\) is large). This underlies nuclear reactions where binding energy differences (mass defects) release energy.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="relativistic-momentum">
+      <h3>Relativistic Momentum</h3>
+      <button class="copy-btn" data-tex="\displaystyle p = \gamma m v = \frac{m v}{\sqrt{1 - v^2/c^2}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle p = \gamma m v = \frac{m v}{\sqrt{1 - v^2/c^2}}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="schwarzschild-radius-black-hole">
+      <h3>Schwarzschild Radius (Black Hole)</h3>
+      <button class="copy-btn" data-tex="r_s = \frac{2 G M}{c^2}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(r_s = \frac{2 G M}{c^2}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(M = mass of a (spherically symmetric, non-rotating) object, G = gravitational constant, c = speed of light, r_s = Schwarzschild radius.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">If an object of mass \(M\) is compressed within this radius, its escape velocity exceeds \(c\) and it becomes a black hole. For example, the Earth’s \(r_s\) is ~9 mm, the Sun’s ~3 km. This formula comes from General Relativity’s solution for spacetime around a mass.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="gravitational-time-dilation-weak-field">
+      <h3>Gravitational Time Dilation (weak field)</h3>
+      <button class="copy-btn" data-tex="t_f = t_p \sqrt{1 - \frac{2GM}{r c^2}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(t_f = t_p \sqrt{1 - \frac{2GM}{r c^2}}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(t_p is proper time (time measured by a clock at radius r in gravitational field), t_f is time measured by a far-away observer, M is mass of gravitating body, r is radial position of the clock (from center of mass).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Clocks deeper in a gravitational well (closer to a mass) run slower relative to clocks far away. This is a prediction of GR (even the GPS satellites must correct for this and special relativistic effects to synchronize with Earth clocks). When \(r\) is very large (far away), the factor tends to 1 (no dilation).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html> 

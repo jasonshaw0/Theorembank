@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra - Mathematics</title>
+    <link rel="stylesheet" href="https://unpkg.com/@radix-ui/themes@latest/styles.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="radix-themes-custom-fonts"> <!-- Radix Custom Fonts Helper -->
+        <radix-theme :accent-color="'indigo'" :gray-color="'slate'" :panel-background="'solid'" :scaling="'100%'" :radius="'medium'">
+            <div class="mobile-header"><button id="hamburger-menu">&#9776; Menu</button></div>
+            <aside class="sidebar">
+                <nav>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <button class="nav-section-toggle">Mathematics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="index.html">Mathematics Home</a></li>
+                                <li><a href="arithmetic.html">Arithmetic</a></li>
+                                <li><a href="number_theory.html">Number Theory</a></li>
+                                <li><a href="algebra.html">Algebra</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Geometry</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="geometry_plane.html">Plane Geometry</a></li>
+                                        <li><a href="geometry_solid.html">Solid Geometry</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="trigonometry.html">Trigonometry</a></li>
+                                <li><a href="analytic_geometry.html">Analytic Geometry</a></li>
+                                <li><a href="differential_geometry.html">Differential Geometry</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="calculus_differentiation.html">Differentiation</a></li>
+                                        <li><a href="calculus_integration.html">Integration</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Vector Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="vector_calculus_operations.html">Vector Operations</a></li>
+                                        <li><a href="vector_calculus_integral_theorems.html">Integral Theorems</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="linear_algebra.html">Linear Algebra</a></li>
+                                <li><a href="abstract_algebra.html">Abstract Algebra</a></li>
+                                <li><a href="probability.html">Probability</a></li>
+                                <li><a href="statistics.html">Statistics</a></li>
+                                <li><a href="logic.html">Logic</a></li>
+                                <li><a href="set_theory.html">Set Theory</a></li>
+                                <li><a href="topology.html">Topology</a></li>
+                                <li><a href="differential_equations.html">Differential Equations</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Physics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="../physics/index.html">Physics Home</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Mechanics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/mechanics_kinematics.html">Kinematics (straight-line)</a></li>
+                                        <li><a href="../physics/mechanics_dynamics.html">Dynamics (forces & Newton's Laws)</a></li>
+                                        <li><a href="../physics/mechanics_rotational.html">Rotational Mechanics</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Thermodynamics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/thermodynamics_laws.html">Laws & Entropy</a></li>
+                                        <li><a href="../physics/thermodynamics_gas_laws.html">Gas Laws & Thermal Processes</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Electromagnetism</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/electromagnetism_electrostatics.html">Electrostatics & Circuits</a></li>
+                                        <li><a href="../physics/electromagnetism_induction.html">Magnetism & Induction</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../physics/optics.html">Optics</a></li>
+                                <li><a href="../physics/waves_oscillations.html">Waves & Oscillations</a></li>
+                                <li><a href="../physics/quantum_mechanics.html">Quantum Mechanics</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Relativity</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/relativity_special.html">Special Relativity</a></li>
+                                        <li><a href="../physics/relativity_general.html">General Relativity</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../physics/fluid_mechanics.html">Fluid Mechanics</a></li>
+                                <li><a href="../physics/nuclear_physics.html">Nuclear Physics</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Engineering (Coming Soon)</button>
+                            <ul class="subcategory-list">
+                                <li><a href="#">Engineering Home (Coming Soon)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="content">
+                <h1>Algebra</h1>
+                <p>This section covers key algebraic formulas, including solutions to equations, expansions, series sums, and factoring identities.</p>
+
+                <div class="formula-card-container">
+                    <!-- Quadratic Formula -->
+                    <div class="formula-card" id="quadratic-formula">
+                        <h3>Quadratic Formula</h3>
+                        <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(a, b, c\): coefficients of a quadratic equation \(ax^2 + bx + c = 0\) (with \(a\neq 0\)).</li>
+                            <li>\(x\): represents the solutions (roots) of the equation.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).
+                        </p>
+                        <div class="visual-placeholder">Visual: Parabola intersecting x-axis.</div>
+                    </div>
+
+                    <!-- Binomial Theorem -->
+                    <div class="formula-card" id="binomial-theorem">
+                        <h3>Binomial Theorem</h3>
+                        <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(n\): a non-negative integer.</li>
+                            <li>\(a, b\): terms of the binomial.</li>
+                            <li>\(\binom{n}{k} = \frac{n!}{k!(n-k)!}\): the binomial coefficient.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal's Triangle for binomial coefficients.
+                        </p>
+                        <div class="visual-placeholder">Visual: Pascal's Triangle.</div>
+                    </div>
+
+                    <!-- Sum of a Geometric Series (finite) -->
+                    <div class="formula-card" id="geometric-series-sum">
+                        <h3>Sum of a Geometric Series (finite)</h3>
+                        <div class="mathjax-expression">\(S_n = a \frac{1 - r^n}{1 - r} \quad (\text{for } r \neq 1)\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(S_n\): sum of the first \(n\) terms.</li>
+                            <li>\(a\): the first term of the geometric series.</li>
+                            <li>\(r\): the common ratio.</li>
+                            <li>\(n\): the number of terms.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Calculates the sum of the first \(n\) terms of a geometric progression. If \(|r|<1\), as \(n \to \infty\), the series converges to \(S_{\infty} = \frac{a}{1-r}\). A geometric series can be represented by successively smaller segments or areas to illustrate convergence.
+                        </p>
+                        <div class="visual-placeholder">Visual: Converging geometric segments.</div>
+                    </div>
+
+                    <!-- Common Factoring Identity (Difference of Squares) -->
+                    <div class="formula-card" id="difference-of-squares">
+                        <h3>Common Factoring Identity (Difference of Squares)</h3>
+                        <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(a, b\): any expressions or numbers.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Fundamental algebraic identity used to factor the difference between two squares. It's often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).
+                        </p>
+                        <div class="visual-placeholder">Visual: Difference in areas of squares.</div>
+                    </div>
+
+                </div>
+            </main>
+            <script src="../script.js"></script>
+        </radix-theme>
+    </div> <!-- End Radix Custom Fonts Helper -->
+</body>
+</html> 

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+        <ul class="sidebar-nav">
+            <!-- Mathematics Section -->
+            <li class="section-header">Mathematics</li>
+            <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+            <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+            <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+            <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+            <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+            <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+            <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+            <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+            <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+            <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+            <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+            <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+            <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+            <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+            <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+            <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+            <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+            <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+            
+            <!-- Physics Section -->
+            <li class="section-header">Physics</li>
+            <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+            <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+            <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+            <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+            <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+            <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+            <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+            <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+            <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+            <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+  <h1>Geometry (Euclidean)</h1>
+  <p>Essential formulas and concepts in geometry (euclidean)</p>
+
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="pythagorean-theorem">
+      <h3>Pythagorean Theorem</h3>
+      <button class="copy-btn" data-tex="c^2 = a^2 + b^2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(c^2 = a^2 + b^2\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(a and b are the lengths of the legs (perpendicular sides) of a right triangle, and c is the length of the hypotenuse (side opposite the right angle).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Relates the side lengths of a right-angled triangle. It is used to find the third side given the other two.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="sum-of-interior-angles-polygon">
+      <h3>Sum of Interior Angles (Polygon)</h3>
+      <button class="copy-btn" data-tex="S_{\text{angles}} = (n - 2)\times 180^\circ" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(S_{\text{angles}} = (n - 2)\times 180^\circ\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(n is the number of sides of a polygon.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="heron-s-formula-triangle-area-by-sides">
+      <h3>Heron's Formula (Triangle Area by Sides)</h3>
+      <button class="copy-btn" data-tex="A = \sqrt{s(s-a)(s-b)(s-c)}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(A = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="volume-of-a-rectangular-prism-cuboid">
+      <h3>Volume of a Rectangular Prism (Cuboid)</h3>
+      <button class="copy-btn" data-tex="V = L \times W \times H" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = L \times W \times H\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(L, W, H are the length, width, and height of the rectangular solid (for a cube, all three are equal to a).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Computes the volume (space inside) of a box-shaped object. Visualized as counting unit cubes that fill a rectangular box.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="volume-of-a-cylinder">
+      <h3>Volume of a Cylinder</h3>
+      <button class="copy-btn" data-tex="V = \pi r^2 h" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = \pi r^2 h\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(r is the base radius, h is the height of the cylinder.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="volume-of-a-cone-pyramid">
+      <h3>Volume of a Cone/Pyramid</h3>
+      <button class="copy-btn" data-tex="V = \frac{1}{3} A_{\text{base}} \, h" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = \frac{1}{3} A_{\text{base}} \, h\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">The volume of any pyramid (base with triangular sides meeting at a point) is one-third the base area times height. Visual proof involves stacking three congruent pyramids to fill a prism.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="volume-of-a-sphere">
+      <h3>Volume of a Sphere</h3>
+      <button class="copy-btn" data-tex="V = \frac{4}{3}\pi r^3" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = \frac{4}{3}\pi r^3\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(r is the radius of the sphere.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the volume inside a sphere (ball).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html> 

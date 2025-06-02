@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamics - Physics</title>
+    <link rel="stylesheet" href="https://unpkg.com/@radix-ui/themes@latest/styles.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="radix-themes-custom-fonts"> <!-- Radix Custom Fonts Helper -->
+        <radix-theme :accent-color="'indigo'" :gray-color="'slate'" :panel-background="'solid'" :scaling="'100%'" :radius="'medium'">
+            <div class="mobile-header"><button id="hamburger-menu">&#9776; Menu</button></div>
+            <aside class="sidebar">
+                <nav>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <button class="nav-section-toggle">Mathematics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="../math/index.html">Mathematics Home</a></li>
+                                <li><a href="../math/arithmetic.html">Arithmetic</a></li>
+                                <li><a href="../math/number_theory.html">Number Theory</a></li>
+                                <li><a href="../math/algebra.html">Algebra</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Geometry</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../math/geometry_plane.html">Plane Geometry</a></li>
+                                        <li><a href="../math/geometry_solid.html">Solid Geometry</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../math/trigonometry.html">Trigonometry</a></li>
+                                <li><a href="../math/analytic_geometry.html">Analytic Geometry</a></li>
+                                <li><a href="../math/differential_geometry.html">Differential Geometry</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../math/calculus_differentiation.html">Differentiation</a></li>
+                                        <li><a href="../math/calculus_integration.html">Integration</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Vector Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../math/vector_calculus_operations.html">Vector Operations</a></li>
+                                        <li><a href="../math/vector_calculus_integral_theorems.html">Integral Theorems</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../math/linear_algebra.html">Linear Algebra</a></li>
+                                <li><a href="../math/abstract_algebra.html">Abstract Algebra</a></li>
+                                <li><a href="../math/probability.html">Probability</a></li>
+                                <li><a href="../math/statistics.html">Statistics</a></li>
+                                <li><a href="../math/logic.html">Logic</a></li>
+                                <li><a href="../math/set_theory.html">Set Theory</a></li>
+                                <li><a href="../math/topology.html">Topology</a></li>
+                                <li><a href="../math/differential_equations.html">Differential Equations</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Physics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="index.html">Physics Home</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Mechanics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="mechanics_kinematics.html">Kinematics (straight-line)</a></li>
+                                        <li><a href="mechanics_dynamics.html">Dynamics (forces & Newton's Laws)</a></li>
+                                        <li><a href="mechanics_rotational.html">Rotational Mechanics</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Thermodynamics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="thermodynamics_laws.html">Laws & Entropy</a></li>
+                                        <li><a href="thermodynamics_gas_laws.html">Gas Laws & Thermal Processes</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Electromagnetism</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="electromagnetism_electrostatics.html">Electrostatics & Circuits</a></li>
+                                        <li><a href="electromagnetism_induction.html">Magnetism & Induction</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="optics.html">Optics</a></li>
+                                <li><a href="waves_oscillations.html">Waves & Oscillations</a></li>
+                                <li><a href="quantum_mechanics.html">Quantum Mechanics</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Relativity</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="relativity_special.html">Special Relativity</a></li>
+                                        <li><a href="relativity_general.html">General Relativity</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="fluid_mechanics.html">Fluid Mechanics</a></li>
+                                <li><a href="nuclear_physics.html">Nuclear Physics</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Engineering (Coming Soon)</button>
+                            <ul class="subcategory-list">
+                                <li><a href="#">Engineering Home (Coming Soon)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="content">
+                <h1>Dynamics (Forces & Newton's Laws)</h1>
+                <p>This section deals with the effect of forces on the motion of objects, based on Newton's Laws.</p>
+                
+                <div class="formula-card-container">
+                    <!-- Newton's Second Law -->
+                    <div class="formula-card" id="newtons-second-law">
+                        <h3>Newton's Second Law</h3>
+                        <div class="mathjax-expression">\(\mathbf{F}_{\text{net}} = m \mathbf{a}\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(m\): mass of an object.</li>
+                            <li>\(\mathbf{a}\): acceleration vector of the object.</li>
+                            <li>\(\mathbf{F}_{\text{net}}\): net force vector acting on the object.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Fundamental law relating force, mass, and acceleration. It implies acceleration is proportional to net force and inversely proportional to mass.
+                        </p>
+                        <div class="visual-placeholder">Visual: Free-body diagram and resulting acceleration.</div>
+                    </div>
+
+                    <!-- Weight (Force due to Gravity) -->
+                    <div class="formula-card" id="weight">
+                        <h3>Weight (Force due to Gravity)</h3>
+                        <div class="mathjax-expression">\(W = m g\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(W\): weight (force).</li>
+                            <li>\(m\): mass.</li>
+                            <li>\(g\): acceleration due to gravity (on Earth, \(g \approx 9.8\,\text{m/s}^2\) downward).</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Weight is the gravitational force exerted on a mass by Earth (or another celestial body). It differs from mass; mass is constant, weight depends on local \(g\).
+                        </p>
+                        <div class="visual-placeholder">Visual: Spring scale comparison on Earth vs. Moon.</div>
+                    </div>
+
+                    <!-- Momentum & Impulse -->
+                    <div class="formula-card" id="momentum-impulse">
+                        <h3>Momentum & Impulse</h3>
+                        <div class="mathjax-expression">\(\mathbf{p} = m \mathbf{v}\) &nbsp;&nbsp;&nbsp;&nbsp;  \(\mathbf{J} = \Delta \mathbf{p} = \mathbf{F}_{\text{avg}}\,\Delta t\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(\mathbf{p}\): momentum vector.</li>
+                            <li>\(m\): mass.</li>
+                            <li>\(\mathbf{v}\): velocity.</li>
+                            <li>\(\mathbf{J}\): impulse (vector).</li>
+                            <li>\(\Delta \mathbf{p}\): change in momentum.</li>
+                            <li>\(\mathbf{F}_{\text{avg}}\): average force applied.</li>
+                            <li>\(\Delta t\): time interval of force application.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Momentum is the quantity of motion. Impulse is the effect of a force acting over time, equal to the change in momentum.
+                        </p>
+                        <div class="visual-placeholder">Visual: Collision and crumple zones.</div>
+                    </div>
+                </div>
+            </main>
+            <script src="../script.js"></script>
+        </radix-theme>
+    </div> <!-- End Radix Custom Fonts Helper -->
+</body>
+</html> 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+        <ul class="sidebar-nav">
+            <!-- Mathematics Section -->
+            <li class="section-header">Mathematics</li>
+            <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+            <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+            <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+            <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+            <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+            <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+            <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+            <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+            <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+            <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+            <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+            <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+            <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+            <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+            <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+            <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+            <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+            <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+            
+            <!-- Physics Section -->
+            <li class="section-header">Physics</li>
+            <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+            <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+            <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+            <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+            <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+            <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+            <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+            <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+            <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+            <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+  <h1>Algebra</h1>
+  <p>Essential formulas and concepts in algebra</p>
+
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="quadratic-formula">
+      <h3>Quadratic Formula</h3>
+      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="binomial-theorem">
+      <h3>Binomial Theorem</h3>
+      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
+      <h3>Common Factoring Identity (Difference of Squares)</h3>
+      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(a and b are any expressions or numbers.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="combination-formula">
+      <h3>Combination Formula</h3>
+      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html> 

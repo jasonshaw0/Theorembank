@@ -1,0 +1,306 @@
+/* ===== ROOT VARIABLES ===== */
+:root{
+  --accent: #4f46e5;
+  --bg: #fefefe;
+  --fg: #2d3748;
+  --panel: #ffffff;
+  --panel-border: #e2e8f0;
+  --code-bg: #f7fafc;
+  --hover: #f1f5f9;
+  --shadow: rgba(0,0,0,0.1);
+  --success: #48bb78;
+}
+
+[data-theme='dark']{
+  --accent: #818cf8;
+  --bg: #1a202c;
+  --fg: #f7fafc;
+  --panel: #2d3748;
+  --panel-border: #4a5568;
+  --code-bg: #2d3748;
+  --hover: #4a5568;
+  --shadow: rgba(0,0,0,0.3);
+}
+
+/* ===== GLOBAL STYLES ===== */
+*{box-sizing:border-box}
+body{margin:0;display:flex;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui, sans-serif;transition:background-color 0.3s, color 0.3s}
+
+/* ===== MODERN SIDEBAR NAVIGATION ===== */
+.sidebar{
+  width: 280px;
+  height: 100vh;
+  max-height: 100vh;
+  background: var(--panel);
+  border-right: 1px solid var(--panel-border);
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 0;
+  z-index: 100;
+  /* Ensure smooth scrolling */
+  scroll-behavior: smooth;
+  /* Better scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+/* Webkit scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--fg);
+}
+
+/* Navigation List - Clean, Flat Structure */
+.sidebar-nav{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Section Headers - Prominent but not clickable */
+.section-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 16px 24px 8px;
+  margin: 16px 0 0 0;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.section-header:first-child {
+  margin-top: 0;
+}
+
+/* Navigation Links - Simple, Always Visible */
+.nav-link {
+  display: block;
+  padding: 12px 24px;
+  color: var(--fg);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.nav-link:hover {
+  background: var(--hover);
+  border-left-color: var(--accent);
+  transform: translateX(2px);
+}
+
+/* Active/Current Page Styling */
+.nav-link.active {
+  background: var(--hover);
+  border-left-color: var(--accent);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Subsection Links - Slightly Indented */
+.nav-link.subsection {
+  padding-left: 40px;
+  font-size: 14px;
+  color: rgba(var(--fg), 0.8);
+}
+
+.nav-link.subsection:hover {
+  color: var(--fg);
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+.content{
+  margin-left: 280px;
+  padding: 40px;
+  width: calc(100% - 280px);
+  background: var(--bg);
+  min-height: 100vh;
+  transition: background-color 0.3s;
+}
+
+.content h1,.content h2{
+  color: var(--accent);
+  border-bottom: 2px solid var(--panel-border);
+  padding-bottom: 12px;
+  margin-top: 0;
+}
+
+/* ===== FORMULA CARDS ===== */
+.formula-card-container{display:flex;flex-direction:column;gap:24px}
+.formula-card{
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.formula-card:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--shadow)}
+
+.copy-btn{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  font-size: 12px;
+}
+.formula-card:hover .copy-btn{opacity:1}
+.copy-btn:hover{transform:scale(1.05)}
+.copy-btn.copied{background:var(--success);animation:pulse 0.6s}
+
+.formula-card h3{margin:0 0 12px;color:var(--accent);font-size:1.3em}
+.mathjax-expression{
+  font-size: 1.2em;
+  margin: 16px 0;
+  padding: 16px;
+  background: var(--code-bg);
+  border-radius: 8px;
+}
+.variables{list-style:none;padding:0;margin:12px 0}
+.variables li{margin-bottom:6px;color:var(--fg);font-family:monospace}
+.description{margin-top:12px;line-height:1.7}
+
+.visual-placeholder{
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--code-bg);
+  border-radius: 6px;
+  font-style: italic;
+  color: rgba(var(--fg), 0.6);
+}
+
+.derivation{margin-top:16px}
+.derivation summary{cursor:pointer;font-weight:600;color:var(--accent);padding:8px 0}
+.derivation-content{margin-top:12px;padding:16px;background:var(--code-bg);border-radius:8px;border-left:4px solid var(--accent)}
+
+/* ===== MOBILE HEADER ===== */
+.mobile-header{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--panel-border);
+  z-index: 101;
+  padding: 0 20px;
+  align-items: center;
+}
+
+#hamburger-menu,#theme-toggle{
+  background: none;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--fg);
+}
+#hamburger-menu:hover,#theme-toggle:hover{background:var(--hover)}
+#theme-toggle{margin-left:auto}
+
+/* ===== SEARCH BOX ===== */
+.search-box{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  padding: 12px 16px;
+  border: 2px solid var(--panel-border);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--fg);
+  font-size: 14px;
+  z-index: 1000;
+}
+.search-box:focus{box-shadow:0 8px 35px var(--shadow), 0 0 0 3px rgba(79, 70, 229, 0.1)}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media(max-width:768px){
+  body{flex-direction:column}
+  .sidebar{
+    position: fixed;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    max-height: 100vh;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    padding-top: 70px; /* Account for mobile header */
+  }
+  .sidebar.active{left:0}
+  .content{
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    padding-top: 80px;
+  }
+  .mobile-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search-box{right:10px;width:calc(100vw - 20px);max-width:300px}
+  .formula-card{padding:16px}
+  .copy-btn{position:static;opacity:1;margin-bottom:12px;align-self:flex-start}
+  
+  /* Ensure sidebar can scroll on mobile */
+  .sidebar-nav {
+    padding-bottom: 20px;
+  }
+  
+  /* Better touch targets on mobile */
+  .nav-link {
+    padding: 16px 24px;
+    font-size: 16px;
+  }
+  
+  .section-header {
+    padding: 20px 24px 12px;
+    font-size: 15px;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes slideDown{
+  from{opacity:0;max-height:0}
+  to{opacity:1;max-height:200px}
+}
+
+/* ===== ACCESSIBILITY ===== */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ===== PRINT STYLES ===== */
+@media print{
+  .sidebar,.mobile-header,.copy-btn,.search-box{display:none!important}
+  .content{margin-left:0;width:100%;padding:20px}
+  .formula-card{break-inside:avoid;margin-bottom:20px;box-shadow:none;border:1px solid #ddd}
+} 

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+        <ul class="sidebar-nav">
+            <!-- Mathematics Section -->
+            <li class="section-header">Mathematics</li>
+            <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+            <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+            <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+            <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+            <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+            <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+            <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+            <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+            <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+            <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+            <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+            <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+            <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+            <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+            <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+            <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+            <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+            <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+            
+            <!-- Physics Section -->
+            <li class="section-header">Physics</li>
+            <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+            <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+            <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+            <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+            <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+            <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+            <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+            <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+            <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+            <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+  <h1>Probability</h1>
+  <p>Essential formulas and concepts in probability</p>
+
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="probability-classical-definition">
+      <h3>Probability (classical definition)</h3>
+      <button class="copy-btn" data-tex="P(A) = \dfrac{\text{number of favorable outcomes}}{\text{number of possible outcomes}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A) = \dfrac{\text{number of favorable outcomes}}{\text{number of possible outcomes}}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(A is an event in a finite sample space with equally likely outcomes.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the probability of event \(A\) by ratio if all outcomes are equally likely. For example, the probability of rolling a 5 on a fair six-sided die is \(1/6\).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="complement-rule">
+      <h3>Complement Rule</h3>
+      <button class="copy-btn" data-tex="P(A^c) = 1 - P(A)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A^c) = 1 - P(A)\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">The probability that \(A\)</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="addition-rule-union-of-events">
+      <h3>Addition Rule (Union of Events)</h3>
+      <button class="copy-btn" data-tex="P(A \cup B) = P(A) + P(B) - P(A \cap B)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="conditional-probability">
+      <h3>Conditional Probability</h3>
+      <button class="copy-btn" data-tex="P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Updates the probability of \(A\) under the condition that \(B\) is known to have happened. For example, the probability it’s raining given that the sky is cloudy. Visually explained using a restricted sample space (just \(B\) outcomes).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="bayes-theorem">
+      <h3>Bayes’ Theorem</h3>
+      <button class="copy-btn" data-tex="P(A \mid B) = \dfrac{P(B \mid A)\,P(A)}{P(B)}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A \mid B) = \dfrac{P(B \mid A)\,P(A)}{P(B)}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Allows inversion of conditional probabilities. It’s fundamental in statistical inference, relating the probability of a cause \(A\) given effect \(B\) to the probability of effect given cause. Often visualized with probability trees or Bayes’ boxes.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="binomial-distribution-probability-of-k-successes">
+      <h3>Binomial Distribution (Probability of $k$ successes)</h3>
+      <button class="copy-btn" data-tex="P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the probability of exactly \(k\) successes in \(n\) Bernoulli trials. For example, the chance of getting exactly 3 heads in 5 fair coin flips. The distribution’s probabilities can be visualized with a histogram or Pascal’s triangle (for small \(n\)).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="expected-value-mean-of-a-discrete-random-variable">
+      <h3>Expected Value (Mean) of a Discrete Random Variable</h3>
+      <button class="copy-btn" data-tex="E[X] = \sum_{i} x_i\, P(X = x_i)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(E[X] = \sum_{i} x_i\, P(X = x_i)\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(X is a random variable that takes values x_i with probability P(X=x_i).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html> 

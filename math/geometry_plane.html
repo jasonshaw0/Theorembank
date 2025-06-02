@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plane Geometry - Mathematics</title>
+    <link rel="stylesheet" href="https://unpkg.com/@radix-ui/themes@latest/styles.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="radix-themes-custom-fonts"> <!-- Radix Custom Fonts Helper -->
+        <radix-theme :accent-color="'indigo'" :gray-color="'slate'" :panel-background="'solid'" :scaling="'100%'" :radius="'medium'">
+            <div class="mobile-header"><button id="hamburger-menu">&#9776; Menu</button></div>
+            <aside class="sidebar">
+                <nav>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <button class="nav-section-toggle">Mathematics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="index.html">Mathematics Home</a></li>
+                                <li><a href="arithmetic.html">Arithmetic</a></li>
+                                <li><a href="number_theory.html">Number Theory</a></li>
+                                <li><a href="algebra.html">Algebra</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Geometry</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="geometry_plane.html">Plane Geometry</a></li>
+                                        <li><a href="geometry_solid.html">Solid Geometry</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="trigonometry.html">Trigonometry</a></li>
+                                <li><a href="analytic_geometry.html">Analytic Geometry</a></li>
+                                <li><a href="differential_geometry.html">Differential Geometry</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="calculus_differentiation.html">Differentiation</a></li>
+                                        <li><a href="calculus_integration.html">Integration</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Vector Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="vector_calculus_operations.html">Vector Operations</a></li>
+                                        <li><a href="vector_calculus_integral_theorems.html">Integral Theorems</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="linear_algebra.html">Linear Algebra</a></li>
+                                <li><a href="abstract_algebra.html">Abstract Algebra</a></li>
+                                <li><a href="probability.html">Probability</a></li>
+                                <li><a href="statistics.html">Statistics</a></li>
+                                <li><a href="logic.html">Logic</a></li>
+                                <li><a href="set_theory.html">Set Theory</a></li>
+                                <li><a href="topology.html">Topology</a></li>
+                                <li><a href="differential_equations.html">Differential Equations</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Physics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="../physics/index.html">Physics Home</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Mechanics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/mechanics_kinematics.html">Kinematics (straight-line)</a></li>
+                                        <li><a href="../physics/mechanics_dynamics.html">Dynamics (forces & Newton's Laws)</a></li>
+                                        <li><a href="../physics/mechanics_rotational.html">Rotational Mechanics</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Thermodynamics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/thermodynamics_laws.html">Laws & Entropy</a></li>
+                                        <li><a href="../physics/thermodynamics_gas_laws.html">Gas Laws & Thermal Processes</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Electromagnetism</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/electromagnetism_electrostatics.html">Electrostatics & Circuits</a></li>
+                                        <li><a href="../physics/electromagnetism_induction.html">Magnetism & Induction</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../physics/optics.html">Optics</a></li>
+                                <li><a href="../physics/waves_oscillations.html">Waves & Oscillations</a></li>
+                                <li><a href="../physics/quantum_mechanics.html">Quantum Mechanics</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Relativity</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/relativity_special.html">Special Relativity</a></li>
+                                        <li><a href="../physics/relativity_general.html">General Relativity</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../physics/fluid_mechanics.html">Fluid Mechanics</a></li>
+                                <li><a href="../physics/nuclear_physics.html">Nuclear Physics</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Engineering (Coming Soon)</button>
+                            <ul class="subcategory-list">
+                                <li><a href="#">Engineering Home (Coming Soon)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="content">
+                <h1>Plane Geometry</h1>
+                <p>This section explores formulas related to two-dimensional shapes, their properties, areas, and perimeters.</p>
+                
+                <div class="formula-card-container">
+                    <!-- Pythagorean Theorem -->
+                    <div class="formula-card" id="pythagorean-theorem">
+                        <h3>Pythagorean Theorem</h3>
+                        <div class="mathjax-expression">\(c^2 = a^2 + b^2\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(a, b\): lengths of the legs (perpendicular sides) of a right triangle.</li>
+                            <li>\(c\): length of the hypotenuse (side opposite the right angle).</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Relates the side lengths of a right-angled triangle. It is used to find the third side given the other two.
+                        </p>
+                        <div class="visual-placeholder">Visual: Three squares on the sides of a right triangle.</div>
+                    </div>
+
+                    <!-- Area of Common Shapes -->
+                    <div class="formula-card" id="area-common-shapes">
+                        <h3>Area of Common Shapes</h3>
+                        <div class="mathjax-expression">Rectangle \(A = L \times W\); Triangle \(A = \frac{1}{2} b h\); Circle \(A = \pi r^2\); Trapezoid \(A = \frac{1}{2}(a+b)h\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(L, W\): length and width of a rectangle.</li>
+                            <li>\(b, h\): base and height of a triangle.</li>
+                            <li>\(r\): radius of a circle.</li>
+                            <li>\(a, b\): lengths of the parallel sides of a trapezoid, \(h\) is height.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Formulas for areas of basic plane figures.
+                        </p>
+                        <div class="visual-placeholder">Visual: Rectangle, triangle, circle, trapezoid shapes.</div>
+                    </div>
+
+                </div>
+            </main>
+            <script src="../script.js"></script>
+        </radix-theme>
+    </div> <!-- End Radix Custom Fonts Helper -->
+</body>
+</html> 

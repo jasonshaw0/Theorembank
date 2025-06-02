@@ -1,0 +1,1203 @@
+{
+  "math": {
+    "arithmetic": {
+      "title": "Arithmetic",
+      "path": "math/arithmetic.html",
+      "lead": "Essential formulas and concepts in arithmetic",
+      "cards": [
+        {
+          "name": "Sum of the first $n$ natural numbers",
+          "tex": "1 + 2 + \\cdots + n = \\frac{n(n+1)}{2}",
+          "vars": [
+            "n is a positive integer."
+          ],
+          "desc": "Gives the sum of all natural numbers from \\(1\\) up to \\(n\\). Often illustrated by pairing terms (e.g. \\(1+n\\), \\(2+(n-1)\\), etc.) to simplify the addition.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Arithmetic sequence (nth term)",
+          "tex": "a_n = a_1 + (n-1)d",
+          "vars": [
+            "a_n is the nth term of the sequence, a_1 is the first term, d is the common difference, and n is the term index."
+          ],
+          "desc": "Defines the general term of an arithmetic progression (constant difference between consecutive terms). A linear graph represents the sequence values.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Arithmetic series (sum of first $n$ terms of an AP)",
+          "tex": "S_n = \\frac{n}{2}(2a_1 + (n-1)d)",
+          "vars": [
+            "S_n is the sum of the first n terms, a_1 is the first term, d is the common difference, n is the number of terms."
+          ],
+          "desc": "Calculates the sum of an arithmetic progression. Often visualized by pairing terms from ends toward the center (which all yield the same sum).",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "number_theory": {
+      "title": "Number Theory",
+      "path": "math/number_theory.html",
+      "lead": "Essential formulas and concepts in number theory",
+      "cards": [
+        {
+          "name": "Fermat's Little Theorem",
+          "tex": "a^{p-1} \\equiv 1 \\pmod p",
+          "vars": [
+            "p is a prime number, a is an integer not divisible by p."
+          ],
+          "desc": "In modular arithmetic, this theorem states that if \\(p\\) is prime, then \\(a^{p-1}\\) leaves a remainder of \\(1\\) upon division by \\(p\\). It’s fundamental for simplifying exponents mod \\(p\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Euler's Totient (Phi) Formula",
+          "tex": "\\varphi(n) = n \\displaystyle\\prod_{p \\mid n}\\Big(1 - \\frac{1}{p}\\Big)",
+          "vars": [
+            "n is a positive integer, and the product is over each prime p dividing n."
+          ],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "algebra": {
+      "title": "Algebra",
+      "path": "math/algebra.html",
+      "lead": "Essential formulas and concepts in algebra",
+      "cards": [
+        {
+          "name": "Quadratic Formula",
+          "tex": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+          "vars": [],
+          "desc": "Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \\(y = ax^2+bx+c\\) intersecting the \\(x\\)-axis at \\(x\\) values given by this formula (the roots).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Binomial Theorem",
+          "tex": "(a + b)^n = \\sum_{k=0}^{n}\\binom{n}{k} a^{n-k} b^k",
+          "vars": [],
+          "desc": "Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Common Factoring Identity (Difference of Squares)",
+          "tex": "a^2 - b^2 = (a+b)(a-b)",
+          "vars": [
+            "a and b are any expressions or numbers."
+          ],
+          "desc": "Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \\(a\\) and side \\(b\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Combination Formula",
+          "tex": "\\displaystyle \\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
+          "vars": [],
+          "desc": "Computes the number of ways to choose \\(k\\) items from \\(n\\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "geometry": {
+      "title": "Geometry (Euclidean)",
+      "path": "math/geometry.html",
+      "lead": "Essential formulas and concepts in geometry (euclidean)",
+      "cards": [
+        {
+          "name": "Pythagorean Theorem",
+          "tex": "c^2 = a^2 + b^2",
+          "vars": [
+            "a and b are the lengths of the legs (perpendicular sides) of a right triangle, and c is the length of the hypotenuse (side opposite the right angle)."
+          ],
+          "desc": "Relates the side lengths of a right-angled triangle. It is used to find the third side given the other two.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Sum of Interior Angles (Polygon)",
+          "tex": "S_{\\text{angles}} = (n - 2)\\times 180^\\circ",
+          "vars": [
+            "n is the number of sides of a polygon."
+          ],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Heron's Formula (Triangle Area by Sides)",
+          "tex": "A = \\sqrt{s(s-a)(s-b)(s-c)}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Volume of a Rectangular Prism (Cuboid)",
+          "tex": "V = L \\times W \\times H",
+          "vars": [
+            "L, W, H are the length, width, and height of the rectangular solid (for a cube, all three are equal to a)."
+          ],
+          "desc": "Computes the volume (space inside) of a box-shaped object. Visualized as counting unit cubes that fill a rectangular box.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Volume of a Cylinder",
+          "tex": "V = \\pi r^2 h",
+          "vars": [
+            "r is the base radius, h is the height of the cylinder."
+          ],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Volume of a Cone/Pyramid",
+          "tex": "V = \\frac{1}{3} A_{\\text{base}} \\, h",
+          "vars": [],
+          "desc": "The volume of any pyramid (base with triangular sides meeting at a point) is one-third the base area times height. Visual proof involves stacking three congruent pyramids to fill a prism.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Volume of a Sphere",
+          "tex": "V = \\frac{4}{3}\\pi r^3",
+          "vars": [
+            "r is the radius of the sphere."
+          ],
+          "desc": "Gives the volume inside a sphere (ball).",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "trigonometry": {
+      "title": "Trigonometry",
+      "path": "math/trigonometry.html",
+      "lead": "Essential formulas and concepts in trigonometry",
+      "cards": [
+        {
+          "name": "Trigonometric Ratios (right triangle definitions)",
+          "tex": "\\displaystyle \\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}},\\quad \\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}},\\quad \\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}",
+          "vars": [],
+          "desc": "Defines sine, cosine, and tangent as ratios of sides in a right-angled triangle.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Pythagorean Identity",
+          "tex": "\\sin^2\\theta + \\cos^2\\theta = 1",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Law of Sines (for any triangle)",
+          "tex": "\\displaystyle \\frac{\\sin A}{a} = \\frac{\\sin B}{b} = \\frac{\\sin C}{c}",
+          "vars": [
+            "A, B, C are the angles of a triangle, and a, b, c are the side lengths opposite those angles, respectively."
+          ],
+          "desc": "Relates the ratios of each side length to the sine of its opposite angle; useful for solving general (non-right) triangles. Usually accompanied by a triangle diagram showing angles and opposite sides.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Law of Cosines",
+          "tex": "c^2 = a^2 + b^2 - 2ab\\cos C",
+          "vars": [
+            "a, b, c are side lengths of a triangle, and C is the angle opposite side c."
+          ],
+          "desc": "Generalizes the Pythagorean theorem to any triangle. It finds a third side or an angle, useful when the Law of Sines is ambiguous or not applicable. Visualized by dropping perpendiculars in a non-right triangle to derive the relation.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Euler’s Formula (complex plane)",
+          "tex": "e^{i\\theta} = \\cos\\theta + i\\,\\sin\\theta",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "analytic_geometry": {
+      "title": "Analytic Geometry",
+      "path": "math/analytic_geometry.html",
+      "lead": "Essential formulas and concepts in analytic geometry",
+      "cards": [
+        {
+          "name": "Distance Between Two Points (2D)",
+          "tex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}",
+          "vars": [
+            "(x_1, y_1) and (x_2, y_2) are the coordinates of the two points."
+          ],
+          "desc": "Calculates the straight-line distance between two points in the plane, derived from the Pythagorean theorem.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Midpoint of Two Points",
+          "tex": "M = \\Big( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2} \\Big)",
+          "vars": [
+            "(x_1, y_1) and (x_2, y_2) are the coordinates of the endpoints of a line segment; M is the midpoint coordinates."
+          ],
+          "desc": "Gives the coordinate of the point exactly in the middle of two given points.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Slope of a Line",
+          "tex": "m = \\frac{y_2 - y_1}{x_2 - x_1}",
+          "vars": [
+            "(x_1, y_1) and (x_2, y_2) are two distinct points on a line; m is the slope."
+          ],
+          "desc": "Measures the steepness or inclination of a line as the ratio of vertical change to horizontal change.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Equation of a Line (Slope-Intercept Form)",
+          "tex": "y = m x + b",
+          "vars": [
+            "m is the slope of the line, b is the y-intercept (the y value when x=0), x,y are the coordinates of any point on the line."
+          ],
+          "desc": "Represents a line in the plane with slope \\(m\\) and intercept \\(b\\). The graph is a straight line crossing the \\(y\\)-axis at \\((0,b)\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Circle (Standard Equation)",
+          "tex": "(x - h)^2 + (y - k)^2 = r^2",
+          "vars": [
+            "(h, k) is the center of the circle, r is the radius, (x, y) is any point on the circle."
+          ],
+          "desc": "Describes all points that are a fixed distance \\(r\\) from a center \\((h,k)\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Ellipse (Standard Form)",
+          "tex": "\\displaystyle \\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1",
+          "vars": [
+            "(h,k) is the center of the ellipse, a is the semi-major radius (horizontal if a>b), b is the semi-minor radius (vertical if a>b)."
+          ],
+          "desc": "Represents an ellipse – the set of points for which the sum of distances to two foci is constant. If \\(a = b\\), this reduces to a circle.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Equation of a Plane (3D)",
+          "tex": "Ax + By + Cz + D = 0",
+          "vars": [
+            "A, B, C, D are constants defining the plane; (x,y,z) is any point on the plane. (The vector (A,B,C) is normal perpendicular to the plane.)"
+          ],
+          "desc": "General form of a plane in three-dimensional space. Any point satisfying this linear equation lies on the plane.",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "differential_geometry": {
+      "title": "Differential Geometry",
+      "path": "math/differential_geometry.html",
+      "lead": "Essential formulas and concepts in differential geometry",
+      "cards": [
+        {
+          "name": "Curvature of a Plane Curve",
+          "tex": "\\displaystyle \\kappa(x) = \\frac{|y''(x)|}{\\big(1 + [y'(x)]^2\\big)^{3/2}}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Arc Length of a Curve",
+          "tex": "L = \\displaystyle \\int_{x=a}^{b} \\sqrt{1 + [y'(x)]^2}\\,dx",
+          "vars": [
+            "y'(x) is the derivative (slope) of the curve y(x); the integral is evaluated from x=a to x=b, the x-coordinates of the endpoints of the curve segment."
+          ],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "calculus": {
+      "title": "Calculus",
+      "path": "math/calculus.html",
+      "lead": "Essential formulas and concepts in calculus",
+      "cards": [
+        {
+          "name": "Definition of Derivative",
+          "tex": "f'(x) = \\displaystyle \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+          "vars": [
+            "f(x) is a function, f'(x) is its derivative. h is an increment in x (approaching 0 in the limit)."
+          ],
+          "desc": "Defines the derivative as the instantaneous rate of change or slope of the function \\(f(x)\\) at point \\(x\\). Graphically, it’s the slope of the tangent line to \\(y=f(x)\\) at \\(x\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Power Rule (for derivatives)",
+          "tex": "\\displaystyle \\frac{d}{dx}\\big(x^n\\big) = n x^{n-1}",
+          "vars": [
+            "n is a constant exponent, x is the variable."
+          ],
+          "desc": "Provides a quick way to differentiate monomials. For example, if \\(f(x)=x^5\\), then \\(f'(x)=5x^4\\). This rule is fundamental for polynomial differentiation.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Indefinite Integral (Power Rule)",
+          "tex": "\\displaystyle \\int x^n\\,dx = \\frac{x^{n+1}}{n+1} + C \\qquad(n \\neq -1)",
+          "vars": [
+            "n is a constant exponent (not -1); C is the constant of integration (since antiderivatives are determined up to an additive constant)."
+          ],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Integration by Parts",
+          "tex": "\\displaystyle \\int u\\,dv = uv - \\int v\\,du",
+          "vars": [
+            "u and v are functions of x such that du and dv are their differentials (derivatives times dx). Often one sets u=f(x) and dv = g(x)dx."
+          ],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "vector_calculus": {
+      "title": "Vector Calculus",
+      "path": "math/vector_calculus.html",
+      "lead": "Essential formulas and concepts in vector calculus",
+      "cards": [
+        {
+          "name": "Gradient (of a scalar field)",
+          "tex": "\\displaystyle \\nabla f = \\Big(\\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y}, \\frac{\\partial f}{\\partial z}\\Big)",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Divergence (of a vector field)",
+          "tex": "\\displaystyle \\nabla\\cdot \\mathbf{F} = \\frac{\\partial P}{\\partial x} + \\frac{\\partial Q}{\\partial y} + \\frac{\\partial R}{\\partial z}",
+          "vars": [],
+          "desc": "Divergence is a scalar field representing the net rate of \"outflow\" from an infinitesimal volume at each point. Positive divergence indicates a source (flow expanding outward), negative indicates a sink.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Curl (of a vector field)",
+          "tex": "\\displaystyle \\nabla \\times \\mathbf{F} = \\Big(\\frac{\\partial R}{\\partial y} - \\frac{\\partial Q}{\\partial z}, \\frac{\\partial P}{\\partial z} - \\frac{\\partial R}{\\partial x}, \\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\Big)",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Laplacian",
+          "tex": "\\displaystyle \\nabla^2 f = \\frac{\\partial^2 f}{\\partial x^2} + \\frac{\\partial^2 f}{\\partial y^2} + \\frac{\\partial^2 f}{\\partial z^2}",
+          "vars": [
+            "f is a twice-differentiable scalar function of x,y,z."
+          ],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Green’s Theorem (in the plane)",
+          "tex": "\\displaystyle \\iint_{D}\\Big(\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\Big)\\,dA = \\oint_{\\partial D} \\big(P\\,dx + Q\\,dy\\big)",
+          "vars": [],
+          "desc": "Relates a double integral over region \\(D\\) to a line integral around its boundary. It’s a special case of Stokes’ Theorem in 2D, often used to convert between circulation (line integral) and curl (area integral).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Stokes’ Theorem",
+          "tex": "\\displaystyle \\iint_{S} (\\nabla \\times \\mathbf{F})\\cdot d\\mathbf{S} = \\oint_{\\partial S} \\mathbf{F}\\cdot d\\mathbf{\\ell}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Divergence Theorem (Gauss’s Theorem)",
+          "tex": "\\displaystyle \\iiint_{V} (\\nabla \\cdot \\mathbf{F})\\,dV = \\iint_{\\partial V} \\mathbf{F}\\cdot d\\mathbf{A}",
+          "vars": [],
+          "desc": "Relates the flux of a vector field out of a closed surface to the volume integral of the divergence over the region inside. In essence, it formalizes that the total \"outflow\" from a volume equals the sum of all sources inside.",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "linear_algebra": {
+      "title": "Linear Algebra",
+      "path": "math/linear_algebra.html",
+      "lead": "Essential formulas and concepts in linear algebra",
+      "cards": [
+        {
+          "name": "Eigenvalue Equation",
+          "tex": "\\det(A - \\lambda I) = 0",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Dot Product",
+          "tex": "\\mathbf{u}\\cdot \\mathbf{v} = u_x v_x + u_y v_y + u_z v_z = |\\mathbf{u}|\\;|\\mathbf{v}|\\cos\\theta",
+          "vars": [],
+          "desc": "Produces a scalar equal to the sum of component-wise products. It measures how much one vector extends in the direction of another. If the dot product is zero, vectors are perpendicular (orthogonal).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Cross Product (3D vectors)",
+          "tex": "\\mathbf{u} \\times \\mathbf{v} = (u_y v_z - u_z v_y,\\; u_z v_x - u_x v_z,\\; u_x v_y - u_y v_x)",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "abstract_algebra": {
+      "title": "Abstract Algebra",
+      "path": "math/abstract_algebra.html",
+      "lead": "Essential formulas and concepts in abstract algebra",
+      "cards": [
+        {
+          "name": "Orbit-Stabilizer Theorem",
+          "tex": "|\\mathrm{Orb}(x)| \\cdot |\\mathrm{Stab}(x)| = |G|",
+          "vars": [],
+          "desc": "Relates the size of an orbit of an element to the size of its stabilizer and the whole group. It’s a foundational result in group actions, often used to count objects via Burnside’s lemma. Think of splitting the group's action into independent moves on \\(x\\) (orbit size) and those that do nothing to \\(x\\) (stabilizer).",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "probability": {
+      "title": "Probability",
+      "path": "math/probability.html",
+      "lead": "Essential formulas and concepts in probability",
+      "cards": [
+        {
+          "name": "Probability (classical definition)",
+          "tex": "P(A) = \\dfrac{\\text{number of favorable outcomes}}{\\text{number of possible outcomes}}",
+          "vars": [
+            "A is an event in a finite sample space with equally likely outcomes."
+          ],
+          "desc": "Gives the probability of event \\(A\\) by ratio if all outcomes are equally likely. For example, the probability of rolling a 5 on a fair six-sided die is \\(1/6\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Complement Rule",
+          "tex": "P(A^c) = 1 - P(A)",
+          "vars": [],
+          "desc": "The probability that \\(A\\)",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Addition Rule (Union of Events)",
+          "tex": "P(A \\cup B) = P(A) + P(B) - P(A \\cap B)",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Conditional Probability",
+          "tex": "P(A \\mid B) = \\dfrac{P(A \\cap B)}{P(B)}",
+          "vars": [],
+          "desc": "Updates the probability of \\(A\\) under the condition that \\(B\\) is known to have happened. For example, the probability it’s raining given that the sky is cloudy. Visually explained using a restricted sample space (just \\(B\\) outcomes).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Bayes’ Theorem",
+          "tex": "P(A \\mid B) = \\dfrac{P(B \\mid A)\\,P(A)}{P(B)}",
+          "vars": [],
+          "desc": "Allows inversion of conditional probabilities. It’s fundamental in statistical inference, relating the probability of a cause \\(A\\) given effect \\(B\\) to the probability of effect given cause. Often visualized with probability trees or Bayes’ boxes.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Binomial Distribution (Probability of $k$ successes)",
+          "tex": "P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}",
+          "vars": [],
+          "desc": "Gives the probability of exactly \\(k\\) successes in \\(n\\) Bernoulli trials. For example, the chance of getting exactly 3 heads in 5 fair coin flips. The distribution’s probabilities can be visualized with a histogram or Pascal’s triangle (for small \\(n\\)).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Expected Value (Mean) of a Discrete Random Variable",
+          "tex": "E[X] = \\sum_{i} x_i\\, P(X = x_i)",
+          "vars": [
+            "X is a random variable that takes values x_i with probability P(X=x_i)."
+          ],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "statistics": {
+      "title": "Statistics",
+      "path": "math/statistics.html",
+      "lead": "Essential formulas and concepts in statistics",
+      "cards": [
+        {
+          "name": "Arithmetic Mean (Average)",
+          "tex": "\\displaystyle \\bar{x} = \\frac{x_1 + x_2 + \\cdots + x_n}{n}",
+          "vars": [],
+          "desc": "Gives the central tendency of a data set as the sum of values divided by count. It’s the balance point of the data distribution.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Standard Deviation (Population)",
+          "tex": "\\displaystyle \\sigma = \\sqrt{\\frac{\\sum_{i=1}^{N}(x_i - \\mu)^2}{N}}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Normal Distribution (Gaussian PDF)",
+          "tex": "\\displaystyle f(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} \\exp\\!\\Big[-\\frac{(x-\\mu)^2}{2\\sigma^2}\\Big]",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "z-Score (Standard Score)",
+          "tex": "z = \\frac{x - \\mu}{\\sigma}",
+          "vars": [],
+          "desc": "Converts a value to standard units indicating how many standard deviations \\(x\\) is above (\\(z>0\\)) or below (\\(z<0\\)) the mean. It’s used to compare different distributions or to look up probabilities from standard normal tables.",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "logic": {
+      "title": "Logic",
+      "path": "math/logic.html",
+      "lead": "Essential formulas and concepts in logic",
+      "cards": [
+        {
+          "name": "Number of Truth Assignments",
+          "tex": "2^n",
+          "vars": [
+            "n is the number of distinct boolean variables/propositions."
+          ],
+          "desc": "If you have \\(n\\) independent true/false propositions, there are \\(2^n\\) possible combinations of truth values. For example, 3 binary variables can have \\(2^3 = 8\\) configurations (as seen in a truth table with 8 rows).",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "set_theory": {
+      "title": "Set Theory",
+      "path": "math/set_theory.html",
+      "lead": "Essential formulas and concepts in set theory",
+      "cards": [
+        {
+          "name": "Union-Intersection (Inclusion-Exclusion for two sets)",
+          "tex": "|A \\cup B| = |A| + |B| - |A \\cap B|",
+          "vars": [
+            "A and B are sets; |X| denotes the number of elements in set X."
+          ],
+          "desc": "Calculates the size of the union of two sets by adding their sizes and subtracting the overlap (which was counted twice). This principle generalizes to more sets with alternating plus and minus of intersections (inclusion-exclusion principle).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Size of Power Set",
+          "tex": "| \\mathcal{P}(A) | = 2^{|A|}",
+          "vars": [],
+          "desc": "The number of possible subsets of a set \\(A\\) is \\(2^{|A|}\\) (each element either in or out of a subset). For instance, a set with 3 elements has \\(2^3=8\\) subsets.",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "topology": {
+      "title": "Topology",
+      "path": "math/topology.html",
+      "lead": "Essential formulas and concepts in topology",
+      "cards": [
+        {
+          "name": "Euler’s Formula for Polyhedra",
+          "tex": "V - E + F = 2",
+          "vars": [
+            "V is the number of vertices, E the number of edges, F the number of faces of a convex polyhedron (or planar connected graph)."
+          ],
+          "desc": "A classic result relating the counts of fundamental elements of polyhedra (e.g., a cube has \\(V=8, E=12, F=6\\), and indeed \\(8-12+6=2\\)). This is often shown by deforming the polyhedron to a network on a sphere or plane. It generalizes to \\(V-E+F=2-2g\\) for surfaces of higher genus \\(g\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Euler Characteristic of Surfaces",
+          "tex": "\\chi = 2 - 2g",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "differential_equations": {
+      "title": "Differential Equations",
+      "path": "math/differential_equations.html",
+      "lead": "Essential formulas and concepts in differential equations",
+      "cards": [
+        {
+          "name": "Exponential Growth/Decay",
+          "tex": "\\displaystyle \\frac{dy}{dt} = k\\,y \\quad\\implies\\quad y(t) = C\\,e^{k t}",
+          "vars": [
+            "y(t) is the quantity as a function of time t, k is the growth (k>0) or decay (k<0) rate constant, C is the initial amount y(0)."
+          ],
+          "desc": "The differential equation states that the rate of change of \\(y\\) is proportional to its current amount. The solution is an exponential law. Examples: radioactive decay (negative \\(k\\)), population growth (positive \\(k\\)). The graph is an exponential curve increasing or decreasing over time.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Simple Harmonic Motion (solution)",
+          "tex": "x'' + \\omega^2 x = 0 \\quad\\implies\\quad x(t) = A \\cos(\\omega t) + B \\sin(\\omega t)",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "index": {
+      "title": "Mathematics",
+      "path": "math/index.html",
+      "lead": "Comprehensive math reference with formulas and explanations",
+      "cards": [
+        {
+          "name": "Sum of the first $n$ natural numbers",
+          "tex": "1 + 2 + \\cdots + n = \\frac{n(n+1)}{2}",
+          "vars": [
+            "n is a positive integer."
+          ],
+          "desc": "Gives the sum of all natural numbers from \\(1\\) up to \\(n\\). Often illustrated by pairing terms (e.g. \\(1+n\\), \\(2+(n-1)\\), etc.) to simplify the addition.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Fermat's Little Theorem",
+          "tex": "a^{p-1} \\equiv 1 \\pmod p",
+          "vars": [
+            "p is a prime number, a is an integer not divisible by p."
+          ],
+          "desc": "In modular arithmetic, this theorem states that if \\(p\\) is prime, then \\(a^{p-1}\\) leaves a remainder of \\(1\\) upon division by \\(p\\). It’s fundamental for simplifying exponents mod \\(p\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Quadratic Formula",
+          "tex": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+          "vars": [],
+          "desc": "Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \\(y = ax^2+bx+c\\) intersecting the \\(x\\)-axis at \\(x\\) values given by this formula (the roots).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Pythagorean Theorem",
+          "tex": "c^2 = a^2 + b^2",
+          "vars": [
+            "a and b are the lengths of the legs (perpendicular sides) of a right triangle, and c is the length of the hypotenuse (side opposite the right angle)."
+          ],
+          "desc": "Relates the side lengths of a right-angled triangle. It is used to find the third side given the other two.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Trigonometric Ratios (right triangle definitions)",
+          "tex": "\\displaystyle \\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}},\\quad \\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}},\\quad \\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}",
+          "vars": [],
+          "desc": "Defines sine, cosine, and tangent as ratios of sides in a right-angled triangle.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Distance Between Two Points (2D)",
+          "tex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}",
+          "vars": [
+            "(x_1, y_1) and (x_2, y_2) are the coordinates of the two points."
+          ],
+          "desc": "Calculates the straight-line distance between two points in the plane, derived from the Pythagorean theorem.",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    }
+  },
+  "physics": {
+    "mechanics": {
+      "title": "Mechanics",
+      "path": "physics/mechanics.html",
+      "lead": "Essential formulas and concepts in mechanics",
+      "cards": [
+        {
+          "name": "Projectile Range (level ground)",
+          "tex": "R = \\frac{v_0^2 \\sin(2\\theta)}{g}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Newton’s Second Law",
+          "tex": "\\mathbf{F}_{\\text{net}} = m \\mathbf{a}",
+          "vars": [],
+          "desc": "Fundamental law relating force, mass, and acceleration. It implies acceleration is proportional to net force and inversely proportional to mass.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Weight (Force due to Gravity)",
+          "tex": "W = m g",
+          "vars": [],
+          "desc": "Weight is the gravitational force exerted on a mass by Earth (or another celestial body). It differs from mass; mass is constant, weight depends on local \\(g\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Momentum",
+          "tex": "\\displaystyle \\mathbf{p} = m \\mathbf{v}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Impulse",
+          "tex": "\\mathbf{J} = \\Delta \\mathbf{p} = \\mathbf{F}_{\\text{avg}}\\,\\Delta t",
+          "vars": [],
+          "desc": "Momentum is the quantity of motion (mass times velocity). Impulse is the effect of a force acting over time, equal to the change in momentum. These are illustrated by collisions: e.g., a longer impact time reduces force for the same momentum change (crumple zones in cars).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Work (Constant Force)",
+          "tex": "W = F\\,d \\,\\cos\\theta",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Power",
+          "tex": "P = \\frac{W}{t} = F v \\cos\\theta",
+          "vars": [],
+          "desc": "Power is the rate of energy transfer or work done per second (measured in Watts). For example, 1 watt = 1 joule/second. The \\(Fv\\) form is useful for constant forces (e.g., power required to lift an object at constant speed). Often visualized with mechanical engines or electrical power calculations.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Newton’s Law of Universal Gravitation",
+          "tex": "F = G \\frac{m_1 m_2}{r^2}",
+          "vars": [],
+          "desc": "Every mass exerts an attractive force on every other mass. This inverse-square law explains planetary orbits, moon’s gravity, etc.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Gravitational Potential Energy (two masses)",
+          "tex": "U(r) = -\\,G \\frac{m_1 m_2}{r}",
+          "vars": [
+            "Same m_1, m_2, r, G as above. The negative sign indicates that the potential energy is zero at infinite separation and becomes more negative as masses come closer (bound state)."
+          ],
+          "desc": "Energy associated with two masses in a gravitational field. As \\(r\\) decreases, \\(U\\) decreases (becomes more negative), meaning work would be required to separate them. Often visualized as a well or curve approaching 0 at infinity and dipping down as \\(r\\) decreases.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Moment of Inertia (for discrete masses)",
+          "tex": "I = \\sum m_i r_i^2",
+          "vars": [
+            "m_i are point masses in the object, r_i is each mass’s distance to the axis of rotation. I depends on the axis chosen."
+          ],
+          "desc": "Moment of inertia is rotational inertia, representing how mass is distributed relative to the axis. It appears in rotational dynamics (\\(I\\) plays the role of \\(m\\)). For example, a solid disk vs. a hoop of equal mass have different \\(I\\) about the center (hoop has more mass at perimeter, larger \\(I\\)).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Rotational Dynamics",
+          "tex": "\\tau_{\\text{net}} = I \\alpha",
+          "vars": [],
+          "desc": "This is the rotational analogue of \\(F=ma\\). It states that net torque produces angular acceleration proportional to the moment of inertia. For example, it requires more torque to spin up a heavier or more extended object at the same rate.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Angular Momentum (rotational)",
+          "tex": "L = I \\omega",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Rotational Kinetic Energy",
+          "tex": "K_{\\text{rot}} = \\tfrac{1}{2} I \\omega^2",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "thermodynamics": {
+      "title": "Thermodynamics",
+      "path": "physics/thermodynamics.html",
+      "lead": "Essential formulas and concepts in thermodynamics",
+      "cards": [
+        {
+          "name": "First Law of Thermodynamics",
+          "tex": "\\displaystyle \\Delta U = Q - W",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Boltzmann’s Entropy Formula",
+          "tex": "S = k_B \\ln \\Omega",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Ideal Gas Law",
+          "tex": "P V = n R T",
+          "vars": [],
+          "desc": "Equation of state for an ideal gas (point particles, no intermolecular forces). It combines Boyle’s law, Charles’s law, etc. Tells, for example, how pressure increases with temperature if volume is fixed.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Thermal Expansion (Linear)",
+          "tex": "\\Delta L = \\alpha L_0 \\Delta T",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Carnot Engine Efficiency (Max Theoretical)",
+          "tex": "\\displaystyle \\eta_{\\text{Carnot}} = 1 - \\frac{T_c}{T_h}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "electromagnetism": {
+      "title": "Electromagnetism",
+      "path": "physics/electromagnetism.html",
+      "lead": "Essential formulas and concepts in electromagnetism",
+      "cards": [
+        {
+          "name": "Coulomb’s Law",
+          "tex": "F = k\\,\\frac{q_1 q_2}{r^2}",
+          "vars": [],
+          "desc": "Gives the electrostatic force between two charges. The force is attractive if charges are opposite, repulsive if like-signed. It is an inverse-square law similar in form to gravity.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Electric Field of Point Charge",
+          "tex": "E = k\\,\\frac{q}{r^2}",
+          "vars": [
+            "q = source charge, r = distance from the charge, E = electric field magnitude at that distance (radially outward for q>0, inward for q<0)."
+          ],
+          "desc": "The electric field is force per unit charge. For a point charge, it diminishes with distance squared.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Electric Potential (Point Charge)",
+          "tex": "V = k\\,\\frac{q}{r}",
+          "vars": [
+            "q = point charge, r = distance from the charge, V = electric potential (voltage) at that point relative to infinity."
+          ],
+          "desc": "The electric potential is the potential energy per unit charge. For a point charge, it falls off as \\(1/r\\). Differences in \\(V\\) between two points give the work per charge to move between those points.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Capacitance (Parallel Plate)",
+          "tex": "C = \\dfrac{\\varepsilon_0 A}{d}",
+          "vars": [],
+          "desc": "Capacitance is the ability to store charge per unit voltage (\\(C=Q/V\\)). For parallel plates, larger area or smaller gap yields bigger \\(C\\). This formula is a basic design equation for capacitors.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Ohm’s Law",
+          "tex": "V = I R",
+          "vars": [
+            "V = voltage (potential difference across a resistor or circuit element), I = current through it, R = resistance."
+          ],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Electrical Power",
+          "tex": "P = V I = I^2 R = \\frac{V^2}{R}",
+          "vars": [
+            "P = power (rate of electrical energy consumption or production), V = voltage across a component, I = current through it, R = resistance (if using that form)."
+          ],
+          "desc": "Different forms of the power formula useful depending on known quantities. For instance, a 60 W light bulb on household 120 V draws \\(I = P/V = 0.5\\) A. The formulas also explain joule heating: \\(I^2R\\) is heat dissipated in a resistor.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Lorentz Force (on a charge)",
+          "tex": "\\mathbf{F} = q(\\mathbf{E} + \\mathbf{v} \\times \\mathbf{B})",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Speed of Light from EM Constants",
+          "tex": "c = \\dfrac{1}{\\sqrt{\\mu_0\\,\\varepsilon_0}}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "optics": {
+      "title": "Optics",
+      "path": "physics/optics.html",
+      "lead": "Essential formulas and concepts in optics",
+      "cards": [
+        {
+          "name": "Snell’s Law (Refraction)",
+          "tex": "n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Thin Lens/Mirror Equation",
+          "tex": "\\displaystyle \\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}",
+          "vars": [
+            "f = focal length of a lens or mirror, d_o = object distance (distance from object to lens/mirror), d_i = image distance (distance from lens/mirror to the image formed). (Sign conventions apply for virtual images, etc.)"
+          ],
+          "desc": "Relates object distance, image distance, and focal length for paraxial rays. It works for converging lenses/mirrors (positive \\(f\\)) and diverging (using sign conventions with negative \\(f\\)). Often used with magnification formula for locating images.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Magnification",
+          "tex": "m = \\frac{h_i}{h_o} = -\\frac{d_i}{d_o}",
+          "vars": [
+            "h_o = object height, h_i = image height, d_o = object distance, d_i = image distance. The negative sign indicates that a positive m (image upright) comes with a negative d_i in sign convention (virtual image for lenses, etc.), and a negative m means the image is inverted."
+          ],
+          "desc": "The magnification \\(m\\) tells how large the image is relative to the object and whether it’s inverted (negative \\(m\\)) or upright (positive \\(m\\)). For example, \\(|m|=2\\) means the image is twice as tall as the object.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Lensmaker’s Formula",
+          "tex": "\\displaystyle \\frac{1}{f} = (n-1)\\Big(\\frac{1}{R_1} - \\frac{1}{R_2}\\Big)",
+          "vars": [
+            "f = focal length of a thin lens in air, n = refractive index of lens material, R_1 and R_2 = radii of curvature of the two lens surfaces (convention: R_1 is radius of surface facing the object, positive if center of curvature is on opposite side of incoming light)."
+          ],
+          "desc": "Determines \\(f\\) from lens shape and material. For example, a symmetric bi-convex lens (\\(R_1 = R_2 = R\\)) in air has \\(1/f = 2(n-1)/R\\). It explains how stronger curvature (smaller \\(R\\)) or higher \\(n\\) gives a shorter focal length (more powerful lens).",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "waves-and-oscillations": {
+      "title": "Waves and Oscillations",
+      "path": "physics/waves-and-oscillations.html",
+      "lead": "Essential formulas and concepts in waves and oscillations",
+      "cards": [
+        {
+          "name": "Wave Speed",
+          "tex": "v = f \\,\\lambda",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Period and Frequency",
+          "tex": "T = \\frac{1}{f}",
+          "vars": [
+            "T = period (time for one complete cycle), f = frequency."
+          ],
+          "desc": "Simply the reciprocal relationship between how long one cycle takes and how many cycles occur per second. If a pendulum swings back and forth in 2 seconds (\\(T=2\\) s), its frequency is \\(0.5\\) Hz.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Pendulum (small angle) Period",
+          "tex": "T = 2\\pi \\sqrt{\\frac{L}{g}}",
+          "vars": [
+            "L = length of a simple pendulum (mass on a string), g = acceleration due to gravity. (This formula assumes small oscillation amplitude so that motion is approximately simple harmonic.)"
+          ],
+          "desc": "Gives the time for one complete swing back-and-forth of a pendulum (for small angles). It shows period is independent of mass and amplitude (for small angles) and increases with the square root of length.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Mass-Spring Oscillator Period",
+          "tex": "T = 2\\pi \\sqrt{\\frac{m}{k}}",
+          "vars": [
+            "m = mass attached to spring, k = spring force constant (stiffness)."
+          ],
+          "desc": "The period of an object of mass \\(m\\) oscillating on a spring (assuming no damping). A stiffer spring (\\(k\\) large) gives a shorter period (faster oscillation), while a heavier mass gives a longer period.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Wave Equation (one dimension)",
+          "tex": "\\displaystyle \\frac{\\partial^2 y}{\\partial t^2} = v^2\\,\\frac{\\partial^2 y}{\\partial x^2}",
+          "vars": [
+            "y(x,t) describes the wave displacement as function of position x and time t. v = wave speed (assumed constant here)."
+          ],
+          "desc": "A differential equation that \\(y(x,t)\\) satisfies for many physical waves (on a string, sound, light in 1D). It states that the acceleration of a small segment (left side) is proportional to the curvature of the wave shape (right side) with factor \\(v^2\\). Solutions are typically \\(y(x,t)=f(x-vt)+g(x+vt)\\) (waves traveling right and left).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Sound Intensity Level (Decibels)",
+          "tex": "\\displaystyle \\beta = 10 \\log_{10}\\!\\frac{I}{I_0}\\,\\text{dB}",
+          "vars": [],
+          "desc": "Converts a wide range of sound intensity into a logarithmic scale that correlates with perceived loudness. An increase of 10 dB means intensity is 10 times higher (approx. twice as loud to the human ear).",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "quantum-mechanics": {
+      "title": "Quantum Mechanics",
+      "path": "physics/quantum-mechanics.html",
+      "lead": "Essential formulas and concepts in quantum mechanics",
+      "cards": [
+        {
+          "name": "Planck-Einstein Relation",
+          "tex": "E = h\\,f",
+          "vars": [],
+          "desc": "Indicates that electromagnetic radiation is quantized into photons, each with energy proportional to frequency. Higher frequency (e.g., X-rays) means higher energy per photon than lower frequency (e.g., radio waves).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "de Broglie Wavelength",
+          "tex": "\\displaystyle \\lambda = \\frac{h}{p}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Schrödinger’s Equation (Time-Independent)",
+          "tex": "-\\frac{\\hbar^2}{2m}\\nabla^2 \\psi + V \\psi = E \\psi",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Heisenberg Uncertainty Principle",
+          "tex": "\\displaystyle \\Delta x\\,\\Delta p \\ge \\frac{\\hbar}{2}",
+          "vars": [],
+          "desc": "There’s a fundamental limit to how precisely we can simultaneously know certain pairs of observables (like position and momentum). This is not due to measurement flaws, but inherent to quantum systems.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Photoelectric Effect (Energy Conservation)",
+          "tex": "K_{\\text{max}} = h f - \\phi",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "relativity": {
+      "title": "Relativity",
+      "path": "physics/relativity.html",
+      "lead": "Essential formulas and concepts in relativity",
+      "cards": [
+        {
+          "name": "Length Contraction",
+          "tex": "L = \\frac{L_0}{\\gamma} = L_0 \\sqrt{1 - \\frac{v^2}{c^2}}",
+          "vars": [],
+          "desc": "Objects are measured to be shorter along the direction of motion relative to an observer for whom they are moving. For instance, a fast-moving rod or spaceship appears foreshortened. Like time dilation, this effect is only significant at speeds close to \\(c\\).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Mass–Energy Equivalence",
+          "tex": "E = m c^2",
+          "vars": [],
+          "desc": "Shows mass is a concentrated form of energy. A small amount of mass can convert to a huge amount of energy (because \\(c^2\\) is large). This underlies nuclear reactions where binding energy differences (mass defects) release energy.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Relativistic Momentum",
+          "tex": "\\displaystyle p = \\gamma m v = \\frac{m v}{\\sqrt{1 - v^2/c^2}}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Schwarzschild Radius (Black Hole)",
+          "tex": "r_s = \\frac{2 G M}{c^2}",
+          "vars": [
+            "M = mass of a (spherically symmetric, non-rotating) object, G = gravitational constant, c = speed of light, r_s = Schwarzschild radius."
+          ],
+          "desc": "If an object of mass \\(M\\) is compressed within this radius, its escape velocity exceeds \\(c\\) and it becomes a black hole. For example, the Earth’s \\(r_s\\) is ~9 mm, the Sun’s ~3 km. This formula comes from General Relativity’s solution for spacetime around a mass.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Gravitational Time Dilation (weak field)",
+          "tex": "t_f = t_p \\sqrt{1 - \\frac{2GM}{r c^2}}",
+          "vars": [
+            "t_p is proper time (time measured by a clock at radius r in gravitational field), t_f is time measured by a far-away observer, M is mass of gravitating body, r is radial position of the clock (from center of mass)."
+          ],
+          "desc": "Clocks deeper in a gravitational well (closer to a mass) run slower relative to clocks far away. This is a prediction of GR (even the GPS satellites must correct for this and special relativistic effects to synchronize with Earth clocks). When \\(r\\) is very large (far away), the factor tends to 1 (no dilation).",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "fluid-mechanics": {
+      "title": "Fluid Mechanics",
+      "path": "physics/fluid-mechanics.html",
+      "lead": "Essential formulas and concepts in fluid mechanics",
+      "cards": [
+        {
+          "name": "Hydrostatic Pressure",
+          "tex": "P = P_0 + \\rho g h",
+          "vars": [],
+          "desc": "Pressure in a static fluid increases linearly with depth. This is why deep water has higher pressure. For example, every 10 m of water adds about 1 atmosphere of pressure.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Buoyant Force (Archimedes’ Principle)",
+          "tex": "F_b = \\rho_{\\text{fluid}}\\, V_{\\text{disp}}\\, g",
+          "vars": [],
+          "desc": "Any object in a fluid experiences an upward force equal to the weight of fluid it displaces. This principle explains floating: if \\(F_b\\) equals the object’s weight, it floats (weight of displaced fluid = weight of object).",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Equation of Continuity",
+          "tex": "A_1 v_1 = A_2 v_2",
+          "vars": [
+            "A_1, A_2 are cross-sectional areas of a flow tube at two locations, v_1, v_2 are fluid speeds at those locations (for an incompressible fluid)."
+          ],
+          "desc": "Expresses mass conservation in steady flow: the volume flow rate \\(A v\\) is constant along a streamline. If a pipe narrows (smaller \\(A\\)), the fluid speed \\(v\\) increases.",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "nuclear-physics": {
+      "title": "Nuclear Physics",
+      "path": "physics/nuclear-physics.html",
+      "lead": "Essential formulas and concepts in nuclear physics",
+      "cards": [
+        {
+          "name": "Radioactive Decay (Exponential Law)",
+          "tex": "N(t) = N_0\\, e^{-\\lambda t}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Half-Life Relation",
+          "tex": "t_{1/2} = \\frac{\\ln 2}{\\lambda}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Decay Activity",
+          "tex": "A = \\lambda N",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Mass Defect \\& Binding Energy",
+          "tex": "\\Delta E = \\Delta m\\,c^2",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    },
+    "index": {
+      "title": "Physics",
+      "path": "physics/index.html",
+      "lead": "Comprehensive physics reference with formulas and explanations",
+      "cards": [
+        {
+          "name": "Projectile Range (level ground)",
+          "tex": "R = \\frac{v_0^2 \\sin(2\\theta)}{g}",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "First Law of Thermodynamics",
+          "tex": "\\displaystyle \\Delta U = Q - W",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Coulomb’s Law",
+          "tex": "F = k\\,\\frac{q_1 q_2}{r^2}",
+          "vars": [],
+          "desc": "Gives the electrostatic force between two charges. The force is attractive if charges are opposite, repulsive if like-signed. It is an inverse-square law similar in form to gravity.",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Snell’s Law (Refraction)",
+          "tex": "n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Wave Speed",
+          "tex": "v = f \\,\\lambda",
+          "vars": [],
+          "desc": "",
+          "visual": "Mathematical concept visualization"
+        },
+        {
+          "name": "Planck-Einstein Relation",
+          "tex": "E = h\\,f",
+          "vars": [],
+          "desc": "Indicates that electromagnetic radiation is quantized into photons, each with energy proportional to frequency. Higher frequency (e.g., X-rays) means higher energy per photon than lower frequency (e.g., radio waves).",
+          "visual": "Mathematical concept visualization"
+        }
+      ]
+    }
+  },
+  "engineering": {}
+}

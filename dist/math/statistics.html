@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+        <ul class="sidebar-nav">
+            <!-- Mathematics Section -->
+            <li class="section-header">Mathematics</li>
+            <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+            <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+            <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+            <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+            <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+            <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+            <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+            <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+            <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+            <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+            <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+            <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+            <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+            <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+            <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+            <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+            <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+            <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+            
+            <!-- Physics Section -->
+            <li class="section-header">Physics</li>
+            <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+            <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+            <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+            <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+            <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+            <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+            <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+            <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+            <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+            <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+  <h1>Statistics</h1>
+  <p>Essential formulas and concepts in statistics</p>
+
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="arithmetic-mean-average">
+      <h3>Arithmetic Mean (Average)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \bar{x} = \frac{x_1 + x_2 + \cdots + x_n}{n}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \bar{x} = \frac{x_1 + x_2 + \cdots + x_n}{n}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the central tendency of a data set as the sum of values divided by count. It’s the balance point of the data distribution.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="standard-deviation-population">
+      <h3>Standard Deviation (Population)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \sigma = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \mu)^2}{N}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \sigma = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \mu)^2}{N}}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="normal-distribution-gaussian-pdf">
+      <h3>Normal Distribution (Gaussian PDF)</h3>
+      <button class="copy-btn" data-tex="\displaystyle f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\!\Big[-\frac{(x-\mu)^2}{2\sigma^2}\Big]" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\!\Big[-\frac{(x-\mu)^2}{2\sigma^2}\Big]\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="z-score-standard-score">
+      <h3>z-Score (Standard Score)</h3>
+      <button class="copy-btn" data-tex="z = \frac{x - \mu}{\sigma}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(z = \frac{x - \mu}{\sigma}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Converts a value to standard units indicating how many standard deviations \(x\) is above (\(z>0\)) or below (\(z<0\)) the mean. It’s used to compare different distributions or to look up probabilities from standard normal tables.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html> 

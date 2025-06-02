@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+        <ul class="sidebar-nav">
+            <!-- Mathematics Section -->
+            <li class="section-header">Mathematics</li>
+            <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+            <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+            <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+            <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+            <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+            <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+            <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+            <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+            <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+            <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+            <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+            <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+            <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+            <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+            <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+            <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+            <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+            <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+            
+            <!-- Physics Section -->
+            <li class="section-header">Physics</li>
+            <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+            <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+            <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+            <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+            <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+            <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+            <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+            <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+            <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+            <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+  <h1>Analytic Geometry</h1>
+  <p>Essential formulas and concepts in analytic geometry</p>
+
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="distance-between-two-points-2d">
+      <h3>Distance Between Two Points (2D)</h3>
+      <button class="copy-btn" data-tex="d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\((x_1, y_1) and (x_2, y_2) are the coordinates of the two points.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Calculates the straight-line distance between two points in the plane, derived from the Pythagorean theorem.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="midpoint-of-two-points">
+      <h3>Midpoint of Two Points</h3>
+      <button class="copy-btn" data-tex="M = \Big( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \Big)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(M = \Big( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \Big)\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\((x_1, y_1) and (x_2, y_2) are the coordinates of the endpoints of a line segment; M is the midpoint coordinates.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the coordinate of the point exactly in the middle of two given points.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="slope-of-a-line">
+      <h3>Slope of a Line</h3>
+      <button class="copy-btn" data-tex="m = \frac{y_2 - y_1}{x_2 - x_1}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(m = \frac{y_2 - y_1}{x_2 - x_1}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\((x_1, y_1) and (x_2, y_2) are two distinct points on a line; m is the slope.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Measures the steepness or inclination of a line as the ratio of vertical change to horizontal change.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="equation-of-a-line-slope-intercept-form">
+      <h3>Equation of a Line (Slope-Intercept Form)</h3>
+      <button class="copy-btn" data-tex="y = m x + b" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(y = m x + b\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(m is the slope of the line, b is the y-intercept (the y value when x=0), x,y are the coordinates of any point on the line.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Represents a line in the plane with slope \(m\) and intercept \(b\). The graph is a straight line crossing the \(y\)-axis at \((0,b)\).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="circle-standard-equation">
+      <h3>Circle (Standard Equation)</h3>
+      <button class="copy-btn" data-tex="(x - h)^2 + (y - k)^2 = r^2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\((x - h)^2 + (y - k)^2 = r^2\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\((h, k) is the center of the circle, r is the radius, (x, y) is any point on the circle.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Describes all points that are a fixed distance \(r\) from a center \((h,k)\).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="ellipse-standard-form">
+      <h3>Ellipse (Standard Form)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\((h,k) is the center of the ellipse, a is the semi-major radius (horizontal if a>b), b is the semi-minor radius (vertical if a>b).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Represents an ellipse – the set of points for which the sum of distances to two foci is constant. If \(a = b\), this reduces to a circle.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="equation-of-a-plane-3d">
+      <h3>Equation of a Plane (3D)</h3>
+      <button class="copy-btn" data-tex="Ax + By + Cz + D = 0" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(Ax + By + Cz + D = 0\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(A, B, C, D are constants defining the plane; (x,y,z) is any point on the plane. (The vector (A,B,C) is normal perpendicular to the plane.)\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">General form of a plane in three-dimensional space. Any point satisfying this linear equation lies on the plane.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html> 

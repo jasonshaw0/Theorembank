@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic - Mathematics</title>
+    <link rel="stylesheet" href="https://unpkg.com/@radix-ui/themes@latest/styles.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="radix-themes-custom-fonts"> <!-- Radix Custom Fonts Helper -->
+        <radix-theme :accent-color="'indigo'" :gray-color="'slate'" :panel-background="'solid'" :scaling="'100%'" :radius="'medium'">
+            <div class="mobile-header"><button id="hamburger-menu">&#9776; Menu</button></div>
+            <aside class="sidebar">
+                <nav>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <button class="nav-section-toggle">Mathematics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="index.html">Mathematics Home</a></li>
+                                <li><a href="arithmetic.html">Arithmetic</a></li>
+                                <li><a href="number_theory.html">Number Theory</a></li>
+                                <li><a href="algebra.html">Algebra</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Geometry</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="geometry_plane.html">Plane Geometry</a></li>
+                                        <li><a href="geometry_solid.html">Solid Geometry</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="trigonometry.html">Trigonometry</a></li>
+                                <li><a href="analytic_geometry.html">Analytic Geometry</a></li>
+                                <li><a href="differential_geometry.html">Differential Geometry</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="calculus_differentiation.html">Differentiation</a></li>
+                                        <li><a href="calculus_integration.html">Integration</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Vector Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="vector_calculus_operations.html">Vector Operations</a></li>
+                                        <li><a href="vector_calculus_integral_theorems.html">Integral Theorems</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="linear_algebra.html">Linear Algebra</a></li>
+                                <li><a href="abstract_algebra.html">Abstract Algebra</a></li>
+                                <li><a href="probability.html">Probability</a></li>
+                                <li><a href="statistics.html">Statistics</a></li>
+                                <li><a href="logic.html">Logic</a></li>
+                                <li><a href="set_theory.html">Set Theory</a></li>
+                                <li><a href="topology.html">Topology</a></li>
+                                <li><a href="differential_equations.html">Differential Equations</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Physics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="../physics/index.html">Physics Home</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Mechanics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/mechanics_kinematics.html">Kinematics (straight-line)</a></li>
+                                        <li><a href="../physics/mechanics_dynamics.html">Dynamics (forces & Newton's Laws)</a></li>
+                                        <li><a href="../physics/mechanics_rotational.html">Rotational Mechanics</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Thermodynamics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/thermodynamics_laws.html">Laws & Entropy</a></li>
+                                        <li><a href="../physics/thermodynamics_gas_laws.html">Gas Laws & Thermal Processes</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Electromagnetism</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/electromagnetism_electrostatics.html">Electrostatics & Circuits</a></li>
+                                        <li><a href="../physics/electromagnetism_induction.html">Magnetism & Induction</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../physics/optics.html">Optics</a></li>
+                                <li><a href="../physics/waves_oscillations.html">Waves & Oscillations</a></li>
+                                <li><a href="../physics/quantum_mechanics.html">Quantum Mechanics</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Relativity</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../physics/relativity_special.html">Special Relativity</a></li>
+                                        <li><a href="../physics/relativity_general.html">General Relativity</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../physics/fluid_mechanics.html">Fluid Mechanics</a></li>
+                                <li><a href="../physics/nuclear_physics.html">Nuclear Physics</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Engineering (Coming Soon)</button>
+                            <ul class="subcategory-list">
+                                <li><a href="#">Engineering Home (Coming Soon)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="content">
+                <h1>Arithmetic</h1>
+                <p>This section covers fundamental concepts of arithmetic, including basic operations, sequences, and series.</p>
+                
+                <div class="formula-card-container">
+                    <!-- Sum of the first n natural numbers -->
+                    <div class="formula-card" id="sum-natural-numbers">
+                        <h3>Sum of the first $n$ natural numbers</h3>
+                        <div class="mathjax-expression">\(1 + 2 + \cdots + n = \frac{n(n+1)}{2}\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(n\): a positive integer.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Gives the sum of all natural numbers from $1$ up to $n$. Often illustrated by pairing terms (e.g. $1+n$, $2+(n-1)$, etc.) to simplify the addition.
+                        </p>
+                        <div class="visual-placeholder">Visual: Pairing of terms or triangular arrangement.</div>
+                    </div>
+
+                    <!-- Arithmetic sequence (nth term) -->
+                    <div class="formula-card" id="arithmetic-sequence-nth-term">
+                        <h3>Arithmetic sequence (nth term)</h3>
+                        <div class="mathjax-expression">\(a_n = a_1 + (n-1)d\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(a_n\): the $n$th term of the sequence.</li>
+                            <li>\(a_1\): the first term.</li>
+                            <li>\(d\): the common difference.</li>
+                            <li>\(n\): the term index.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Defines the general term of an arithmetic progression (constant difference between consecutive terms). A linear graph represents the sequence values.
+                        </p>
+                        <div class="visual-placeholder">Visual: Graph of an arithmetic sequence.</div>
+                    </div>
+
+                    <!-- Arithmetic series (sum of first n terms of an AP) -->
+                    <div class="formula-card" id="arithmetic-series-sum">
+                        <h3>Arithmetic series (sum of first $n$ terms of an AP)</h3>
+                        <div class="mathjax-expression">\(S_n = \frac{n}{2}(2a_1 + (n-1)d)\)</div>
+                        <h4>Variables:</h4>
+                        <ul class="variables">
+                            <li>\(S_n\): the sum of the first $n$ terms.</li>
+                            <li>\(a_1\): the first term.</li>
+                            <li>\(d\): the common difference.</li>
+                            <li>\(n\): the number of terms.</li>
+                        </ul>
+                        <h4>Description/Usage:</h4>
+                        <p class="description">
+                            Calculates the sum of an arithmetic progression. Often visualized by pairing terms from ends toward the center (which all yield the same sum).
+                        </p>
+                        <div class="visual-placeholder">Visual: Pairing terms in an arithmetic series.</div>
+                    </div>
+                </div>
+            </main>
+            <script src="../script.js"></script>
+        </radix-theme>
+    </div> <!-- End Radix Custom Fonts Helper -->
+</body>
+</html> 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics - Formula Reference</title>
+    <link rel="stylesheet" href="https://unpkg.com/@radix-ui/themes@latest/styles.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="radix-themes-custom-fonts"> <!-- Radix Custom Fonts Helper -->
+        <radix-theme :accent-color="'indigo'" :gray-color="'slate'" :panel-background="'solid'" :scaling="'100%'" :radius="'medium'">
+            <div class="mobile-header">
+                <button id="hamburger-menu">&#9776; Menu</button>
+            </div>
+            <aside class="sidebar">
+                <nav>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <button class="nav-section-toggle">Mathematics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="../math/index.html">Mathematics Home</a></li>
+                                <li><a href="../math/arithmetic.html">Arithmetic</a></li>
+                                <li><a href="../math/number_theory.html">Number Theory</a></li>
+                                <li><a href="../math/algebra.html">Algebra</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Geometry</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../math/geometry_plane.html">Plane Geometry</a></li>
+                                        <li><a href="../math/geometry_solid.html">Solid Geometry</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../math/trigonometry.html">Trigonometry</a></li>
+                                <li><a href="../math/analytic_geometry.html">Analytic Geometry</a></li>
+                                <li><a href="../math/differential_geometry.html">Differential Geometry</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../math/calculus_differentiation.html">Differentiation</a></li>
+                                        <li><a href="../math/calculus_integration.html">Integration</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Vector Calculus</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="../math/vector_calculus_operations.html">Vector Operations</a></li>
+                                        <li><a href="../math/vector_calculus_integral_theorems.html">Integral Theorems</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="../math/linear_algebra.html">Linear Algebra</a></li>
+                                <li><a href="../math/abstract_algebra.html">Abstract Algebra</a></li>
+                                <li><a href="../math/probability.html">Probability</a></li>
+                                <li><a href="../math/statistics.html">Statistics</a></li>
+                                <li><a href="../math/logic.html">Logic</a></li>
+                                <li><a href="../math/set_theory.html">Set Theory</a></li>
+                                <li><a href="../math/topology.html">Topology</a></li>
+                                <li><a href="../math/differential_equations.html">Differential Equations</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Physics</button>
+                            <ul class="subcategory-list">
+                                <li><a href="index.html">Physics Home</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Mechanics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="mechanics_kinematics.html">Kinematics (straight-line)</a></li>
+                                        <li><a href="mechanics_dynamics.html">Dynamics (forces & Newton's Laws)</a></li>
+                                        <li><a href="mechanics_rotational.html">Rotational Mechanics</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Thermodynamics</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="thermodynamics_laws.html">Laws & Entropy</a></li>
+                                        <li><a href="thermodynamics_gas_laws.html">Gas Laws & Thermal Processes</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Electromagnetism</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="electromagnetism_electrostatics.html">Electrostatics & Circuits</a></li>
+                                        <li><a href="electromagnetism_induction.html">Magnetism & Induction</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="optics.html">Optics</a></li>
+                                <li><a href="waves_oscillations.html">Waves & Oscillations</a></li>
+                                <li><a href="quantum_mechanics.html">Quantum Mechanics</a></li>
+                                <li>
+                                    <button class="nav-subsection-toggle">Relativity</button>
+                                    <ul class="subcategory-list-nested">
+                                        <li><a href="relativity_special.html">Special Relativity</a></li>
+                                        <li><a href="relativity_general.html">General Relativity</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="fluid_mechanics.html">Fluid Mechanics</a></li>
+                                <li><a href="nuclear_physics.html">Nuclear Physics</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="nav-section-toggle">Engineering (Coming Soon)</button>
+                            <ul class="subcategory-list">
+                                <li><a href="#">Engineering Home (Coming Soon)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="content">
+                <h1>Physics</h1>
+                <p>Welcome to the Physics section. This area covers a wide range of physical laws and principles, from classical mechanics to modern quantum physics.</p>
+                <h2>Subcategories</h2>
+                <ul>
+                    <li>Mechanics
+                        <ul>
+                            <li><a href="mechanics_kinematics.html">Kinematics (straight-line)</a> - Motion of objects without considering forces.</li>
+                            <li><a href="mechanics_dynamics.html">Dynamics (forces & Newton's Laws)</a> - Motion of objects under the influence of forces.</li>
+                            <li><a href="mechanics_rotational.html">Rotational Mechanics</a> - Motion of rotating bodies.</li>
+                        </ul>
+                    </li>
+                    <li>Thermodynamics
+                        <ul>
+                            <li><a href="thermodynamics_laws.html">Laws of Thermodynamics & Entropy</a> - Energy, heat, work, and disorder.</li>
+                            <li><a href="thermodynamics_gas_laws.html">Gas Laws & Thermal Processes</a> - Behavior of gases and heat transfer.</li>
+                        </ul>
+                    </li>
+                    <li>Electromagnetism
+                        <ul>
+                            <li><a href="electromagnetism_electrostatics.html">Electrostatics & Circuits</a> - Electric charges, fields, and basic circuits.</li>
+                            <li><a href="electromagnetism_induction.html">Magnetism & Induction</a> - Magnetic fields and electromagnetic induction.</li>
+                        </ul>
+                    </li>
+                    <li><a href="optics.html">Optics</a> - Behavior and properties of light.</li>
+                    <li><a href="waves_oscillations.html">Waves & Oscillations</a> - Periodic motion and wave phenomena.</li>
+                    <li><a href="quantum_mechanics.html">Quantum Mechanics</a> - Physics at atomic and subatomic levels.</li>
+                    <li>Relativity
+                        <ul>
+                            <li><a href="relativity_special.html">Special Relativity</a> - Physics of high speeds and spacetime.</li>
+                            <li><a href="relativity_general.html">General Relativity</a> - Gravity as a curvature of spacetime.</li>
+                        </ul>
+                    </li>
+                    <li><a href="fluid_mechanics.html">Fluid Mechanics</a> - Behavior of fluids (liquids and gases).</li>
+                    <li><a href="nuclear_physics.html">Nuclear Physics</a> - Structure and behavior of atomic nuclei.</li>
+                </ul>
+            </main>
+            <script src="../script.js"></script>
+        </radix-theme>
+    </div> <!-- End Radix Custom Fonts Helper -->
+</body>
+</html> 
