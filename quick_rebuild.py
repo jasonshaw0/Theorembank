@@ -1,32 +1,25 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title></title>
-  <link rel="stylesheet" href="../style.css" />
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [['\\[', '\\]']]
-      },
-      svg: { fontCache: 'global' }
-    };
-  </script>
-</head>
-<body>
+#!/usr/bin/env python3
+import json, os, pathlib, shutil, re
+from jinja2 import Environment, FileSystemLoader
 
-<div class="mobile-header">
-  <button id="hamburger-menu">☰ Menu</button>
-  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
-</div>
-
-<aside class="sidebar">
-  <nav>
+def rebuild_site():
+    """Quick rebuild script for GitHub Pages emergency"""
+    
+    SRC_DIR = pathlib.Path(__file__).parent
+    TEMPLATE = Environment(loader=FileSystemLoader(SRC_DIR / "templates"))
+    CONTENT = json.loads((SRC_DIR / "content" / "formulas.json").read_text(encoding="utf-8"))
+    
+    def slug(s): 
+        return re.sub(r'[^a-z0-9\-]+', '-', s.lower()).strip('-')
+    
+    def write(path, text):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+    
+    def generate_sidebar():
+        """Generate the sidebar navigation HTML"""
+        sidebar_html = '''
+        <nav>
             <ul class="sidebar-nav">
                 <!-- Mathematics Section -->
                 <li class="section-header">Mathematics</li>
@@ -63,37 +56,25 @@
                 <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
             </ul>
         </nav>
-</aside>
-
-<main class="content">
-  <h1>Abstract Algebra</h1>
-  <p>Essential formulas and concepts in abstract algebra</p>
-
-  <div class="formula-card-container">
+        '''
+        return sidebar_html.strip()
     
-    <div class="formula-card" id="orbit-stabilizer-theorem">
-      <h3>Orbit-Stabilizer Theorem</h3>
-      <button class="copy-btn" data-tex="|\mathrm{Orb}(x)| \cdot |\mathrm{Stab}(x)| = |G|" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(|\mathrm{Orb}(x)| \cdot |\mathrm{Stab}(x)| = |G|\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Relates the size of an orbit of an element to the size of its stabilizer and the whole group. It’s a foundational result in group actions, often used to count objects via Burnside’s lemma. Think of splitting the group's action into independent moves on \(x\) (orbit size) and those that do nothing to \(x\) (stabilizer).</p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
-    </div>
+    def build_page(subject, page_key, page_data):
+        html = TEMPLATE.get_template("formula_page.html").render(
+            subject=subject, 
+            page_key=page_key, 
+            page_data=page_data, 
+            slug=slug,
+            sidebar_content=generate_sidebar()
+        )
+        write(SRC_DIR / page_data["path"], html)
     
-  </div>
-</main>
+    # Build all pages from content
+    for subject, pages in CONTENT.items():
+        for page_key, page in pages.items():
+            build_page(subject, page_key, page)
+    
+    print("Site rebuilt successfully!")
 
-<script src="../script.js"></script>
-</body>
-</html> 
+if __name__ == "__main__":
+    rebuild_site() 
