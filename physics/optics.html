@@ -66,15 +66,15 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Optics</h1>
+  <p>Essential formulas and concepts in optics</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="quadratic-formula">
-      <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+    <div class="formula-card" id="snell-s-law-refraction">
+      <h3>Snell’s Law (Refraction)</h3>
+      <button class="copy-btn" data-tex="n_1 \sin \theta_1 = n_2 \sin \theta_2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(n_1 \sin \theta_1 = n_2 \sin \theta_2\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -82,7 +82,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -91,18 +91,18 @@
       
     </div>
     
-    <div class="formula-card" id="binomial-theorem">
-      <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+    <div class="formula-card" id="thin-lens-mirror-equation">
+      <h3>Thin Lens/Mirror Equation</h3>
+      <button class="copy-btn" data-tex="\displaystyle \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(f = focal length of a lens or mirror, d_o = object distance (distance from object to lens/mirror), d_i = image distance (distance from lens/mirror to the image formed). (Sign conventions apply for virtual images, etc.)\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
+      <p class="description">Relates object distance, image distance, and focal length for paraxial rays. It works for converging lenses/mirrors (positive \(f\)) and diverging (using sign conventions with negative \(f\)). Often used with magnification formula for locating images.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -111,18 +111,18 @@
       
     </div>
     
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+    <div class="formula-card" id="magnification">
+      <h3>Magnification</h3>
+      <button class="copy-btn" data-tex="m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
+        <li>\(h_o = object height, h_i = image height, d_o = object distance, d_i = image distance. The negative sign indicates that a positive m (image upright) comes with a negative d_i in sign convention (virtual image for lenses, etc.), and a negative m means the image is inverted.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
+      <p class="description">The magnification \(m\) tells how large the image is relative to the object and whether it’s inverted (negative \(m\)) or upright (positive \(m\)). For example, \(|m|=2\) means the image is twice as tall as the object.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -131,18 +131,18 @@
       
     </div>
     
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
+    <div class="formula-card" id="lensmaker-s-formula">
+      <h3>Lensmaker’s Formula</h3>
+      <button class="copy-btn" data-tex="\displaystyle \frac{1}{f} = (n-1)\Big(\frac{1}{R_1} - \frac{1}{R_2}\Big)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \frac{1}{f} = (n-1)\Big(\frac{1}{R_1} - \frac{1}{R_2}\Big)\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(f = focal length of a thin lens in air, n = refractive index of lens material, R_1 and R_2 = radii of curvature of the two lens surfaces (convention: R_1 is radius of surface facing the object, positive if center of curvature is on opposite side of incoming light).\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      <p class="description">Determines \(f\) from lens shape and material. For example, a symmetric bi-convex lens (\(R_1 = R_2 = R\)) in air has \(1/f = 2(n-1)/R\). It explains how stronger curvature (smaller \(R\)) or higher \(n\) gives a shorter focal length (more powerful lens).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

@@ -66,15 +66,15 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Trigonometry</h1>
+  <p>Essential formulas and concepts in trigonometry</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="quadratic-formula">
-      <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+    <div class="formula-card" id="trigonometric-ratios-right-triangle-definitions">
+      <h3>Trigonometric Ratios (right triangle definitions)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \sin\theta = \frac{\text{opposite}}{\text{hypotenuse}},\quad \cos\theta = \frac{\text{adjacent}}{\text{hypotenuse}},\quad \tan\theta = \frac{\text{opposite}}{\text{adjacent}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \sin\theta = \frac{\text{opposite}}{\text{hypotenuse}},\quad \cos\theta = \frac{\text{adjacent}}{\text{hypotenuse}},\quad \tan\theta = \frac{\text{opposite}}{\text{adjacent}}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -82,7 +82,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      <p class="description">Defines sine, cosine, and tangent as ratios of sides in a right-angled triangle.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -91,10 +91,10 @@
       
     </div>
     
-    <div class="formula-card" id="binomial-theorem">
-      <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+    <div class="formula-card" id="pythagorean-identity">
+      <h3>Pythagorean Identity</h3>
+      <button class="copy-btn" data-tex="\sin^2\theta + \cos^2\theta = 1" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\sin^2\theta + \cos^2\theta = 1\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -102,7 +102,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -111,18 +111,18 @@
       
     </div>
     
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+    <div class="formula-card" id="law-of-sines-for-any-triangle">
+      <h3>Law of Sines (for any triangle)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
+        <li>\(A, B, C are the angles of a triangle, and a, b, c are the side lengths opposite those angles, respectively.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
+      <p class="description">Relates the ratios of each side length to the sine of its opposite angle; useful for solving general (non-right) triangles. Usually accompanied by a triangle diagram showing angles and opposite sides.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -131,10 +131,30 @@
       
     </div>
     
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
+    <div class="formula-card" id="law-of-cosines">
+      <h3>Law of Cosines</h3>
+      <button class="copy-btn" data-tex="c^2 = a^2 + b^2 - 2ab\cos C" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(c^2 = a^2 + b^2 - 2ab\cos C\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(a, b, c are side lengths of a triangle, and C is the angle opposite side c.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Generalizes the Pythagorean theorem to any triangle. It finds a third side or an angle, useful when the Law of Sines is ambiguous or not applicable. Visualized by dropping perpendiculars in a non-right triangle to derive the relation.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="euler-s-formula-complex-plane">
+      <h3>Euler’s Formula (complex plane)</h3>
+      <button class="copy-btn" data-tex="e^{i\theta} = \cos\theta + i\,\sin\theta" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(e^{i\theta} = \cos\theta + i\,\sin\theta\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -142,7 +162,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

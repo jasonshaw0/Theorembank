@@ -66,23 +66,23 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Probability</h1>
+  <p>Essential formulas and concepts in probability</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="quadratic-formula">
-      <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+    <div class="formula-card" id="probability-classical-definition">
+      <h3>Probability (classical definition)</h3>
+      <button class="copy-btn" data-tex="P(A) = \dfrac{\text{number of favorable outcomes}}{\text{number of possible outcomes}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A) = \dfrac{\text{number of favorable outcomes}}{\text{number of possible outcomes}}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(A is an event in a finite sample space with equally likely outcomes.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      <p class="description">Gives the probability of event \(A\) by ratio if all outcomes are equally likely. For example, the probability of rolling a 5 on a fair six-sided die is \(1/6\).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -91,10 +91,10 @@
       
     </div>
     
-    <div class="formula-card" id="binomial-theorem">
-      <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+    <div class="formula-card" id="complement-rule">
+      <h3>Complement Rule</h3>
+      <button class="copy-btn" data-tex="P(A^c) = 1 - P(A)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A^c) = 1 - P(A)\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -102,7 +102,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
+      <p class="description">The probability that \(A\)</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -111,18 +111,18 @@
       
     </div>
     
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+    <div class="formula-card" id="addition-rule-union-of-events">
+      <h3>Addition Rule (Union of Events)</h3>
+      <button class="copy-btn" data-tex="P(A \cup B) = P(A) + P(B) - P(A \cap B)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
+        
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -131,10 +131,10 @@
       
     </div>
     
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
+    <div class="formula-card" id="conditional-probability">
+      <h3>Conditional Probability</h3>
+      <button class="copy-btn" data-tex="P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -142,7 +142,67 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      <p class="description">Updates the probability of \(A\) under the condition that \(B\) is known to have happened. For example, the probability it’s raining given that the sky is cloudy. Visually explained using a restricted sample space (just \(B\) outcomes).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="bayes-theorem">
+      <h3>Bayes’ Theorem</h3>
+      <button class="copy-btn" data-tex="P(A \mid B) = \dfrac{P(B \mid A)\,P(A)}{P(B)}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(A \mid B) = \dfrac{P(B \mid A)\,P(A)}{P(B)}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Allows inversion of conditional probabilities. It’s fundamental in statistical inference, relating the probability of a cause \(A\) given effect \(B\) to the probability of effect given cause. Often visualized with probability trees or Bayes’ boxes.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="binomial-distribution-probability-of-k-successes">
+      <h3>Binomial Distribution (Probability of $k$ successes)</h3>
+      <button class="copy-btn" data-tex="P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the probability of exactly \(k\) successes in \(n\) Bernoulli trials. For example, the chance of getting exactly 3 heads in 5 fair coin flips. The distribution’s probabilities can be visualized with a histogram or Pascal’s triangle (for small \(n\)).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="expected-value-mean-of-a-discrete-random-variable">
+      <h3>Expected Value (Mean) of a Discrete Random Variable</h3>
+      <button class="copy-btn" data-tex="E[X] = \sum_{i} x_i\, P(X = x_i)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(E[X] = \sum_{i} x_i\, P(X = x_i)\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(X is a random variable that takes values x_i with probability P(X=x_i).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

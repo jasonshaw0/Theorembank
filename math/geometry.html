@@ -66,23 +66,23 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Geometry (Euclidean)</h1>
+  <p>Essential formulas and concepts in geometry (euclidean)</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="quadratic-formula">
-      <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+    <div class="formula-card" id="pythagorean-theorem">
+      <h3>Pythagorean Theorem</h3>
+      <button class="copy-btn" data-tex="c^2 = a^2 + b^2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(c^2 = a^2 + b^2\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(a and b are the lengths of the legs (perpendicular sides) of a right triangle, and c is the length of the hypotenuse (side opposite the right angle).\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      <p class="description">Relates the side lengths of a right-angled triangle. It is used to find the third side given the other two.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -91,18 +91,18 @@
       
     </div>
     
-    <div class="formula-card" id="binomial-theorem">
-      <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+    <div class="formula-card" id="sum-of-interior-angles-polygon">
+      <h3>Sum of Interior Angles (Polygon)</h3>
+      <button class="copy-btn" data-tex="S_{\text{angles}} = (n - 2)\times 180^\circ" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(S_{\text{angles}} = (n - 2)\times 180^\circ\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(n is the number of sides of a polygon.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -111,18 +111,18 @@
       
     </div>
     
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+    <div class="formula-card" id="heron-s-formula-triangle-area-by-sides">
+      <h3>Heron's Formula (Triangle Area by Sides)</h3>
+      <button class="copy-btn" data-tex="A = \sqrt{s(s-a)(s-b)(s-c)}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(A = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
+        
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -131,10 +131,50 @@
       
     </div>
     
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
+    <div class="formula-card" id="volume-of-a-rectangular-prism-cuboid">
+      <h3>Volume of a Rectangular Prism (Cuboid)</h3>
+      <button class="copy-btn" data-tex="V = L \times W \times H" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = L \times W \times H\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(L, W, H are the length, width, and height of the rectangular solid (for a cube, all three are equal to a).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Computes the volume (space inside) of a box-shaped object. Visualized as counting unit cubes that fill a rectangular box.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="volume-of-a-cylinder">
+      <h3>Volume of a Cylinder</h3>
+      <button class="copy-btn" data-tex="V = \pi r^2 h" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = \pi r^2 h\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(r is the base radius, h is the height of the cylinder.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="volume-of-a-cone-pyramid">
+      <h3>Volume of a Cone/Pyramid</h3>
+      <button class="copy-btn" data-tex="V = \frac{1}{3} A_{\text{base}} \, h" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = \frac{1}{3} A_{\text{base}} \, h\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -142,7 +182,27 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      <p class="description">The volume of any pyramid (base with triangular sides meeting at a point) is one-third the base area times height. Visual proof involves stacking three congruent pyramids to fill a prism.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="volume-of-a-sphere">
+      <h3>Volume of a Sphere</h3>
+      <button class="copy-btn" data-tex="V = \frac{4}{3}\pi r^3" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = \frac{4}{3}\pi r^3\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(r is the radius of the sphere.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the volume inside a sphere (ball).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

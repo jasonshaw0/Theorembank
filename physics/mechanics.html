@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+        <ul class="sidebar-nav">
+            <!-- Mathematics Section -->
+            <li class="section-header">Mathematics</li>
+            <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+            <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+            <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+            <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+            <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+            <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+            <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+            <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+            <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+            <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+            <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+            <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+            <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+            <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+            <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+            <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+            <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+            <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+            
+            <!-- Physics Section -->
+            <li class="section-header">Physics</li>
+            <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+            <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+            <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+            <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+            <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+            <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+            <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+            <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+            <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+            <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+  <h1>Mechanics</h1>
+  <p>Essential formulas and concepts in mechanics</p>
+
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="projectile-range-level-ground">
+      <h3>Projectile Range (level ground)</h3>
+      <button class="copy-btn" data-tex="R = \frac{v_0^2 \sin(2\theta)}{g}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(R = \frac{v_0^2 \sin(2\theta)}{g}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="newton-s-second-law">
+      <h3>Newton’s Second Law</h3>
+      <button class="copy-btn" data-tex="\mathbf{F}_{\text{net}} = m \mathbf{a}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\mathbf{F}_{\text{net}} = m \mathbf{a}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Fundamental law relating force, mass, and acceleration. It implies acceleration is proportional to net force and inversely proportional to mass.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="weight-force-due-to-gravity">
+      <h3>Weight (Force due to Gravity)</h3>
+      <button class="copy-btn" data-tex="W = m g" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(W = m g\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Weight is the gravitational force exerted on a mass by Earth (or another celestial body). It differs from mass; mass is constant, weight depends on local \(g\).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="momentum">
+      <h3>Momentum</h3>
+      <button class="copy-btn" data-tex="\displaystyle \mathbf{p} = m \mathbf{v}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \mathbf{p} = m \mathbf{v}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="impulse">
+      <h3>Impulse</h3>
+      <button class="copy-btn" data-tex="\mathbf{J} = \Delta \mathbf{p} = \mathbf{F}_{\text{avg}}\,\Delta t" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\mathbf{J} = \Delta \mathbf{p} = \mathbf{F}_{\text{avg}}\,\Delta t\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Momentum is the quantity of motion (mass times velocity). Impulse is the effect of a force acting over time, equal to the change in momentum. These are illustrated by collisions: e.g., a longer impact time reduces force for the same momentum change (crumple zones in cars).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="work-constant-force">
+      <h3>Work (Constant Force)</h3>
+      <button class="copy-btn" data-tex="W = F\,d \,\cos\theta" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(W = F\,d \,\cos\theta\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="power">
+      <h3>Power</h3>
+      <button class="copy-btn" data-tex="P = \frac{W}{t} = F v \cos\theta" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P = \frac{W}{t} = F v \cos\theta\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Power is the rate of energy transfer or work done per second (measured in Watts). For example, 1 watt = 1 joule/second. The \(Fv\) form is useful for constant forces (e.g., power required to lift an object at constant speed). Often visualized with mechanical engines or electrical power calculations.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="newton-s-law-of-universal-gravitation">
+      <h3>Newton’s Law of Universal Gravitation</h3>
+      <button class="copy-btn" data-tex="F = G \frac{m_1 m_2}{r^2}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(F = G \frac{m_1 m_2}{r^2}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Every mass exerts an attractive force on every other mass. This inverse-square law explains planetary orbits, moon’s gravity, etc.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="gravitational-potential-energy-two-masses">
+      <h3>Gravitational Potential Energy (two masses)</h3>
+      <button class="copy-btn" data-tex="U(r) = -\,G \frac{m_1 m_2}{r}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(U(r) = -\,G \frac{m_1 m_2}{r}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(Same m_1, m_2, r, G as above. The negative sign indicates that the potential energy is zero at infinite separation and becomes more negative as masses come closer (bound state).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Energy associated with two masses in a gravitational field. As \(r\) decreases, \(U\) decreases (becomes more negative), meaning work would be required to separate them. Often visualized as a well or curve approaching 0 at infinity and dipping down as \(r\) decreases.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="moment-of-inertia-for-discrete-masses">
+      <h3>Moment of Inertia (for discrete masses)</h3>
+      <button class="copy-btn" data-tex="I = \sum m_i r_i^2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(I = \sum m_i r_i^2\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(m_i are point masses in the object, r_i is each mass’s distance to the axis of rotation. I depends on the axis chosen.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Moment of inertia is rotational inertia, representing how mass is distributed relative to the axis. It appears in rotational dynamics (\(I\) plays the role of \(m\)). For example, a solid disk vs. a hoop of equal mass have different \(I\) about the center (hoop has more mass at perimeter, larger \(I\)).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="rotational-dynamics">
+      <h3>Rotational Dynamics</h3>
+      <button class="copy-btn" data-tex="\tau_{\text{net}} = I \alpha" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\tau_{\text{net}} = I \alpha\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">This is the rotational analogue of \(F=ma\). It states that net torque produces angular acceleration proportional to the moment of inertia. For example, it requires more torque to spin up a heavier or more extended object at the same rate.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="angular-momentum-rotational">
+      <h3>Angular Momentum (rotational)</h3>
+      <button class="copy-btn" data-tex="L = I \omega" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(L = I \omega\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="rotational-kinetic-energy">
+      <h3>Rotational Kinetic Energy</h3>
+      <button class="copy-btn" data-tex="K_{\text{rot}} = \tfrac{1}{2} I \omega^2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(K_{\text{rot}} = \tfrac{1}{2} I \omega^2\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html> 

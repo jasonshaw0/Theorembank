@@ -1,22 +1,32 @@
-#!/usr/bin/env python3
-import json, os, pathlib, shutil, re
-from jinja2 import Environment, FileSystemLoader
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+</head>
+<body>
 
-SRC_DIR   = pathlib.Path(__file__).parent
-TEMPLATE  = Environment(loader=FileSystemLoader(SRC_DIR / "templates"))
-CONTENT   = json.loads((SRC_DIR / "content" / "formulas.json").read_text(encoding="utf-8"))
-DIST      = SRC_DIR / "dist"
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
 
-def slug(s): return re.sub(r'[^a-z0-9\-]+', '-', s.lower()).strip('-')
-
-def write(path, text):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(text, encoding="utf-8")
-
-def generate_sidebar():
-    """Generate the modern, flat sidebar navigation HTML"""
-    sidebar_html = '''
-    <nav>
+<aside class="sidebar">
+  <nav>
         <ul class="sidebar-nav">
             <!-- Mathematics Section -->
             <li class="section-header">Mathematics</li>
@@ -53,63 +63,57 @@ def generate_sidebar():
             <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
         </ul>
     </nav>
-    '''
-    return sidebar_html.strip()
+</aside>
 
-def build_page(subject, page_key, page_data):
-    html = TEMPLATE.get_template("formula_page.html").render(
-        subject=subject, 
-        page_key=page_key, 
-        page_data=page_data, 
-        slug=slug,
-        sidebar_content=generate_sidebar()
-    )
-    write(DIST / page_data["path"], html)
+<main class="content">
+  <h1>Differential Equations</h1>
+  <p>Essential formulas and concepts in differential equations</p>
 
-def copy_assets():
-    for f in ("style.css", "script.js"):
-        shutil.copy2(SRC_DIR / f, DIST / f)
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="exponential-growth-decay">
+      <h3>Exponential Growth/Decay</h3>
+      <button class="copy-btn" data-tex="\displaystyle \frac{dy}{dt} = k\,y \quad\implies\quad y(t) = C\,e^{k t}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \frac{dy}{dt} = k\,y \quad\implies\quad y(t) = C\,e^{k t}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(y(t) is the quantity as a function of time t, k is the growth (k>0) or decay (k<0) rate constant, C is the initial amount y(0).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">The differential equation states that the rate of change of \(y\) is proportional to its current amount. The solution is an exponential law. Examples: radioactive decay (negative \(k\)), population growth (positive \(k\)). The graph is an exponential curve increasing or decreasing over time.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="simple-harmonic-motion-solution">
+      <h3>Simple Harmonic Motion (solution)</h3>
+      <button class="copy-btn" data-tex="x&#39;&#39; + \omega^2 x = 0 \quad\implies\quad x(t) = A \cos(\omega t) + B \sin(\omega t)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(x'' + \omega^2 x = 0 \quad\implies\quad x(t) = A \cos(\omega t) + B \sin(\omega t)\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
 
-def main():
-    # Try to remove dist directory, handle Windows permission errors
-    if DIST.exists():
-        try:
-            shutil.rmtree(DIST)
-        except PermissionError:
-            print(f"Warning: Could not remove {DIST} - files may be in use. Trying to clear contents...")
-            # Try to remove individual files instead
-            try:
-                for item in DIST.iterdir():
-                    if item.is_file():
-                        try:
-                            item.unlink()
-                        except PermissionError:
-                            print(f"Could not remove {item} - file in use")
-                    elif item.is_dir():
-                        try:
-                            shutil.rmtree(item)
-                        except PermissionError:
-                            print(f"Could not remove directory {item} - files in use")
-            except Exception as e:
-                print(f"Warning: Could not fully clear {DIST}: {e}")
-    
-    # Ensure dist directory exists
-    DIST.mkdir(exist_ok=True)
-    
-    # Build all pages from content
-    for subject, pages in CONTENT.items():
-        for page_key, page in pages.items():
-            build_page(subject, page_key, page)
-    
-    # Landing page → redirect to Math
-    idx = TEMPLATE.get_template("base.html").render(
-        title="Formula Reference", 
-        body='<script>location.href="math/index.html"</script><noscript><a href="math/index.html">Go to Mathematics</a></noscript>'
-    )
-    write(DIST / "index.html", idx)
-    
-    copy_assets()
-    print(f"Generated {len([p for pages in CONTENT.values() for p in pages])} pages to {DIST}")
-
-if __name__ == "__main__":
-    main() 
+<script src="../script.js"></script>
+</body>
+</html> 

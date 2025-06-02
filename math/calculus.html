@@ -66,23 +66,23 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Calculus</h1>
+  <p>Essential formulas and concepts in calculus</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="quadratic-formula">
-      <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+    <div class="formula-card" id="definition-of-derivative">
+      <h3>Definition of Derivative</h3>
+      <button class="copy-btn" data-tex="f&#39;(x) = \displaystyle \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(f'(x) = \displaystyle \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(f(x) is a function, f'(x) is its derivative. h is an increment in x (approaching 0 in the limit).\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      <p class="description">Defines the derivative as the instantaneous rate of change or slope of the function \(f(x)\) at point \(x\). Graphically, it’s the slope of the tangent line to \(y=f(x)\) at \(x\).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -91,18 +91,18 @@
       
     </div>
     
-    <div class="formula-card" id="binomial-theorem">
-      <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+    <div class="formula-card" id="power-rule-for-derivatives">
+      <h3>Power Rule (for derivatives)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \frac{d}{dx}\big(x^n\big) = n x^{n-1}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \frac{d}{dx}\big(x^n\big) = n x^{n-1}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(n is a constant exponent, x is the variable.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
+      <p class="description">Provides a quick way to differentiate monomials. For example, if \(f(x)=x^5\), then \(f'(x)=5x^4\). This rule is fundamental for polynomial differentiation.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -111,18 +111,18 @@
       
     </div>
     
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+    <div class="formula-card" id="indefinite-integral-power-rule">
+      <h3>Indefinite Integral (Power Rule)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \int x^n\,dx = \frac{x^{n+1}}{n+1} + C \qquad(n \neq -1)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \int x^n\,dx = \frac{x^{n+1}}{n+1} + C \qquad(n \neq -1)\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
+        <li>\(n is a constant exponent (not -1); C is the constant of integration (since antiderivatives are determined up to an additive constant).\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -131,18 +131,18 @@
       
     </div>
     
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
+    <div class="formula-card" id="integration-by-parts">
+      <h3>Integration by Parts</h3>
+      <button class="copy-btn" data-tex="\displaystyle \int u\,dv = uv - \int v\,du" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \int u\,dv = uv - \int v\,du\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(u and v are functions of x such that du and dv are their differentials (derivatives times dx). Often one sets u=f(x) and dv = g(x)dx.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

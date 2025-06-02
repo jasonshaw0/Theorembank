@@ -1,154 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathematics - Formula Reference</title>
-    <link rel="stylesheet" href="https://unpkg.com/@radix-ui/themes@latest/styles.css">
-    <link rel="stylesheet" href="../style.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
 </head>
 <body>
-    <div class="radix-themes-custom-fonts"> <!-- Radix Custom Fonts Helper -->
-        <radix-theme :accent-color="'indigo'" :gray-color="'slate'" :panel-background="'solid'" :scaling="'100%'" :radius="'medium'">
-            <div class="mobile-header">
-                <button id="hamburger-menu">&#9776; Menu</button>
-            </div>
-            <aside class="sidebar">
-                <nav>
-                    <ul class="sidebar-nav">
-                        <li>
-                            <button class="nav-section-toggle">Mathematics</button>
-                            <ul class="subcategory-list">
-                                <li><a href="index.html">Mathematics Home</a></li>
-                                <li><a href="arithmetic.html">Arithmetic</a></li>
-                                <li><a href="number_theory.html">Number Theory</a></li>
-                                <li><a href="algebra.html">Algebra</a></li>
-                                <li>
-                                    <button class="nav-subsection-toggle">Geometry</button>
-                                    <ul class="subcategory-list-nested">
-                                        <li><a href="geometry_plane.html">Plane Geometry</a></li>
-                                        <li><a href="geometry_solid.html">Solid Geometry</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="trigonometry.html">Trigonometry</a></li>
-                                <li><a href="analytic_geometry.html">Analytic Geometry</a></li>
-                                <li><a href="differential_geometry.html">Differential Geometry</a></li>
-                                <li>
-                                    <button class="nav-subsection-toggle">Calculus</button>
-                                    <ul class="subcategory-list-nested">
-                                        <li><a href="calculus_differentiation.html">Differentiation</a></li>
-                                        <li><a href="calculus_integration.html">Integration</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <button class="nav-subsection-toggle">Vector Calculus</button>
-                                    <ul class="subcategory-list-nested">
-                                        <li><a href="vector_calculus_operations.html">Vector Operations</a></li>
-                                        <li><a href="vector_calculus_integral_theorems.html">Integral Theorems</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="linear_algebra.html">Linear Algebra</a></li>
-                                <li><a href="abstract_algebra.html">Abstract Algebra</a></li>
-                                <li><a href="probability.html">Probability</a></li>
-                                <li><a href="statistics.html">Statistics</a></li>
-                                <li><a href="logic.html">Logic</a></li>
-                                <li><a href="set_theory.html">Set Theory</a></li>
-                                <li><a href="topology.html">Topology</a></li>
-                                <li><a href="differential_equations.html">Differential Equations</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <button class="nav-section-toggle">Physics</button>
-                            <ul class="subcategory-list">
-                                <li><a href="../physics/index.html">Physics Home</a></li>
-                                <li>
-                                    <button class="nav-subsection-toggle">Mechanics</button>
-                                    <ul class="subcategory-list-nested">
-                                        <li><a href="../physics/mechanics_kinematics.html">Kinematics (straight-line)</a></li>
-                                        <li><a href="../physics/mechanics_dynamics.html">Dynamics (forces & Newton's Laws)</a></li>
-                                        <li><a href="../physics/mechanics_rotational.html">Rotational Mechanics</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <button class="nav-subsection-toggle">Thermodynamics</button>
-                                    <ul class="subcategory-list-nested">
-                                        <li><a href="../physics/thermodynamics_laws.html">Laws & Entropy</a></li>
-                                        <li><a href="../physics/thermodynamics_gas_laws.html">Gas Laws & Thermal Processes</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <button class="nav-subsection-toggle">Electromagnetism</button>
-                                    <ul class="subcategory-list-nested">
-                                        <li><a href="../physics/electromagnetism_electrostatics.html">Electrostatics & Circuits</a></li>
-                                        <li><a href="../physics/electromagnetism_induction.html">Magnetism & Induction</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="../physics/optics.html">Optics</a></li>
-                                <li><a href="../physics/waves_oscillations.html">Waves & Oscillations</a></li>
-                                <li><a href="../physics/quantum_mechanics.html">Quantum Mechanics</a></li>
-                                <li>
-                                    <button class="nav-subsection-toggle">Relativity</button>
-                                    <ul class="subcategory-list-nested">
-                                        <li><a href="../physics/relativity_special.html">Special Relativity</a></li>
-                                        <li><a href="../physics/relativity_general.html">General Relativity</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="../physics/fluid_mechanics.html">Fluid Mechanics</a></li>
-                                <li><a href="../physics/nuclear_physics.html">Nuclear Physics</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <button class="nav-section-toggle">Engineering (Coming Soon)</button>
-                            <ul class="subcategory-list">
-                                <li><a href="#">Engineering Home (Coming Soon)</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-            <main class="content">
-                <h1>Mathematics</h1>
-                <p>Welcome to the Mathematics section. Here you will find formulas related to various branches of mathematics, from fundamental arithmetic to advanced calculus and abstract algebra.</p>
-                <h2>Subcategories</h2>
-                <ul>
-                    <li><a href="arithmetic.html">Arithmetic</a> - Basic operations, sequences, and series.</li>
-                    <li><a href="number_theory.html">Number Theory</a> - Properties of numbers, including primes and divisibility.</li>
-                    <li><a href="algebra.html">Algebra</a> - Equations, polynomials, and abstract structures.</li>
-                    <li>Geometry
-                        <ul>
-                            <li><a href="geometry_plane.html">Plane Geometry</a> - Shapes in two dimensions.</li>
-                            <li><a href="geometry_solid.html">Solid Geometry</a> - Shapes in three dimensions.</li>
-                        </ul>
-                    </li>
-                    <li><a href="trigonometry.html">Trigonometry</a> - Relationships involving angles and sides of triangles.</li>
-                    <li><a href="analytic_geometry.html">Analytic Geometry</a> - Geometry using a coordinate system.</li>
-                    <li><a href="differential_geometry.html">Differential Geometry</a> - Geometry of curves and surfaces using calculus.</li>
-                    <li>Calculus
-                        <ul>
-                            <li><a href="calculus_differentiation.html">Differentiation</a> - Rates of change and slopes.</li>
-                            <li><a href="calculus_integration.html">Integration</a> - Areas, volumes, and antiderivatives.</li>
-                        </ul>
-                    </li>
-                    <li>Vector Calculus
-                        <ul>
-                            <li><a href="vector_calculus_operations.html">Vector Operations</a> - Gradient, divergence, and curl.</li>
-                            <li><a href="vector_calculus_integral_theorems.html">Integral Theorems</a> - Green's, Stokes', and Divergence theorems.</li>
-                        </ul>
-                    </li>
-                    <li><a href="linear_algebra.html">Linear Algebra</a> - Vectors, matrices, and linear transformations.</li>
-                    <li><a href="abstract_algebra.html">Abstract Algebra</a> - Groups, rings, and fields.</li>
-                    <li><a href="probability.html">Probability</a> - The study of chance and randomness.</li>
-                    <li><a href="statistics.html">Statistics</a> - Analysis, interpretation, and presentation of data.</li>
-                    <li><a href="logic.html">Logic</a> - Principles of reasoning.</li>
-                    <li><a href="set_theory.html">Set Theory</a> - Collections of objects.</li>
-                    <li><a href="topology.html">Topology</a> - Properties of spaces preserved under continuous deformations.</li>
-                    <li><a href="differential_equations.html">Differential Equations</a> - Equations involving functions and their derivatives.</li>
-                </ul>
-            </main>
-            <script src="../script.js"></script>
-        </radix-theme>
-    </div> <!-- End Radix Custom Fonts Helper -->
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+        <ul class="sidebar-nav">
+            <!-- Mathematics Section -->
+            <li class="section-header">Mathematics</li>
+            <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+            <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+            <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+            <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+            <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+            <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+            <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+            <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+            <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+            <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+            <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+            <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+            <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+            <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+            <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+            <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+            <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+            <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+            
+            <!-- Physics Section -->
+            <li class="section-header">Physics</li>
+            <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+            <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+            <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+            <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+            <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+            <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+            <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+            <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+            <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+            <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+  <h1>Mathematics</h1>
+  <p>Comprehensive math reference with formulas and explanations</p>
+
+  <div class="formula-card-container">
+    
+    <div class="formula-card" id="sum-of-the-first-n-natural-numbers">
+      <h3>Sum of the first $n$ natural numbers</h3>
+      <button class="copy-btn" data-tex="1 + 2 + \cdots + n = \frac{n(n+1)}{2}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(1 + 2 + \cdots + n = \frac{n(n+1)}{2}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(n is a positive integer.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the sum of all natural numbers from \(1\) up to \(n\). Often illustrated by pairing terms (e.g. \(1+n\), \(2+(n-1)\), etc.) to simplify the addition.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="fermat-s-little-theorem">
+      <h3>Fermat's Little Theorem</h3>
+      <button class="copy-btn" data-tex="a^{p-1} \equiv 1 \pmod p" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(a^{p-1} \equiv 1 \pmod p\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(p is a prime number, a is an integer not divisible by p.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">In modular arithmetic, this theorem states that if \(p\) is prime, then \(a^{p-1}\) leaves a remainder of \(1\) upon division by \(p\). It’s fundamental for simplifying exponents mod \(p\).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="quadratic-formula">
+      <h3>Quadratic Formula</h3>
+      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="pythagorean-theorem">
+      <h3>Pythagorean Theorem</h3>
+      <button class="copy-btn" data-tex="c^2 = a^2 + b^2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(c^2 = a^2 + b^2\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(a and b are the lengths of the legs (perpendicular sides) of a right triangle, and c is the length of the hypotenuse (side opposite the right angle).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Relates the side lengths of a right-angled triangle. It is used to find the third side given the other two.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="trigonometric-ratios-right-triangle-definitions">
+      <h3>Trigonometric Ratios (right triangle definitions)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \sin\theta = \frac{\text{opposite}}{\text{hypotenuse}},\quad \cos\theta = \frac{\text{adjacent}}{\text{hypotenuse}},\quad \tan\theta = \frac{\text{opposite}}{\text{adjacent}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \sin\theta = \frac{\text{opposite}}{\text{hypotenuse}},\quad \cos\theta = \frac{\text{adjacent}}{\text{hypotenuse}},\quad \tan\theta = \frac{\text{opposite}}{\text{adjacent}}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Defines sine, cosine, and tangent as ratios of sides in a right-angled triangle.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="distance-between-two-points-2d">
+      <h3>Distance Between Two Points (2D)</h3>
+      <button class="copy-btn" data-tex="d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\((x_1, y_1) and (x_2, y_2) are the coordinates of the two points.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Calculates the straight-line distance between two points in the plane, derived from the Pythagorean theorem.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+  </div>
+</main>
+
+<script src="../script.js"></script>
 </body>
 </html> 

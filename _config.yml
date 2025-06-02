@@ -1,0 +1,32 @@
+# GitHub Pages Configuration
+title: "Formula Reference"
+description: "A comprehensive reference website for mathematical and physics formulas"
+url: "https://yourusername.github.io"
+baseurl: "/theorembank"
+
+# GitHub Pages specific settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclude build files and source content from Jekyll processing
+exclude:
+  - build.py
+  - debug_parser.py
+  - latex2json_working.py
+  - latex2json.py
+  - launch.py
+  - simple_test.py
+  - templates/
+  - content/
+  - dist/
+  - .conda/
+  - Trash/
+  - "*.py"
+  - GITHUB_SETUP.md
+  - GPT_O3_COMPREHENSIVE_FIX_PACKAGE.md
+
+# Include the generated HTML files
+include:
+  - math/
+  - physics/ 

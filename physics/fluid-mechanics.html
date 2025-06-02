@@ -66,15 +66,15 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Fluid Mechanics</h1>
+  <p>Essential formulas and concepts in fluid mechanics</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="quadratic-formula">
-      <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+    <div class="formula-card" id="hydrostatic-pressure">
+      <h3>Hydrostatic Pressure</h3>
+      <button class="copy-btn" data-tex="P = P_0 + \rho g h" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P = P_0 + \rho g h\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -82,7 +82,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      <p class="description">Pressure in a static fluid increases linearly with depth. This is why deep water has higher pressure. For example, every 10 m of water adds about 1 atmosphere of pressure.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -91,10 +91,10 @@
       
     </div>
     
-    <div class="formula-card" id="binomial-theorem">
-      <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+    <div class="formula-card" id="buoyant-force-archimedes-principle">
+      <h3>Buoyant Force (Archimedes’ Principle)</h3>
+      <button class="copy-btn" data-tex="F_b = \rho_{\text{fluid}}\, V_{\text{disp}}\, g" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(F_b = \rho_{\text{fluid}}\, V_{\text{disp}}\, g\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -102,7 +102,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
+      <p class="description">Any object in a fluid experiences an upward force equal to the weight of fluid it displaces. This principle explains floating: if \(F_b\) equals the object’s weight, it floats (weight of displaced fluid = weight of object).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -111,38 +111,18 @@
       
     </div>
     
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+    <div class="formula-card" id="equation-of-continuity">
+      <h3>Equation of Continuity</h3>
+      <button class="copy-btn" data-tex="A_1 v_1 = A_2 v_2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(A_1 v_1 = A_2 v_2\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
+        <li>\(A_1, A_2 are cross-sectional areas of a flow tube at two locations, v_1, v_2 are fluid speeds at those locations (for an incompressible fluid).\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
-    </div>
-    
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      <p class="description">Expresses mass conservation in steady flow: the volume flow rate \(A v\) is constant along a streamline. If a pipe narrows (smaller \(A\)), the fluid speed \(v\) increases.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

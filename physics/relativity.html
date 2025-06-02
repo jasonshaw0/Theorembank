@@ -66,15 +66,15 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Relativity</h1>
+  <p>Essential formulas and concepts in relativity</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="quadratic-formula">
-      <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+    <div class="formula-card" id="length-contraction">
+      <h3>Length Contraction</h3>
+      <button class="copy-btn" data-tex="L = \frac{L_0}{\gamma} = L_0 \sqrt{1 - \frac{v^2}{c^2}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(L = \frac{L_0}{\gamma} = L_0 \sqrt{1 - \frac{v^2}{c^2}}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -82,7 +82,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      <p class="description">Objects are measured to be shorter along the direction of motion relative to an observer for whom they are moving. For instance, a fast-moving rod or spaceship appears foreshortened. Like time dilation, this effect is only significant at speeds close to \(c\).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -91,10 +91,10 @@
       
     </div>
     
-    <div class="formula-card" id="binomial-theorem">
-      <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+    <div class="formula-card" id="mass-energy-equivalence">
+      <h3>Mass–Energy Equivalence</h3>
+      <button class="copy-btn" data-tex="E = m c^2" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(E = m c^2\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -102,7 +102,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
+      <p class="description">Shows mass is a concentrated form of energy. A small amount of mass can convert to a huge amount of energy (because \(c^2\) is large). This underlies nuclear reactions where binding energy differences (mass defects) release energy.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -111,18 +111,18 @@
       
     </div>
     
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+    <div class="formula-card" id="relativistic-momentum">
+      <h3>Relativistic Momentum</h3>
+      <button class="copy-btn" data-tex="\displaystyle p = \gamma m v = \frac{m v}{\sqrt{1 - v^2/c^2}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle p = \gamma m v = \frac{m v}{\sqrt{1 - v^2/c^2}}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
+        
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -131,18 +131,38 @@
       
     </div>
     
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
+    <div class="formula-card" id="schwarzschild-radius-black-hole">
+      <h3>Schwarzschild Radius (Black Hole)</h3>
+      <button class="copy-btn" data-tex="r_s = \frac{2 G M}{c^2}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(r_s = \frac{2 G M}{c^2}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(M = mass of a (spherically symmetric, non-rotating) object, G = gravitational constant, c = speed of light, r_s = Schwarzschild radius.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      <p class="description">If an object of mass \(M\) is compressed within this radius, its escape velocity exceeds \(c\) and it becomes a black hole. For example, the Earth’s \(r_s\) is ~9 mm, the Sun’s ~3 km. This formula comes from General Relativity’s solution for spacetime around a mass.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="gravitational-time-dilation-weak-field">
+      <h3>Gravitational Time Dilation (weak field)</h3>
+      <button class="copy-btn" data-tex="t_f = t_p \sqrt{1 - \frac{2GM}{r c^2}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(t_f = t_p \sqrt{1 - \frac{2GM}{r c^2}}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(t_p is proper time (time measured by a clock at radius r in gravitational field), t_f is time measured by a far-away observer, M is mass of gravitating body, r is radial position of the clock (from center of mass).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Clocks deeper in a gravitational well (closer to a mass) run slower relative to clocks far away. This is a prediction of GR (even the GPS satellites must correct for this and special relativistic effects to synchronize with Earth clocks). When \(r\) is very large (far away), the factor tends to 1 (no dilation).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

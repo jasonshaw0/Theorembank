@@ -66,23 +66,23 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Set Theory</h1>
+  <p>Essential formulas and concepts in set theory</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="quadratic-formula">
-      <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+    <div class="formula-card" id="union-intersection-inclusion-exclusion-for-two-sets">
+      <h3>Union-Intersection (Inclusion-Exclusion for two sets)</h3>
+      <button class="copy-btn" data-tex="|A \cup B| = |A| + |B| - |A \cap B|" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(|A \cup B| = |A| + |B| - |A \cap B|\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(A and B are sets; |X| denotes the number of elements in set X.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      <p class="description">Calculates the size of the union of two sets by adding their sizes and subtracting the overlap (which was counted twice). This principle generalizes to more sets with alternating plus and minus of intersections (inclusion-exclusion principle).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -91,10 +91,10 @@
       
     </div>
     
-    <div class="formula-card" id="binomial-theorem">
-      <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+    <div class="formula-card" id="size-of-power-set">
+      <h3>Size of Power Set</h3>
+      <button class="copy-btn" data-tex="| \mathcal{P}(A) | = 2^{|A|}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(| \mathcal{P}(A) | = 2^{|A|}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -102,47 +102,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
-    </div>
-    
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
-    </div>
-    
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      <p class="description">The number of possible subsets of a set \(A\) is \(2^{|A|}\) (each element either in or out of a subset). For instance, a set with 3 elements has \(2^3=8\) subsets.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

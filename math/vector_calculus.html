@@ -66,15 +66,15 @@
 </aside>
 
 <main class="content">
-  <h1>Physics</h1>
-  <p>Comprehensive physics reference with formulas and explanations</p>
+  <h1>Vector Calculus</h1>
+  <p>Essential formulas and concepts in vector calculus</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="projectile-range-level-ground">
-      <h3>Projectile Range (level ground)</h3>
-      <button class="copy-btn" data-tex="R = \frac{v_0^2 \sin(2\theta)}{g}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(R = \frac{v_0^2 \sin(2\theta)}{g}\)</div>
+    <div class="formula-card" id="gradient-of-a-scalar-field">
+      <h3>Gradient (of a scalar field)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \nabla f = \Big(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\Big)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \nabla f = \Big(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\Big)\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -91,10 +91,30 @@
       
     </div>
     
-    <div class="formula-card" id="first-law-of-thermodynamics">
-      <h3>First Law of Thermodynamics</h3>
-      <button class="copy-btn" data-tex="\displaystyle \Delta U = Q - W" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \Delta U = Q - W\)</div>
+    <div class="formula-card" id="divergence-of-a-vector-field">
+      <h3>Divergence (of a vector field)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \nabla\cdot \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \nabla\cdot \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Divergence is a scalar field representing the net rate of "outflow" from an infinitesimal volume at each point. Positive divergence indicates a source (flow expanding outward), negative indicates a sink.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="curl-of-a-vector-field">
+      <h3>Curl (of a vector field)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \nabla \times \mathbf{F} = \Big(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}, \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}, \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\Big)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \nabla \times \mathbf{F} = \Big(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}, \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}, \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\Big)\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -111,18 +131,18 @@
       
     </div>
     
-    <div class="formula-card" id="coulomb-s-law">
-      <h3>Coulomb’s Law</h3>
-      <button class="copy-btn" data-tex="F = k\,\frac{q_1 q_2}{r^2}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(F = k\,\frac{q_1 q_2}{r^2}\)</div>
+    <div class="formula-card" id="laplacian">
+      <h3>Laplacian</h3>
+      <button class="copy-btn" data-tex="\displaystyle \nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(f is a twice-differentiable scalar function of x,y,z.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the electrostatic force between two charges. The force is attractive if charges are opposite, repulsive if like-signed. It is an inverse-square law similar in form to gravity.</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -131,10 +151,30 @@
       
     </div>
     
-    <div class="formula-card" id="snell-s-law-refraction">
-      <h3>Snell’s Law (Refraction)</h3>
-      <button class="copy-btn" data-tex="n_1 \sin \theta_1 = n_2 \sin \theta_2" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(n_1 \sin \theta_1 = n_2 \sin \theta_2\)</div>
+    <div class="formula-card" id="green-s-theorem-in-the-plane">
+      <h3>Green’s Theorem (in the plane)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \iint_{D}\Big(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\Big)\,dA = \oint_{\partial D} \big(P\,dx + Q\,dy\big)" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \iint_{D}\Big(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\Big)\,dA = \oint_{\partial D} \big(P\,dx + Q\,dy\big)\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Relates a double integral over region \(D\) to a line integral around its boundary. It’s a special case of Stokes’ Theorem in 2D, often used to convert between circulation (line integral) and curl (area integral).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="stokes-theorem">
+      <h3>Stokes’ Theorem</h3>
+      <button class="copy-btn" data-tex="\displaystyle \iint_{S} (\nabla \times \mathbf{F})\cdot d\mathbf{S} = \oint_{\partial S} \mathbf{F}\cdot d\mathbf{\ell}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \iint_{S} (\nabla \times \mathbf{F})\cdot d\mathbf{S} = \oint_{\partial S} \mathbf{F}\cdot d\mathbf{\ell}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -151,10 +191,10 @@
       
     </div>
     
-    <div class="formula-card" id="wave-speed">
-      <h3>Wave Speed</h3>
-      <button class="copy-btn" data-tex="v = f \,\lambda" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(v = f \,\lambda\)</div>
+    <div class="formula-card" id="divergence-theorem-gauss-s-theorem">
+      <h3>Divergence Theorem (Gauss’s Theorem)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \iiint_{V} (\nabla \cdot \mathbf{F})\,dV = \iint_{\partial V} \mathbf{F}\cdot d\mathbf{A}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \iiint_{V} (\nabla \cdot \mathbf{F})\,dV = \iint_{\partial V} \mathbf{F}\cdot d\mathbf{A}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -162,27 +202,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description"></p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
-    </div>
-    
-    <div class="formula-card" id="planck-einstein-relation">
-      <h3>Planck-Einstein Relation</h3>
-      <button class="copy-btn" data-tex="E = h\,f" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(E = h\,f\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Indicates that electromagnetic radiation is quantized into photons, each with energy proportional to frequency. Higher frequency (e.g., X-rays) means higher energy per photon than lower frequency (e.g., radio waves).</p>
+      <p class="description">Relates the flux of a vector field out of a closed surface to the volume integral of the divergence over the region inside. In essence, it formalizes that the total "outflow" from a volume equals the sum of all sources inside.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

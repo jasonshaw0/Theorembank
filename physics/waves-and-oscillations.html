@@ -66,15 +66,15 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Waves and Oscillations</h1>
+  <p>Essential formulas and concepts in waves and oscillations</p>
 
   <div class="formula-card-container">
     
-    <div class="formula-card" id="quadratic-formula">
-      <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
+    <div class="formula-card" id="wave-speed">
+      <h3>Wave Speed</h3>
+      <button class="copy-btn" data-tex="v = f \,\lambda" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(v = f \,\lambda\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -82,7 +82,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
+      <p class="description"></p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -91,18 +91,18 @@
       
     </div>
     
-    <div class="formula-card" id="binomial-theorem">
-      <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
+    <div class="formula-card" id="period-and-frequency">
+      <h3>Period and Frequency</h3>
+      <button class="copy-btn" data-tex="T = \frac{1}{f}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(T = \frac{1}{f}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        
+        <li>\(T = period (time for one complete cycle), f = frequency.\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
+      <p class="description">Simply the reciprocal relationship between how long one cycle takes and how many cycles occur per second. If a pendulum swings back and forth in 2 seconds (\(T=2\) s), its frequency is \(0.5\) Hz.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -111,18 +111,18 @@
       
     </div>
     
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
+    <div class="formula-card" id="pendulum-small-angle-period">
+      <h3>Pendulum (small angle) Period</h3>
+      <button class="copy-btn" data-tex="T = 2\pi \sqrt{\frac{L}{g}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(T = 2\pi \sqrt{\frac{L}{g}}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
+        <li>\(L = length of a simple pendulum (mass on a string), g = acceleration due to gravity. (This formula assumes small oscillation amplitude so that motion is approximately simple harmonic.)\)</li>
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
+      <p class="description">Gives the time for one complete swing back-and-forth of a pendulum (for small angles). It shows period is independent of mass and amplitude (for small angles) and increases with the square root of length.</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
@@ -131,10 +131,50 @@
       
     </div>
     
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
+    <div class="formula-card" id="mass-spring-oscillator-period">
+      <h3>Mass-Spring Oscillator Period</h3>
+      <button class="copy-btn" data-tex="T = 2\pi \sqrt{\frac{m}{k}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(T = 2\pi \sqrt{\frac{m}{k}}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(m = mass attached to spring, k = spring force constant (stiffness).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">The period of an object of mass \(m\) oscillating on a spring (assuming no damping). A stiffer spring (\(k\) large) gives a shorter period (faster oscillation), while a heavier mass gives a longer period.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="wave-equation-one-dimension">
+      <h3>Wave Equation (one dimension)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \frac{\partial^2 y}{\partial t^2} = v^2\,\frac{\partial^2 y}{\partial x^2}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \frac{\partial^2 y}{\partial t^2} = v^2\,\frac{\partial^2 y}{\partial x^2}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(y(x,t) describes the wave displacement as function of position x and time t. v = wave speed (assumed constant here).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">A differential equation that \(y(x,t)\) satisfies for many physical waves (on a string, sound, light in 1D). It states that the acceleration of a small segment (left side) is proportional to the curvature of the wave shape (right side) with factor \(v^2\). Solutions are typically \(y(x,t)=f(x-vt)+g(x+vt)\) (waves traveling right and left).</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="sound-intensity-level-decibels">
+      <h3>Sound Intensity Level (Decibels)</h3>
+      <button class="copy-btn" data-tex="\displaystyle \beta = 10 \log_{10}\!\frac{I}{I_0}\,\text{dB}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\displaystyle \beta = 10 \log_{10}\!\frac{I}{I_0}\,\text{dB}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -142,7 +182,7 @@
       </ul>
       
       <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
+      <p class="description">Converts a wide range of sound intensity into a logarithmic scale that correlates with perceived loudness. An increase of 10 dB means intensity is 10 times higher (approx. twice as loud to the human ear).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>

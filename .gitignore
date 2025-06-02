@@ -1,28 +1,15 @@
-# Theorembank - LaTeX Formula Reference Site
+# Formula Reference GitHub Pages Site
 # .gitignore
 
-# Python
+# Python development files (for contributors)
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist-python/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
 # Virtual environments
 .env
@@ -33,7 +20,7 @@ ENV/
 env.bak/
 venv.bak/
 
-# Conda environment
+# Conda environment (development)
 .conda/
 
 # IDE/Editor files
@@ -62,38 +49,28 @@ logs/
 temp/
 tmp/
 
-# LaTeX auxiliary files
-*.aux
-*.fdb_latexmk
-*.fls
-*.synctex.gz
-*.toc
-*.out
-*.nav
-*.snm
-*.vrb
-
 # Backup files
 *.bak
 *.backup
 *~
 
-# Large development files (keep the main ones)
+# Development/build files that aren't needed for the live site
 formulappoverview.pdf
 GPT_O3_COMPREHENSIVE_FIX_PACKAGE.md
+GITHUB_SETUP.md
 
 # Trash/development folders
 Trash/
 debug/
 
-# Keep these important files:
-# README.md
-# formula_library.tex
-# build.py
-# latex2json_working.py
-# script.js
-# style.css
-# index.html
-# content/
-# templates/
-# dist/ 
+# Keep these files for the GitHub Pages site:
+# README.md - GitHub Pages description
+# index.html - Main landing page
+# style.css - Styling
+# script.js - JavaScript functionality
+# math/ - Mathematics formulas pages
+# physics/ - Physics formulas pages
+# _config.yml - GitHub Pages config
+# .nojekyll - GitHub Pages setting
+# content/ - Source data (for contributors)
+# templates/ - Templates (for contributors) 

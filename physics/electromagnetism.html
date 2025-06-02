@@ -66,50 +66,10 @@
 </aside>
 
 <main class="content">
-  <h1>Physics</h1>
-  <p>Comprehensive physics reference with formulas and explanations</p>
+  <h1>Electromagnetism</h1>
+  <p>Essential formulas and concepts in electromagnetism</p>
 
   <div class="formula-card-container">
-    
-    <div class="formula-card" id="projectile-range-level-ground">
-      <h3>Projectile Range (level ground)</h3>
-      <button class="copy-btn" data-tex="R = \frac{v_0^2 \sin(2\theta)}{g}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(R = \frac{v_0^2 \sin(2\theta)}{g}\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description"></p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
-    </div>
-    
-    <div class="formula-card" id="first-law-of-thermodynamics">
-      <h3>First Law of Thermodynamics</h3>
-      <button class="copy-btn" data-tex="\displaystyle \Delta U = Q - W" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \Delta U = Q - W\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description"></p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
-    </div>
     
     <div class="formula-card" id="coulomb-s-law">
       <h3>Coulomb’s Law</h3>
@@ -131,10 +91,110 @@
       
     </div>
     
-    <div class="formula-card" id="snell-s-law-refraction">
-      <h3>Snell’s Law (Refraction)</h3>
-      <button class="copy-btn" data-tex="n_1 \sin \theta_1 = n_2 \sin \theta_2" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(n_1 \sin \theta_1 = n_2 \sin \theta_2\)</div>
+    <div class="formula-card" id="electric-field-of-point-charge">
+      <h3>Electric Field of Point Charge</h3>
+      <button class="copy-btn" data-tex="E = k\,\frac{q}{r^2}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(E = k\,\frac{q}{r^2}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(q = source charge, r = distance from the charge, E = electric field magnitude at that distance (radially outward for q>0, inward for q<0).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">The electric field is force per unit charge. For a point charge, it diminishes with distance squared.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="electric-potential-point-charge">
+      <h3>Electric Potential (Point Charge)</h3>
+      <button class="copy-btn" data-tex="V = k\,\frac{q}{r}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = k\,\frac{q}{r}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(q = point charge, r = distance from the charge, V = electric potential (voltage) at that point relative to infinity.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">The electric potential is the potential energy per unit charge. For a point charge, it falls off as \(1/r\). Differences in \(V\) between two points give the work per charge to move between those points.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="capacitance-parallel-plate">
+      <h3>Capacitance (Parallel Plate)</h3>
+      <button class="copy-btn" data-tex="C = \dfrac{\varepsilon_0 A}{d}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(C = \dfrac{\varepsilon_0 A}{d}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Capacitance is the ability to store charge per unit voltage (\(C=Q/V\)). For parallel plates, larger area or smaller gap yields bigger \(C\). This formula is a basic design equation for capacitors.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="ohm-s-law">
+      <h3>Ohm’s Law</h3>
+      <button class="copy-btn" data-tex="V = I R" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(V = I R\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(V = voltage (potential difference across a resistor or circuit element), I = current through it, R = resistance.\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description"></p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="electrical-power">
+      <h3>Electrical Power</h3>
+      <button class="copy-btn" data-tex="P = V I = I^2 R = \frac{V^2}{R}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(P = V I = I^2 R = \frac{V^2}{R}\)</div>
+      
+      <h4>Variables:</h4>
+      <ul class="variables">
+        <li>\(P = power (rate of electrical energy consumption or production), V = voltage across a component, I = current through it, R = resistance (if using that form).\)</li>
+      </ul>
+      
+      <h4>Description/Usage:</h4>
+      <p class="description">Different forms of the power formula useful depending on known quantities. For instance, a 60 W light bulb on household 120 V draws \(I = P/V = 0.5\) A. The formulas also explain joule heating: \(I^2R\) is heat dissipated in a resistor.</p>
+      
+      
+      <div class="visual-placeholder">Mathematical concept visualization</div>
+      
+      
+      
+    </div>
+    
+    <div class="formula-card" id="lorentz-force-on-a-charge">
+      <h3>Lorentz Force (on a charge)</h3>
+      <button class="copy-btn" data-tex="\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -151,10 +211,10 @@
       
     </div>
     
-    <div class="formula-card" id="wave-speed">
-      <h3>Wave Speed</h3>
-      <button class="copy-btn" data-tex="v = f \,\lambda" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(v = f \,\lambda\)</div>
+    <div class="formula-card" id="speed-of-light-from-em-constants">
+      <h3>Speed of Light from EM Constants</h3>
+      <button class="copy-btn" data-tex="c = \dfrac{1}{\sqrt{\mu_0\,\varepsilon_0}}" title="Copy LaTeX code">📋</button>
+      <div class="mathjax-expression">\(c = \dfrac{1}{\sqrt{\mu_0\,\varepsilon_0}}\)</div>
       
       <h4>Variables:</h4>
       <ul class="variables">
@@ -163,26 +223,6 @@
       
       <h4>Description/Usage:</h4>
       <p class="description"></p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
-    </div>
-    
-    <div class="formula-card" id="planck-einstein-relation">
-      <h3>Planck-Einstein Relation</h3>
-      <button class="copy-btn" data-tex="E = h\,f" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(E = h\,f\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Indicates that electromagnetic radiation is quantized into photons, each with energy proportional to frequency. Higher frequency (e.g., X-rays) means higher energy per photon than lower frequency (e.g., radio waves).</p>
       
       
       <div class="visual-placeholder">Mathematical concept visualization</div>
