@@ -214,4 +214,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   console.log('🎯 Modern navigation initialized - no more collapsing menus!');
-}); 
+});

@@ -7,7 +7,7 @@ def create_codebase_zip():
     """Create a zip file of the codebase excluding unnecessary files/folders"""
     
     # Define what to exclude
-    exclude_dirs = {'.git', '.conda', 'Trash', '.vscode', 'dist', '__pycache__'}
+    exclude_dirs = {'.git', '.conda', 'Trash', '.vscode', 'dist', '__pycache__', 'node_modules'}
     exclude_files = {'.DS_Store', 'Thumbs.db'}
     
     def should_include(path):
@@ -44,4 +44,4 @@ def create_codebase_zip():
     print(f'📦 Size: {size / 1024 / 1024:.2f} MB')
 
 if __name__ == "__main__":
-    create_codebase_zip() 
+    create_codebase_zip()
