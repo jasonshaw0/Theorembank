@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+---
+
+<Layout title="Live Math Editor">
+  <h1>Live Math Editor</h1>
+  <p>Type any expression below to see it rendered instantly. Click "Copy LaTeX" to copy the source code.</p>
+
+  <math-field id="liveEditor" style="min-height: 2.2em; font-size: 1.2rem;"></math-field>
+  <br />
+  <button id="copyBtn">Copy LaTeX</button>
+
+  <script type="module">
+    import 'https://unpkg.com/mathlive?module';
+    const editor = document.getElementById('liveEditor');
+    const btn = document.getElementById('copyBtn');
+    btn.addEventListener('click', async () => {
+      const latex = editor.getValue('latex');
+      await navigator.clipboard.writeText(latex);
+      const originalText = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => (btn.textContent = originalText), 1500);
+    });
+  </script>
+</Layout> 

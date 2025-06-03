@@ -17,9 +17,149 @@
       svg: { fontCache: 'global' }
     };
   </script>
+  <style>
+    .welcome-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: var(--bg);
+      padding: 20px;
+    }
+    
+    .welcome-card {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 16px;
+      padding: 48px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 8px 32px var(--shadow);
+    }
+    
+    .welcome-card h1 {
+      color: var(--accent);
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      border: none;
+    }
+    
+    .welcome-card p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      color: var(--fg);
+    }
+    
+    .action-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .action-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px var(--shadow);
+    }
+    
+    .action-btn.secondary {
+      background: var(--panel);
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+    
+    .action-btn.secondary:hover {
+      background: var(--accent);
+      color: white;
+    }
+    
+    .theme-toggle-corner {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .theme-toggle-corner:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+  </style>
 </head>
 <body>
-<script>location.href="math/index.html"</script><noscript><a href="math/index.html">Go to Mathematics</a></noscript>
-<script src="script.js"></script>
+
+<button class="theme-toggle-corner" id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+
+<div class="welcome-container">
+  <div class="welcome-card">
+    <h1>📐 Formula Reference</h1>
+    <p>Your comprehensive reference for mathematical and physics formulas. Browse organized collections or try our interactive math editor.</p>
+    
+    <div class="action-buttons">
+      <a href="math/index.html" class="action-btn">📚 Browse Mathematics</a>
+      <a href="math/editor.html" class="action-btn secondary">🧮 Live Math Editor</a>
+    </div>
+    
+    <p style="margin-top: 24px; font-size: 0.9rem; color: rgba(var(--fg), 0.7);">
+      <a href="physics/index.html" style="color: var(--accent); text-decoration: none;">⚛️ Physics Section</a> also available
+    </p>
+  </div>
+</div>
+
+<script>
+  // Theme toggle functionality
+  const themeBtn = document.getElementById("theme-toggle");
+  
+  const toggleTheme = () => {
+    const root = document.documentElement;
+    const currentTheme = root.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+    
+    themeBtn.textContent = newTheme === "dark" ? "☀️" : "🌙";
+  };
+  
+  // Initialize theme from localStorage
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  themeBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+  themeBtn.onclick = toggleTheme;
+  
+  // Keyboard shortcut for theme toggle
+  document.addEventListener("keydown", e => {
+    if (e.ctrlKey && e.key === "j") {
+      e.preventDefault();
+      toggleTheme();
+    }
+  });
+</script>
+
 </body>
 </html> 

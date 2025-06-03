@@ -1,0 +1,128 @@
+---
+import Layout from '../../../layouts/BaseLayout.astro';
+---
+
+<Layout title="Electrostatics">
+  <h1>Electrostatics</h1>
+  <p>Fundamental laws and formulas for static electric fields and charges.</p>
+
+  <div class="formula-grid">
+    <div class="formula-card">
+      <h3>Coulomb's Law</h3>
+      <div class="formula">$$F = k \frac{q_1 q_2}{r^2}$$</div>
+      <p>Force between two point charges.</p>
+      <button class="copy-btn" data-latex="F = k \\frac{q_1 q_2}{r^2}">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Electric Field</h3>
+      <div class="formula">$$\vec{E} = k \frac{q}{r^2} \hat{r}$$</div>
+      <p>Electric field of a point charge.</p>
+      <button class="copy-btn" data-latex="\\vec{E} = k \\frac{q}{r^2} \\hat{r}">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Electric Potential</h3>
+      <div class="formula">$$V = k \frac{q}{r}$$</div>
+      <p>Electric potential of a point charge.</p>
+      <button class="copy-btn" data-latex="V = k \\frac{q}{r}">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Gauss's Law</h3>
+      <div class="formula">$$\oint \vec{E} \cdot d\vec{A} = \frac{Q_{enc}}{\varepsilon_0}$$</div>
+      <p>Electric flux through closed surface.</p>
+      <button class="copy-btn" data-latex="\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{enc}}{\\varepsilon_0}">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Capacitance</h3>
+      <div class="formula">$$C = \frac{Q}{V}$$</div>
+      <div class="formula">$$C = \varepsilon_0 \frac{A}{d}$$ (parallel plate)</div>
+      <p>Capacitance definitions and parallel plate formula.</p>
+      <button class="copy-btn" data-latex="C = \\frac{Q}{V}">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Energy in Electric Field</h3>
+      <div class="formula">$$U = \frac{1}{2}CV^2 = \frac{1}{2}QV = \frac{Q^2}{2C}$$</div>
+      <p>Energy stored in a capacitor.</p>
+      <button class="copy-btn" data-latex="U = \\frac{1}{2}CV^2 = \\frac{1}{2}QV = \\frac{Q^2}{2C}">Copy LaTeX</button>
+    </div>
+  </div>
+
+  <script>
+    // Load KaTeX for math rendering
+    import('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js').then(() => {
+      import('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js').then(() => {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
+        });
+      });
+    });
+
+    // Add event listeners after DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyButtons = document.querySelectorAll('.copy-btn');
+      copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const latex = this.getAttribute('data-latex');
+          navigator.clipboard.writeText(latex).then(() => {
+            this.textContent = 'Copied!';
+            setTimeout(() => this.textContent = 'Copy LaTeX', 1500);
+          });
+        });
+      });
+    });
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  
+  <style>
+    .formula-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .formula-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .formula-card h3 {
+      margin: 0 0 1rem 0;
+      color: #2563eb;
+    }
+    
+    .formula {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    
+    .copy-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    
+    .copy-btn:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</Layout> 

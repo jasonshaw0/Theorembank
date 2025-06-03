@@ -1,0 +1,127 @@
+---
+import Layout from '../../../layouts/BaseLayout.astro';
+---
+
+<Layout title="Kinematics">
+  <h1>Kinematics</h1>
+  <p>Essential equations of motion for objects with constant acceleration.</p>
+
+  <div class="formula-grid">
+    <div class="formula-card">
+      <h3>Position vs Time</h3>
+      <div class="formula">$$x = x_0 + v_0 t + \frac{1}{2}at^2$$</div>
+      <p>Position as a function of time with constant acceleration.</p>
+      <button class="copy-btn" data-latex="x = x_0 + v_0 t + \\frac{1}{2}at^2">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Velocity vs Time</h3>
+      <div class="formula">$$v = v_0 + at$$</div>
+      <p>Velocity as a function of time with constant acceleration.</p>
+      <button class="copy-btn" data-latex="v = v_0 + at">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Velocity-Position Relation</h3>
+      <div class="formula">$$v^2 = v_0^2 + 2a(x - x_0)$$</div>
+      <p>Relates velocity to position without time.</p>
+      <button class="copy-btn" data-latex="v^2 = v_0^2 + 2a(x - x_0)">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Average Velocity</h3>
+      <div class="formula">$$\bar{v} = \frac{x_f - x_i}{t_f - t_i}$$</div>
+      <p>Average velocity over a time interval.</p>
+      <button class="copy-btn" data-latex="\\bar{v} = \\frac{x_f - x_i}{t_f - t_i}">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Projectile Motion - Range</h3>
+      <div class="formula">$$R = \frac{v_0^2 \sin(2\theta)}{g}$$</div>
+      <p>Maximum horizontal range of a projectile.</p>
+      <button class="copy-btn" data-latex="R = \\frac{v_0^2 \\sin(2\\theta)}{g}">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Circular Motion - Centripetal Acceleration</h3>
+      <div class="formula">$$a_c = \frac{v^2}{r} = \omega^2 r$$</div>
+      <p>Acceleration toward the center in circular motion.</p>
+      <button class="copy-btn" data-latex="a_c = \\frac{v^2}{r} = \\omega^2 r">Copy LaTeX</button>
+    </div>
+  </div>
+
+  <script>
+    // Load KaTeX for math rendering
+    import('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js').then(() => {
+      import('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js').then(() => {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ]
+        });
+      });
+    });
+
+    // Add event listeners after DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      const copyButtons = document.querySelectorAll('.copy-btn');
+      copyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const latex = this.getAttribute('data-latex');
+          navigator.clipboard.writeText(latex).then(() => {
+            this.textContent = 'Copied!';
+            setTimeout(() => this.textContent = 'Copy LaTeX', 1500);
+          });
+        });
+      });
+    });
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  
+  <style>
+    .formula-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .formula-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .formula-card h3 {
+      margin: 0 0 1rem 0;
+      color: #2563eb;
+    }
+    
+    .formula {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #f8fafc;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    
+    .copy-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    
+    .copy-btn:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</Layout> 

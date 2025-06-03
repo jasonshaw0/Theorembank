@@ -1,0 +1,14 @@
+{
+  "name": "theorembank-site",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.0.0",
+    "mathlive": "^0.100.0"
+  }
+} 

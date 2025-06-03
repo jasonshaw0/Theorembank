@@ -1,0 +1,660 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+% Page setup
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{Formula Reference Library}
+\fancyfoot[C]{\thepage}
+
+% Section formatting
+\titleformat{\section}[block]{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[block]{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Custom list formatting
+\setlist[itemize]{label=$\bullet$, leftmargin=1.5em}
+
+\begin{document}
+
+\title{\textbf{Formula Reference Library}}
+\author{}
+\date{}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Mathematics}
+
+\subsection{Arithmetic \& Number Theory}
+
+\subsubsection{Sequences}
+
+\begin{itemize}
+\item \textbf{math\_arith\_sequence\_01} -- Arithmetic Sequence (n-th Term): 
+\[a_n = a_1 + (n-1)d\]
+Here $n$ is the term number, $a_1$ is the first term, and $d$ is the common difference. This formula gives the $n$-th term of an arithmetic sequence (constant difference between consecutive terms).
+
+\item \textbf{math\_arith\_sequence\_02} -- Geometric Sequence (n-th Term): 
+\[a_n = a_1 \cdot r^{n-1}\]
+In this formula, $a_1$ is the first term and $r$ is the common ratio between terms. It provides the $n$-th term of a geometric sequence (each term is obtained by multiplying the previous term by $r$).
+\end{itemize}
+
+\subsubsection{Series (Summations)}
+
+\begin{itemize}
+\item \textbf{math\_arith\_series\_01} -- Sum of First $n$ Integers: 
+\[1 + 2 + \cdots + n = \frac{n(n+1)}{2}\]
+Here $n$ is a positive integer. It yields the sum of the first $n$ natural numbers.
+
+\item \textbf{math\_arith\_series\_02} -- Sum of First $n$ Squares: 
+\[1^2 + 2^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}\]
+In this formula, $n$ is a positive integer. It calculates the sum of the squares of the first $n$ natural numbers.
+
+\item \textbf{math\_arith\_series\_03} -- Sum of First $n$ Cubes: 
+\[1^3 + 2^3 + \cdots + n^3 = \left(\frac{n(n+1)}{2}\right)^2\]
+Here $n$ is a positive integer. It gives the sum of the cubes of the first $n$ natural numbers (which equals the square of the sum of the first $n$ numbers).
+
+\item \textbf{math\_arith\_series\_04} -- Arithmetic Series (Finite Sum): 
+\[S_n = \frac{n}{2}\big(2a_1 + (n-1)d\big)\]
+Here $n$ is the number of terms, $a_1$ is the first term, and $d$ is the common difference. This formula computes the sum $S_n$ of the first $n$ terms of an arithmetic progression.
+
+\item \textbf{math\_arith\_series\_05} -- Geometric Series (Finite Sum): 
+\[S_n = a_1\frac{r^n - 1}{r - 1} \quad \text{(for } r \neq 1\text{)}\]
+In this formula, $n$ is the number of terms, $a_1$ is the first term, and $r$ is the common ratio. It gives the sum of the first $n$ terms of a geometric series.
+
+\item \textbf{math\_arith\_series\_06} -- Infinite Geometric Series: 
+\[S_{\infty} = \frac{a_1}{1 - r} \quad \text{(valid if } |r| < 1\text{)}\]
+Here $a_1$ is the first term and $r$ is the common ratio in absolute value less than 1. This formula provides the sum of an infinite geometric series that converges.
+\end{itemize}
+
+\subsubsection{Number Theory}
+
+\begin{itemize}
+\item \textbf{math\_arith\_number\_theory\_01} -- GCD--LCM Relationship: 
+\[\text{lcm}(a,b) = \frac{a \cdot b}{\gcd(a,b)}\]
+Here $a$ and $b$ are positive integers, $\gcd(a,b)$ is their greatest common divisor, and $\text{lcm}(a,b)$ is their least common multiple. This formula relates the product of two integers to the product of their GCD and LCM.
+\end{itemize}
+
+\subsection{Algebra}
+
+\subsubsection{Quadratic Equations}
+
+\begin{itemize}
+\item \textbf{math\_algebra\_quad\_01} -- Quadratic Formula: 
+\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+Here $a$, $b$, and $c$ are coefficients of the quadratic equation $ax^2 + bx + c = 0$, and $x$ represents the variable. This formula gives the two solutions (roots) for $x$ in a quadratic equation.
+
+\item \textbf{math\_algebra\_quad\_02} -- Discriminant: 
+\[D = b^2 - 4ac\]
+In this expression, $a$, $b$, $c$ are coefficients of a quadratic $ax^2+bx+c=0$. The discriminant $D$ indicates the nature of the roots: if $D>0$ (two distinct real roots), $D=0$ (one real double root), or $D<0$ (two complex conjugate roots).
+\end{itemize}
+
+\subsubsection{Polynomial Identities}
+
+\begin{itemize}
+\item \textbf{math\_algebra\_poly\_01} -- Perfect Square Expansion: 
+\[(a + b)^2 = a^2 + 2ab + b^2\]
+(Similarly, $(a - b)^2 = a^2 - 2ab + b^2$.) Here $a$ and $b$ are any real numbers. This identity expands the square of a binomial into a sum of terms.
+
+\item \textbf{math\_algebra\_poly\_02} -- Difference of Squares: 
+\[a^2 - b^2 = (a - b)(a + b)\]
+In this identity, $a$ and $b$ are any expressions. It shows how a difference of two squares factors into the product of a difference and a sum.
+
+\item \textbf{math\_algebra\_poly\_03} -- Sum of Cubes: 
+\[a^3 + b^3 = (a + b)\big(a^2 - ab + b^2\big)\]
+Here $a$ and $b$ are any expressions. It factors the sum of two cubes into a linear factor and a quadratic factor.
+
+\item \textbf{math\_algebra\_poly\_04} -- Difference of Cubes: 
+\[a^3 - b^3 = (a - b)\big(a^2 + ab + b^2\big)\]
+In this formula, $a$ and $b$ are any expressions. It factors the difference of two cubes into a linear factor and a quadratic factor.
+
+\item \textbf{math\_algebra\_poly\_05} -- Binomial Theorem: 
+\[(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k}b^k\]
+Here $n$ is a non-negative integer, and $\binom{n}{k}$ is the binomial coefficient. This formula expands the power of a binomial $(a+b)^n$ as a sum of terms involving products of powers of $a$ and $b$.
+\end{itemize}
+
+\subsubsection{Exponent Rules}
+
+\begin{itemize}
+\item \textbf{math\_algebra\_exp\_01} -- Product of Powers: 
+\[a^m \cdot a^n = a^{m+n}\]
+Here $a$ is a base (real or complex number) and $m,n$ are exponents. The rule states that when multiplying like bases, you add the exponents.
+
+\item \textbf{math\_algebra\_exp\_02} -- Quotient of Powers: 
+\[\frac{a^m}{a^n} = a^{m-n} \quad \text{(for } a \neq 0\text{)}\]
+In this formula, $a$ is the base and $m,n$ are exponents. It indicates that when dividing like bases, you subtract the exponents (numerator minus denominator).
+
+\item \textbf{math\_algebra\_exp\_03} -- Power of a Power: 
+\[(a^m)^n = a^{mn}\]
+Here $a$ is the base and $m,n$ are exponents. This rule shows that an exponentiated term raised to another power multiplies the exponents.
+
+\item \textbf{math\_algebra\_exp\_04} -- Negative Exponent: 
+\[a^{-n} = \frac{1}{a^n} \quad \text{(for } a \neq 0\text{)}\]
+In this expression, $a$ is the base and $n$ is a positive exponent. It defines a negative exponent as the reciprocal of the positive exponent case.
+
+\item \textbf{math\_algebra\_exp\_05} -- Power of a Product: 
+\[(ab)^n = a^n b^n\]
+Here $a$ and $b$ are bases and $n$ is an exponent. The formula indicates that a product raised to a power is equal to each factor raised to that power.
+
+\item \textbf{math\_algebra\_exp\_06} -- Power of a Quotient: 
+\[\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n} \quad \text{(for } b \neq 0\text{)}\]
+In this formula, $a$ and $b$ are bases and $n$ is the exponent. It shows that a quotient raised to a power equals the numerator and denominator each raised to that power.
+\end{itemize}
+
+\subsubsection{Logarithm Rules}
+
+\begin{itemize}
+\item \textbf{math\_algebra\_log\_01} -- Product Rule (Logarithms): 
+\[\log_b (XY) = \log_b X + \log_b Y\]
+Here $b$ is the base of the logarithm (with $b>0$, $b\neq 1$), and $X, Y$ are positive numbers. It states that the log of a product equals the sum of the logs of the factors.
+
+\item \textbf{math\_algebra\_log\_02} -- Quotient Rule (Logarithms): 
+\[\log_b \left(\frac{X}{Y}\right) = \log_b X - \log_b Y\]
+In this formula, $b$ is the base, and $X, Y$ are positive. It says that the log of a quotient is the difference of the logs (numerator minus denominator).
+
+\item \textbf{math\_algebra\_log\_03} -- Power Rule (Logarithms): 
+\[\log_b \big(X^r\big) = r \log_b X\]
+Here $b$ is the base, $X>0$ and $r$ is a real number (exponent). This rule indicates that the log of a power is the exponent times the log of the base quantity.
+
+\item \textbf{math\_algebra\_log\_04} -- Change of Base Formula: 
+\[\log_{b} A = \frac{\log_{c} A}{\log_{c} b} \quad \text{(for any positive base } c \neq 1\text{)}\]
+In this formula, $A$ is the argument of the logarithm and $b$ is the original base. It allows computation of a logarithm in base $b$ using any other convenient base $c$ (commonly $c = 10$ or $e$). For example, $\log_{b}A = \frac{\ln A}{\ln b}$ using natural logs.
+\end{itemize}
+
+\subsection{Functions \& Graphing}
+
+\subsubsection{Coordinate Geometry}
+
+\begin{itemize}
+\item \textbf{math\_functions\_coordinate\_01} -- Distance Between Two Points: 
+\[d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\]
+Here $(x_1, y_1)$ and $(x_2, y_2)$ are coordinates of two points in the plane. This formula computes the distance $d$ between the two points using the Pythagorean theorem.
+
+\item \textbf{math\_functions\_coordinate\_02} -- Midpoint Formula: 
+\[M = \left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)\]
+In this formula, $(x_1, y_1)$ and $(x_2, y_2)$ are endpoints of a line segment. It gives the coordinates of the midpoint $M$ (average of the endpoints' coordinates).
+
+\item \textbf{math\_functions\_coordinate\_03} -- Slope of a Line: 
+\[m = \frac{y_2 - y_1}{x_2 - x_1} \quad \text{(for } x_2 \neq x_1\text{)}\]
+Here $(x_1, y_1)$ and $(x_2, y_2)$ are two distinct points on a line. The value $m$ is the slope (rate of change), representing the steepness of the line (rise over run).
+
+\item \textbf{math\_functions\_coordinate\_04} -- Slope--Intercept Form (Line): 
+\[y = mx + b\]
+In this linear equation, $m$ is the slope and $b$ is the $y$-intercept. It expresses a line on the Cartesian plane with slope $m$ and intercept $(0,b)$, making it easy to graph and identify these properties.
+
+\item \textbf{math\_functions\_coordinate\_05} -- Point--Slope Form (Line): 
+\[y - y_1 = m(x - x_1)\]
+Here $m$ is the slope of the line and $(x_1, y_1)$ is a specific point on the line. This formula represents the line passing through $(x_1, y_1)$ with slope $m$, useful for writing the equation of a line given a point and slope.
+\end{itemize}
+
+\subsubsection{Conic Sections}
+
+\begin{itemize}
+\item \textbf{math\_functions\_conic\_01} -- Circle (Standard Form): 
+\[(x - h)^2 + (y - k)^2 = r^2\]
+In this equation, $(h, k)$ is the center of the circle and $r$ is the radius. It represents all points $(x, y)$ that lie on a circle of radius $r$ centered at $(h,k)$ in the plane.
+
+\item \textbf{math\_functions\_conic\_02} -- Parabola (Vertex Form): 
+\[y = a(x - h)^2 + k\]
+Here $(h, k)$ is the vertex of the parabola, and $a$ is a constant that determines the parabola's openness and direction. This equation gives a parabola opening upward (if $a>0$) or downward (if $a<0$), with its vertex at $(h,k)$.
+
+\item \textbf{math\_functions\_conic\_03} -- Ellipse (Standard Form): 
+\[\frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1\]
+In this equation, $(h,k)$ is the center of the ellipse, $a$ is the semi-major radius, and $b$ is the semi-minor radius. It defines an ellipse aligned with the coordinate axes. (If $a>b$, the major axis is horizontal; if $b>a$, it's vertical.)
+
+\item \textbf{math\_functions\_conic\_04} -- Hyperbola (Standard Form): 
+\[\frac{(x - h)^2}{a^2} - \frac{(y - k)^2}{b^2} = 1\]
+Here $(h,k)$ is the center of the hyperbola, and $a$ and $b$ are constants that determine its transverse and conjugate axis lengths. This equation represents a hyperbola opening left-right (if the $x$ term is positive as shown; the hyperbola opens up-down if the signs are swapped). The two separate curves of the hyperbola are centered at $(h,k)$.
+\end{itemize}
+
+\subsection{Trigonometry}
+
+\subsubsection{Fundamental Identities}
+
+\begin{itemize}
+\item \textbf{math\_trig\_identity\_01} -- Pythagorean Identity: 
+\[\sin^2\theta + \cos^2\theta = 1\]
+This holds for any angle $\theta$. It is a fundamental relationship between the sine and cosine of the same angle, reflecting the Pythagorean theorem on the unit circle.
+
+\item \textbf{math\_trig\_identity\_02} -- Secant--Tangent Identity: 
+\[1 + \tan^2\theta = \sec^2\theta\]
+Here $\theta$ is any angle where the expressions are defined. It is derived from the Pythagorean identity by dividing through by $\cos^2\theta$ (since $\tan\theta = \sin\theta/\cos\theta$ and $\sec\theta = 1/\cos\theta$).
+
+\item \textbf{math\_trig\_identity\_03} -- Cosecant--Cotangent Identity: 
+\[1 + \cot^2\theta = \csc^2\theta\]
+This identity, for any angle $\theta$ (where defined), comes from dividing the fundamental identity by $\sin^2\theta$ (using $\cot\theta = \cos\theta/\sin\theta$ and $\csc\theta = 1/\sin\theta$).
+\end{itemize}
+
+\subsubsection{Angle Sum/Difference Formulas}
+
+\begin{itemize}
+\item \textbf{math\_trig\_sum\_01} -- Sine of Sum/Difference: 
+\[\sin(\alpha \pm \beta) = \sin\alpha\cos\beta \pm \cos\alpha\sin\beta\]
+Here $\alpha$ and $\beta$ are angles (in radians or degrees). This formula allows calculation of the sine of a sum or difference of two angles.
+
+\item \textbf{math\_trig\_sum\_02} -- Cosine of Sum/Difference: 
+\[\cos(\alpha \pm \beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta\]
+For angles $\alpha$ and $\beta$, this formula gives the cosine of their sum or difference. The sign reversal ($\mp$) means use the opposite sign: e.g. $\cos(\alpha+\beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$.
+
+\item \textbf{math\_trig\_sum\_03} -- Tangent of Sum/Difference: 
+\[\tan(\alpha \pm \beta) = \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\beta}\]
+Here $\alpha$ and $\beta$ are angles (not making the denominator zero). It provides $\tan(\alpha+\beta)$ or $\tan(\alpha-\beta)$, useful for combining angles in tangent form.
+\end{itemize}
+
+\subsubsection{Double-Angle Formulas}
+
+\begin{itemize}
+\item \textbf{math\_trig\_double\_01} -- Sine Double-Angle: 
+\[\sin(2\theta) = 2\sin\theta\cos\theta\]
+This formula gives the sine of double an angle $2\theta$ in terms of the sine and cosine of the original angle $\theta$. It's useful in simplifying expressions or solving trigonometric equations.
+
+\item \textbf{math\_trig\_double\_02} -- Cosine Double-Angle: 
+\[\cos(2\theta) = \cos^2\theta - \sin^2\theta\]
+This formula expresses the cosine of $2\theta$ in terms of $\cos\theta$ and $\sin\theta$. (It can also be written as $\cos(2\theta) = 2\cos^2\theta - 1 = 1 - 2\sin^2\theta$ using the Pythagorean identity.)
+
+\item \textbf{math\_trig\_double\_03} -- Tangent Double-Angle: 
+\[\tan(2\theta) = \frac{2\tan\theta}{1 - \tan^2\theta} \quad \text{(assuming } \tan\theta \neq \pm 1\text{)}\]
+It gives the tangent of double angle $2\theta$ in terms of the tangent of $\theta$. This formula is derived from the angle sum formula for tangent.
+\end{itemize}
+
+\subsubsection{Laws of Trigonometry (Triangles)}
+
+\begin{itemize}
+\item \textbf{math\_trig\_law\_01} -- Law of Sines: 
+\[\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}\]
+In any triangle with sides of lengths $a$, $b$, $c$ opposite angles $A$, $B$, $C$ respectively, this law states that the ratio of a side length to the sine of its opposite angle is constant. It is used to find unknown sides or angles in oblique triangles.
+
+\item \textbf{math\_trig\_law\_02} -- Law of Cosines: 
+\[c^2 = a^2 + b^2 - 2ab\cos C\]
+Here $a$, $b$, $c$ are side lengths of a triangle, with $C$ the angle opposite side $c$. This formula generalizes the Pythagorean theorem to any triangle (reducing to $c^2=a^2+b^2$ when $C=90^\circ$). It is used to compute an unknown side or angle in a triangle when two sides and the included angle are known.
+
+\item \textbf{math\_trig\_law\_03} -- Area of a Triangle (SAS): 
+\[\text{Area} = \frac{1}{2}ab\sin C\]
+In a triangle, $a$ and $b$ are two side lengths and $C$ is the angle between those sides. This formula calculates the area using two sides and the included angle (Side-Angle-Side scenario).
+\end{itemize}
+
+\subsubsection{Other Trigonometric Formulas}
+
+\begin{itemize}
+\item \textbf{math\_trig\_other\_01} -- Degree--Radian Conversion: 
+\[180^\circ = \pi \text{ radians}\]
+Equivalently, $\theta_{\text{rad}} = \frac{\pi}{180^\circ}\theta_{\text{deg}}$. This gives the relationship between degree measure and radian measure for angles. For example, $1^\circ = \pi/180$ radians, and $1$ radian $= 180/\pi$ degrees.
+\end{itemize}
+
+\subsection{Calculus I \& II}
+
+\subsubsection{Derivative Rules}
+
+\begin{itemize}
+\item \textbf{math\_calculus\_derivative\_01} -- Power Rule: 
+\[\frac{d}{dx}[x^n] = nx^{n-1}\]
+(for any constant exponent $n$). Here $x$ is the variable and $n$ is a real constant. This rule is used to differentiate power functions of $x$.
+
+\item \textbf{math\_calculus\_derivative\_02} -- Exponential (Base $e$): 
+\[\frac{d}{dx}[e^x] = e^x\]
+The derivative of the natural exponential function $e^x$ is the function itself. This property is fundamental in calculus and differential equations.
+
+\item \textbf{math\_calculus\_derivative\_03} -- Exponential (General Base): 
+\[\frac{d}{dx}[a^x] = a^x \ln a\]
+Here $a$ is a positive constant base. It shows that the derivative of $a^x$ is proportional to $a^x$ itself, with factor $\ln a$.
+
+\item \textbf{math\_calculus\_derivative\_04} -- Logarithm (Natural): 
+\[\frac{d}{dx}[\ln x] = \frac{1}{x} \quad \text{(for } x>0\text{)}\]
+This gives the slope of the natural log function at $x$ as the reciprocal of $x$. It's a key result when differentiating logarithmic functions.
+
+\item \textbf{math\_calculus\_derivative\_05} -- Derivative of $\sin x$: 
+\[\frac{d}{dx}[\sin x] = \cos x\]
+This states that the rate of change of the sine function is the cosine function.
+
+\item \textbf{math\_calculus\_derivative\_06} -- Derivative of $\cos x$: 
+\[\frac{d}{dx}[\cos x] = -\sin x\]
+It shows that the slope of the cosine curve is the negative of the sine function.
+
+\item \textbf{math\_calculus\_derivative\_07} -- Derivative of $\tan x$: 
+\[\frac{d}{dx}[\tan x] = \sec^2 x \quad \text{(for } |\cos x|>0\text{)}\]
+The derivative of the tangent function is $\sec^2 x$, which can be derived using the quotient rule or known identities.
+
+\item \textbf{math\_calculus\_derivative\_08} -- Product Rule: 
+\[\frac{d}{dx}[u(x)v(x)] = u'(x)v(x) + u(x)v'(x)\]
+Here $u(x)$ and $v(x)$ are functions of $x$. This rule provides the derivative of a product of two functions in terms of their individual derivatives.
+
+\item \textbf{math\_calculus\_derivative\_09} -- Quotient Rule: 
+\[\frac{d}{dx}\left[\frac{u(x)}{v(x)}\right] = \frac{u'(x)v(x) - u(x)v'(x)}{[v(x)]^2} \quad \text{(assuming } v(x)\neq 0\text{)}\]
+It gives the derivative of a quotient $u/v$ in terms of the derivatives of $u$ and $v$.
+
+\item \textbf{math\_calculus\_derivative\_10} -- Chain Rule: 
+\[\frac{d}{dx}f(g(x)) = f'(g(x)) \cdot g'(x)\]
+This rule is applied when differentiating a composite function $f(g(x))$. It states that the derivative is the derivative of the outer function $f$ (evaluated at the inner function) times the derivative of the inner function $g(x)$.
+\end{itemize}
+
+\subsubsection{Integral Formulas}
+
+\begin{itemize}
+\item \textbf{math\_calculus\_integral\_01} -- Power Rule (Integration): 
+\[\int x^n\,dx = \frac{x^{n+1}}{n+1} + C \quad \text{(for } n \neq -1\text{)}\]
+Here $C$ is the constant of integration and $n$ is a constant exponent. This formula is used to integrate power functions of $x$. For example, $\int x^2 dx = \frac{x^3}{3}+C$.
+
+\item \textbf{math\_calculus\_integral\_02} -- Exponential: 
+\[\int e^x\,dx = e^x + C\]
+The integral of $e^x$ is itself plus a constant, reflecting that $d(e^x)/dx = e^x$.
+
+\item \textbf{math\_calculus\_integral\_03} -- General Exponential: 
+\[\int a^x\,dx = \frac{a^x}{\ln a} + C \quad \text{(for } a>0, a \neq 1\text{)}\]
+In this formula, $a$ is a constant base. It computes the antiderivative of $a^x$; for example $\int 2^x dx = 2^x/\ln 2 + C$.
+
+\item \textbf{math\_calculus\_integral\_04} -- Integral of $1/x$ (Log): 
+\[\int \frac{1}{x}\,dx = \ln|x| + C\]
+This holds for $x \neq 0$. It indicates that the antiderivative of $1/x$ is the natural logarithm of the absolute value of $x$.
+
+\item \textbf{math\_calculus\_integral\_05} -- Integral of $\sin x$: 
+\[\int \sin x\,dx = -\cos x + C\]
+This follows since differentiating $-\cos x$ yields $\sin x$. It gives the general antiderivative of the sine function.
+
+\item \textbf{math\_calculus\_integral\_06} -- Integral of $\cos x$: 
+\[\int \cos x\,dx = \sin x + C\]
+This works because $d(\sin x)/dx = \cos x$. It provides the antiderivative of the cosine function.
+
+\item \textbf{math\_calculus\_integral\_07} -- Integral of $\sec^2 x$: 
+\[\int \sec^2 x\,dx = \tan x + C\]
+This formula is used because $d(\tan x)/dx = \sec^2 x$. It is often encountered when integrating to solve trigonometric integrals.
+
+\item \textbf{math\_calculus\_integral\_08} -- Integration by Parts: 
+\[\int u\,dv = uv - \int v\,du\]
+Here $u$ and $dv$ are chosen parts of the integrand (with $du$ the derivative of $u$, and $v$ an antiderivative of $dv$). This formula is a technique for integrating products of functions, derived from the product rule for differentiation.
+
+\item \textbf{math\_calculus\_integral\_09} -- Integral of $1/(1+x^2)$: 
+\[\int \frac{dx}{1+x^2} = \arctan x + C\]
+This formula indicates that the antiderivative of $1/(1+x^2)$ is the arctangent function, since $\frac{d}{dx}[\arctan x] = \frac{1}{1+x^2}$.
+
+\item \textbf{math\_calculus\_integral\_10} -- Integral of $1/\sqrt{1-x^2}$: 
+\[\int \frac{dx}{\sqrt{1-x^2}} = \arcsin x + C\]
+It states that the antiderivative of $(1-x^2)^{-1/2}$ is $\arcsin x$ (for $|x|<1$), because $\frac{d}{dx}[\arcsin x] = \frac{1}{\sqrt{1-x^2}}$.
+\end{itemize}
+
+\subsubsection{Other Calculus Formulas}
+
+\begin{itemize}
+\item \textbf{math\_calculus\_other\_01} -- Fundamental Theorem of Calculus (Integral Evaluation): 
+If $F(x)$ is an antiderivative of $f(x)$, then
+\[\int_{a}^{b} f(x)\,dx = F(b) - F(a)\]
+This theorem links differentiation and integration. It allows one to evaluate a definite integral $\int_a^b f(x)dx$ by finding any antiderivative $F(x)$ of $f(x)$ and computing the difference $F(b)-F(a)$.
+\end{itemize}
+
+\section{Physics}
+
+\subsection{Mechanics}
+
+\subsubsection{Kinematics (Motion Equations)}
+
+\begin{itemize}
+\item \textbf{physics\_mechanics\_kinematics\_01} -- First Equation of Motion: 
+\[v = v_0 + at\]
+Here $v_0$ is the initial velocity, $v$ is the velocity after time $t$, and $a$ is constant acceleration. It calculates the velocity of an object under constant acceleration after time $t$.
+
+\item \textbf{physics\_mechanics\_kinematics\_02} -- Second Equation of Motion (Displacement): 
+\[\Delta x = v_0 t + \frac{1}{2}at^2\]
+In this formula, $\Delta x$ is the displacement over time $t$, $v_0$ the initial velocity, and $a$ the constant acceleration. It gives the distance traveled under constant acceleration.
+
+\item \textbf{physics\_mechanics\_kinematics\_03} -- Third Equation of Motion: 
+\[v^2 = v_0^2 + 2a\Delta x\]
+Here $v$ is final velocity, $v_0$ initial velocity, $a$ acceleration, and $\Delta x$ the displacement. This equation relates velocities, acceleration, and displacement without explicit time, useful for constant-acceleration motion.
+
+\item \textbf{physics\_mechanics\_kinematics\_04} -- Average Velocity (Constant $a$): 
+\[\bar{v} = \frac{v_0 + v}{2}\]
+This formula gives the average velocity $\bar{v}$ for uniformly accelerated motion, which is the simple average of the initial and final velocity (valid only when acceleration is constant).
+
+\item \textbf{physics\_mechanics\_kinematics\_05} -- Projectile Range: 
+\[R = \frac{v_0^2 \sin(2\theta)}{g}\]
+Here $v_0$ is the launch speed, $\theta$ is the launch angle (with respect to horizontal), and $g$ is the acceleration due to gravity ($\approx$9.81 m/s² near Earth). This formula gives the horizontal range $R$ of a projectile launched from ground level (and landing at the same level).
+
+\item \textbf{physics\_mechanics\_kinematics\_06} -- Angular--Linear Velocity: 
+\[v = \omega r\]
+In this relationship, $\omega$ is the angular velocity (in radians per second) and $r$ is the radius (distance from the rotation axis). It converts angular velocity to the linear tangential speed $v$ of a point at radius $r$ from the center of circular motion.
+
+\item \textbf{physics\_mechanics\_kinematics\_07} -- Centripetal Acceleration: 
+\[a_c = \frac{v^2}{r} = \omega^2 r\]
+Here $a_c$ is the centripetal (radial) acceleration of an object moving in a circle of radius $r$ with linear speed $v$ (or angular speed $\omega$). It points toward the center of the circle and is required to maintain circular motion.
+\end{itemize}
+
+\subsubsection{Dynamics (Forces \& Energy)}
+
+\begin{itemize}
+\item \textbf{physics\_mechanics\_dynamics\_01} -- Newton's Second Law: 
+\[\mathbf{F} = m\mathbf{a}\]
+In this vector equation, $m$ is an object's mass and $\mathbf{a}$ is its acceleration. It states that the net force $\mathbf{F}$ acting on an object equals the mass times the acceleration, defining the relationship between force and motion (units: N = kg·m/s²).
+
+\item \textbf{physics\_mechanics\_dynamics\_02} -- Weight (Gravity Force): 
+\[W = mg\]
+Here $W$ is the weight (force due to gravity) of an object with mass $m$, and $g$ is the acceleration due to gravity ($\approx$9.81 m/s² near Earth's surface). It calculates the gravitational force on an object's mass at Earth's surface (directed downward).
+
+\item \textbf{physics\_mechanics\_dynamics\_03} -- Frictional Force (Max Static or Kinetic): 
+\[f = \mu N\]
+In this formula, $\mu$ is the coefficient of friction (static or kinetic) and $N$ is the normal force between the surfaces. It gives the maximum static frictional force (that must be overcome to start motion) or the kinetic friction force (resisting motion), directed opposite to the motion or impending motion.
+
+\item \textbf{physics\_mechanics\_dynamics\_04} -- Hooke's Law (Spring Force): 
+\[F_{\text{spring}} = -kx\]
+Here $k$ is the spring constant (stiffness) and $x$ is the displacement from the spring's equilibrium length (positive when stretched). The force $F_{\text{spring}}$ is exerted by an ideal spring, directed opposite to the displacement (the negative sign indicates it's a restoring force).
+
+\item \textbf{physics\_mechanics\_dynamics\_05} -- Centripetal Force: 
+\[F_c = \frac{mv^2}{r}\]
+In this formula, $m$ is mass, $v$ is speed, and $r$ is the radius of circular path. $F_c$ is the inward force required to keep an object moving in uniform circular motion (e.g., tension in a string, gravitational force for orbital motion). Its direction is toward the center of the circle.
+
+\item \textbf{physics\_mechanics\_dynamics\_06} -- Newton's Law of Gravitation: 
+\[F_{g} = G \frac{m_1 m_2}{r^2}\]
+Here $m_1$ and $m_2$ are two masses, $r$ is the distance between their centers, and $G$ is the universal gravitational constant ($6.67\times10^{-11}\,\text{N·m}^2/\text{kg}^2$). This formula gives the gravitational force $F_{g}$ between two masses, which is attractive and directed along the line joining their centers.
+
+\item \textbf{physics\_mechanics\_dynamics\_07} -- Momentum: 
+\[\mathbf{p} = m\mathbf{v}\]
+In this expression, $\mathbf{p}$ is the linear momentum of an object, $m$ its mass, and $\mathbf{v}$ its velocity. Momentum (vector) represents the quantity of motion and is conserved in isolated systems (units: kg·m/s).
+
+\item \textbf{physics\_mechanics\_dynamics\_08} -- Impulse--Momentum: 
+\[J = \Delta p = F\Delta t\]
+Here $J$ is the impulse applied to an object, $\Delta p$ is the change in momentum, $F$ is an (constant average) force applied, and $\Delta t$ is the time duration of force application. It indicates that impulse (force times time) equals the change in momentum it produces. (For a variable force, $J = \int F(t) dt$ over the time interval.)
+
+\item \textbf{physics\_mechanics\_dynamics\_09} -- Kinetic Energy: 
+\[K = \frac{1}{2}mv^2\]
+This formula gives the kinetic energy $K$ of an object with mass $m$ moving at speed $v$. It is the energy due to motion (measured in joules, J), increasing with the square of speed.
+
+\item \textbf{physics\_mechanics\_dynamics\_10} -- Gravitational Potential (Near Earth): 
+\[U_g = mgh\]
+In this formula, $m$ is mass, $g$ the acceleration due to gravity, and $h$ the height above a reference level. $U_g$ is the gravitational potential energy (in J) of an object-Earth system at height $h$, representing the work that can be done by gravity if the object falls.
+
+\item \textbf{physics\_mechanics\_dynamics\_11} -- Spring Potential Energy: 
+\[U_s = \frac{1}{2}kx^2\]
+Here $k$ is the spring constant and $x$ is the displacement from equilibrium. This formula gives the elastic potential energy stored in a stretched or compressed spring (in joules). It equals the work required to stretch/compress the spring by $x$.
+
+\item \textbf{physics\_mechanics\_dynamics\_12} -- Work (Mechanical): 
+\[W = Fd \cos\theta\]
+In this expression, $F$ is the constant force applied, $d$ is the displacement of the object, and $\theta$ is the angle between the force direction and displacement direction. It calculates the work done by a force (in J), which is the energy transferred by that force. Only the component of force along the displacement does work.
+
+\item \textbf{physics\_mechanics\_dynamics\_13} -- Power (Mechanical): 
+\[P = \frac{W}{t} = Fv\cos\theta\]
+Here $P$ is power (the rate of doing work, in watts W), $W$ is work done, $t$ is the time taken, $F$ is force, $v$ is velocity, and $\theta$ is the angle between the force and velocity direction. The formula $P=Fv\cos\theta$ gives the instantaneous power due to a force $F$ acting on an object moving with velocity $v$.
+\end{itemize}
+
+\subsection{Thermodynamics}
+
+\begin{itemize}
+\item \textbf{physics\_thermodynamics\_01} -- Ideal Gas Law: 
+\[PV = nRT\]
+In this equation, $P$ is pressure, $V$ is volume, $n$ is the amount of gas (in moles), $R$ is the universal gas constant ($8.314\ \text{J/(mol·K)}$), and $T$ is absolute temperature (Kelvin). It relates the state variables of an ideal gas in equilibrium.
+
+\item \textbf{physics\_thermodynamics\_02} -- First Law of Thermodynamics: 
+\[\Delta U = Q - W\]
+Here $\Delta U$ is the change in internal energy of a system, $Q$ is the heat added to the system, and $W$ is the work done by the system (using the sign convention of thermodynamics). It is an energy conservation statement: the change in internal energy equals heat added minus work output.
+
+\item \textbf{physics\_thermodynamics\_03} -- Heat (Specific Heat): 
+\[Q = mc\Delta T\]
+In this formula, $Q$ is the heat energy transferred, $m$ is the mass of a substance, $c$ is its specific heat capacity, and $\Delta T$ is the change in temperature. It calculates the heat required to raise (or lower) the temperature of mass $m$ by $\Delta T$.
+
+\item \textbf{physics\_thermodynamics\_04} -- Latent Heat (Phase Change): 
+\[Q = mL\]
+Here $Q$ is the heat absorbed or released during a phase change, $m$ is the mass undergoing the change, and $L$ is the latent heat (of fusion, vaporization, etc., depending on the transition) per unit mass. This formula gives the heat required for a phase change at constant temperature.
+
+\item \textbf{physics\_thermodynamics\_05} -- Carnot Efficiency: 
+\[\eta_{\text{Carnot}} = 1 - \frac{T_{\text{c}}}{T_{\text{h}}}\]
+In this expression, $T_{\text{h}}$ is the absolute temperature of the hot reservoir and $T_{\text{c}}$ that of the cold reservoir (in Kelvin). $\eta$ is the maximum theoretical efficiency of a heat engine operating in a Carnot cycle between these two temperatures. It shows that no engine can be 100\% efficient unless $T_{\text{c}}$ is zero.
+
+\item \textbf{physics\_thermodynamics\_06} -- Thermal Expansion (Linear): 
+\[\Delta L = \alpha L_0 \Delta T\]
+Here $L_0$ is the original length of an object, $\Delta L$ is the change in length due to heating, $\Delta T$ is the temperature change, and $\alpha$ is the coefficient of linear expansion for the material. This formula calculates how much a material elongates or contracts with a temperature change.
+\end{itemize}
+
+\subsection{Electromagnetism}
+
+\subsubsection{Electrostatics}
+
+\begin{itemize}
+\item \textbf{physics\_electromagnetism\_electrostatics\_01} -- Coulomb's Law: 
+\[F = k\frac{q_1q_2}{r^2}\]
+Here $q_1$ and $q_2$ are electric charges, $r$ is the distance between their centers, and $k$ is Coulomb's constant ($\approx 8.99\times10^9\ \text{N·m}^2/\text{C}^2$). This formula gives the magnitude of the electrostatic force $F$ between two point charges. The force is repulsive if charges have the same sign and attractive if opposite, and it acts along the line connecting the charges.
+
+\item \textbf{physics\_electromagnetism\_electrostatics\_02} -- Electric Field of Point Charge: 
+\[E = k\frac{q}{r^2}\]
+In this formula, $q$ is a point charge and $r$ is the distance from the charge. $E$ is the magnitude of the electric field produced by charge $q$ at that distance (in N/C). The field points radially outward from a positive charge and inward toward a negative charge.
+
+\item \textbf{physics\_electromagnetism\_electrostatics\_03} -- Force in Electric Field: 
+\[\mathbf{F} = q\mathbf{E}\]
+Here $q$ is a charge and $\mathbf{E}$ is the electric field vector at the charge's location. The formula gives the electric force on charge $q$ due to the field $\mathbf{E}$ (direction depends on the sign of $q$). It defines $E$ as force per unit charge.
+
+\item \textbf{physics\_electromagnetism\_electrostatics\_04} -- Electric Potential (Point Charge): 
+\[V = k\frac{q}{r}\]
+In this expression, $q$ is a point charge and $r$ is the distance from the charge (with a reference of $V=0$ at infinity). $V$ is the electric potential (in volts) due to the charge $q$. It is a scalar field where a positive charge produces positive potential, and a negative charge produces negative potential (decreasing with distance).
+\end{itemize}
+
+\subsubsection{Circuits}
+
+\begin{itemize}
+\item \textbf{physics\_electromagnetism\_circuits\_01} -- Electric Current: 
+\[I = \frac{Q}{t}\]
+Here $I$ is the current (in amperes, A), $Q$ is the electric charge that flows past a point, and $t$ is the time duration of flow. This formula defines current as charge flow per unit time (1 A = 1 C/s).
+
+\item \textbf{physics\_electromagnetism\_circuits\_02} -- Ohm's Law: 
+\[V = IR\]
+In this relationship, $V$ is the voltage (potential difference in volts), $I$ is the current through a conductor, and $R$ is the resistance of the conductor (in ohms, $\Omega$). It states that the voltage across a resistor equals the product of the current and resistance (assuming linear, ohmic behavior).
+
+\item \textbf{physics\_electromagnetism\_circuits\_03} -- Resistors in Series: 
+\[R_{\text{eq}} = R_1 + R_2 + \cdots + R_n\]
+This formula gives the equivalent resistance $R_{\text{eq}}$ of $n$ resistors connected in series. The resistances simply add up, resulting in a larger total resistance.
+
+\item \textbf{physics\_electromagnetism\_circuits\_04} -- Resistors in Parallel: 
+\[\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n}\]
+It provides the equivalent resistance of $n$ resistors in parallel. The reciprocals of the resistances add up to the reciprocal of the total resistance (the equivalent resistance is always less than the smallest individual resistance in the network).
+
+\item \textbf{physics\_electromagnetism\_circuits\_05} -- Capacitance (Parallel Plate): 
+\[C = \varepsilon_0\frac{A}{d}\]
+In this formula, $C$ is the capacitance (farads, F) of a parallel-plate capacitor, $A$ is the area of one plate, $d$ is the separation between plates, and $\varepsilon_0$ is the permittivity of free space ($8.85\times10^{-12}\ \text{F/m}$). This formula applies for a vacuum or air-filled capacitor and shows capacitance increases with plate area and decreases with distance.
+
+\item \textbf{physics\_electromagnetism\_circuits\_06} -- Capacitors in Series: 
+\[\frac{1}{C_{\text{eq}}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots + \frac{1}{C_n}\]
+This gives the equivalent capacitance $C_{\text{eq}}$ of capacitors connected in series. The reciprocals of individual capacitances add up, making the total capacitance smaller than any single capacitor in the series.
+
+\item \textbf{physics\_electromagnetism\_circuits\_07} -- Capacitors in Parallel: 
+\[C_{\text{eq}} = C_1 + C_2 + \cdots + C_n\]
+It provides the equivalent capacitance for capacitors in parallel. The capacitances add directly, resulting in a larger total capacitance (like increasing plate area).
+
+\item \textbf{physics\_electromagnetism\_circuits\_08} -- Electric Power (DC Circuits): 
+\[P = IV\]
+Here $P$ is the electric power (in watts), $I$ is the current, and $V$ is the voltage across an element. This formula calculates the power dissipated or delivered by an electrical component. Using Ohm's law, it can also be written as $P = I^2 R = \frac{V^2}{R}$ for a resistor.
+\end{itemize}
+
+\subsubsection{Magnetism \& Induction}
+
+\begin{itemize}
+\item \textbf{physics\_electromagnetism\_magnetism\_01} -- Lorentz Force (Charge in B-field): 
+\[|\mathbf{F}| = |q|vB\sin\theta\]
+Here $q$ is the charge of a particle, $v$ is its speed, $B$ is the magnetic field strength, and $\theta$ is the angle between the velocity and magnetic field. The magnitude of the magnetic force on a moving charge is given by this formula (direction is perpendicular to both $\mathbf{v}$ and $\mathbf{B}$, following the right-hand rule). In vector form, $\mathbf{F} = q\mathbf{v} \times \mathbf{B}$.
+
+\item \textbf{physics\_electromagnetism\_magnetism\_02} -- Force on Current-Carrying Wire: 
+\[F = ILB\sin\theta\]
+In this expression, $I$ is the current through a straight wire segment of length $L$, $B$ is the magnetic flux density, and $\theta$ is the angle between the wire (current direction) and the magnetic field. It gives the magnitude of force on the wire in a uniform magnetic field (direction by right-hand rule with current direction).
+
+\item \textbf{physics\_electromagnetism\_magnetism\_03} -- Magnetic Field of Straight Wire: 
+\[B = \frac{\mu_0 I}{2\pi r}\]
+Here $I$ is the current in a long straight wire, $r$ is the radial distance from the wire, and $\mu_0$ is the permeability of free space ($4\pi \times 10^{-7}\ \text{T·m/A}$). This formula gives the magnitude of the magnetic field $B$ at distance $r$ from a long straight conductor carrying current $I$. The direction of $B$ circles around the wire (right-hand grip rule).
+
+\item \textbf{physics\_electromagnetism\_magnetism\_04} -- Magnetic Flux: 
+\[\Phi_B = BA\cos\theta\]
+In this formula, $B$ is the uniform magnetic field strength, $A$ is the area of a loop, and $\theta$ is the angle between the field and the normal (perpendicular) to the loop's surface. $\Phi_B$ is the magnetic flux through that area (in webers, Wb). It quantifies the amount of magnetic field passing through the loop.
+
+\item \textbf{physics\_electromagnetism\_magnetism\_05} -- Faraday's Law (Induction): 
+\[\mathcal{E} = -N\frac{\Delta \Phi_B}{\Delta t}\]
+Here $\mathcal{E}$ is the induced electromotive force (EMF, in volts) in a coil, $N$ is the number of loops in the coil, and $\Delta \Phi_B/\Delta t$ is the rate of change of magnetic flux through the coil. The negative sign (Lenz's law) indicates the direction of the induced EMF opposes the change in flux. This formula governs electromagnetic induction (basis of transformers, generators, etc.).
+
+\item \textbf{physics\_electromagnetism\_magnetism\_06} -- Inductor (Self-Induction): 
+\[V_L = L\frac{dI}{dt}\]
+In this relationship, $V_L$ is the induced voltage across an inductor (in volts), $L$ is the inductance (in henrys, H), and $dI/dt$ is the rate of change of current through the inductor. It indicates that a changing current produces an induced voltage opposing the change (Lenz's law), proportional to how fast the current changes and the inductance of the coil.
+\end{itemize}
+
+\subsection{Modern Physics}
+
+\subsubsection{Relativity}
+
+\begin{itemize}
+\item \textbf{physics\_modern\_relativity\_01} -- Mass--Energy Equivalence: 
+\[E = mc^2\]
+In this famous formula by Einstein, $m$ is mass and $c$ is the speed of light in vacuum ($3.00\times10^8$ m/s). It states that mass can be converted to energy and vice versa; a mass $m$ corresponds to energy $E$ (in joules). For example, 1 kg of mass is equivalent to $9\times10^{16}$ J of energy.
+
+\item \textbf{physics\_modern\_relativity\_02} -- Time Dilation: 
+\[\Delta t' = \frac{\Delta t}{\sqrt{1 - v^2/c^2}}\]
+Here $\Delta t$ is the proper time interval (measured in the rest frame of an event), $\Delta t'$ is the time interval measured in a frame where the clock or process is moving at speed $v$, and $c$ is the speed of light. This formula shows that moving clocks run slower by a factor $\gamma = 1/\sqrt{1-v^2/c^2}$ (for $v$ close to $c$).
+
+\item \textbf{physics\_modern\_relativity\_03} -- Length Contraction: 
+\[L' = L\sqrt{1 - \frac{v^2}{c^2}}\]
+In this formula, $L$ is the proper length (the length of an object in its rest frame) and $L'$ is the length measured by an observer moving relative to the object at speed $v$. It indicates that objects contract in the direction of motion as seen by the moving observer, by the same Lorentz factor $\sqrt{1-v^2/c^2}$.
+
+\item \textbf{physics\_modern\_relativity\_04} -- Relativistic Momentum: 
+\[p = \gamma m v\]
+where $\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$. Here $p$ is the momentum of an object moving at speed $v$, $m$ is its rest mass, and $\gamma$ is the Lorentz factor. This formula generalizes momentum for high speeds, showing that as $v$ approaches $c$, momentum increases more rapidly than the classical $mv$.
+
+\item \textbf{physics\_modern\_relativity\_05} -- Velocity Addition (Special Relativity): 
+\[u' = \frac{u + v}{1 + \frac{uv}{c^2}}\]
+In this formula, $u$ and $v$ are velocities as measured in two different inertial frames (collinear motion), and $u'$ is the velocity of an object as observed from one frame, given its velocity $u$ in another frame that itself moves at $v$ relative to the first. This relativistic addition law ensures that the resultant $u'$ never exceeds $c$ even if $u$ and $v$ are high.
+
+\item \textbf{physics\_modern\_relativity\_06} -- Relativistic Energy--Momentum: 
+\[E^2 = (pc)^2 + (mc^2)^2\]
+Here $E$ is the total energy of a particle, $p$ is its momentum, $m$ is its rest mass, and $c$ is the speed of light. This relationship unites energy, momentum, and mass in special relativity. For a particle at rest ($p=0$), it reduces to $E = mc^2$; for massless particles (like photons, $m=0$), it gives $E = pc$.
+\end{itemize}
+
+\subsubsection{Quantum \& Nuclear Physics}
+
+\begin{itemize}
+\item \textbf{physics\_modern\_quantum\_01} -- Planck's Relation (Photon Energy): 
+\[E = hf\]
+In this formula, $E$ is the energy of a photon, $f$ is its frequency, and $h$ is Planck's constant ($6.626\times10^{-34}$ J·s). It states that the energy of a photon (quantum of electromagnetic radiation) is proportional to its frequency. This is a fundamental concept in quantum physics describing the quantization of light.
+
+\item \textbf{physics\_modern\_quantum\_02} -- de Broglie Wavelength: 
+\[\lambda = \frac{h}{p}\]
+Here $\lambda$ is the wavelength associated with a particle (matter wave), $h$ is Planck's constant, and $p$ is the momentum of the particle. This formula, from de Broglie's hypothesis, assigns wave-like behavior to matter by giving a wavelength to particles: e.g., electrons with momentum $p$ have wavelength $\lambda$. For photons, it coincides with $\lambda = c/f$ when using $E=pc$.
+
+\item \textbf{physics\_modern\_quantum\_03} -- Photoelectric Effect (Max Kinetic Energy): 
+\[K_{\max} = hf - \phi\]
+In this equation, $K_{\max}$ is the maximum kinetic energy of electrons ejected from a material via the photoelectric effect, $f$ is the frequency of incident light, and $\phi$ is the material's work function (the minimum energy required to eject an electron, specific to the material). It shows that if $h f$ exceeds $\phi$, electrons are emitted with kinetic energy equal to the excess, otherwise no electrons are emitted (if $h f < \phi$).
+
+\item \textbf{physics\_modern\_quantum\_04} -- Hydrogen Atom Energy Levels: 
+\[E_n = -\frac{13.6\ \text{eV}}{n^2}\]
+Here $E_n$ is the energy of the electron in the $n$-th energy level of a hydrogen atom (with $n=1,2,3,\dots$), and 13.6 eV is the ground state energy magnitude. This formula (from the Bohr model) indicates that energies are quantized and become less negative (closer to zero) as $n$ increases. The difference in $E_n$ between levels corresponds to photon emission or absorption.
+
+\item \textbf{physics\_modern\_quantum\_05} -- Heisenberg Uncertainty Principle: 
+\[\Delta x\Delta p \gtrsim \frac{\hbar}{2}\]
+Here $\Delta x$ is the uncertainty in position, $\Delta p$ is the uncertainty in momentum along the same direction, and $\hbar = \frac{h}{2\pi}$ is the reduced Planck's constant. This principle asserts a fundamental limit to the precision with which pairs of conjugate quantities (like position and momentum) can be known simultaneously. (Similarly, $\Delta E\Delta t \gtrsim \hbar/2$ for energy and time.)
+
+\item \textbf{physics\_modern\_quantum\_06} -- Radioactive Decay Law: 
+\[N(t) = N_0 e^{-\lambda t}\]
+In this expression, $N_0$ is the initial quantity of radioactive nuclei, $N(t)$ is the quantity remaining after time $t$, and $\lambda$ is the decay constant (probability of decay per unit time). It describes exponential decay: the number of undecayed nuclei falls off exponentially with time.
+
+\item \textbf{physics\_modern\_quantum\_07} -- Half-Life Relation: 
+\[T_{1/2} = \frac{\ln 2}{\lambda}\]
+Here $T_{1/2}$ is the half-life of a radioactive substance (the time for half of the nuclei to decay), and $\lambda$ is the decay constant. This formula connects the half-life with the decay constant, since after one half-life, $N(t)/N_0 = 1/2$, which leads to $\lambda T_{1/2} = \ln 2$.
+\end{itemize}
+
+\end{document} 

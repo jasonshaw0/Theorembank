@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Derivatives - Formula Reference</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+            <ul class="sidebar-nav">
+                <!-- Mathematics Section -->
+                <li class="section-header">Mathematics</li>
+                <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+                <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+                <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+                <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+                <li><a href="../math/derivatives.html" class="nav-link">Derivatives</a></li>
+                <li><a href="../math/integration.html" class="nav-link">Integration</a></li>
+                <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+                <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+                <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+                <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+                <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+                <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+                <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+                <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+                <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+                <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+                <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+                <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+                <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+                <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+                
+                <!-- Physics Section -->
+                <li class="section-header">Physics</li>
+                <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+                <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+                <li><a href="../physics/kinematics.html" class="nav-link">Kinematics</a></li>
+                <li><a href="../physics/electrostatics.html" class="nav-link">Electrostatics</a></li>
+                <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+                <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+                <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+                <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+                <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+                <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+                <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+                <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+            </ul>
+        </nav>
+</aside>
+
+<main class="content">
+  <h1>Derivatives</h1>
+  <p>Essential formulas for differentiation in calculus.</p>
+
+  <div class="formula-grid">
+    <div class="formula-card">
+      <h3>Power Rule</h3>
+      <div class="formula">$$\frac{d}{dx}[x^n] = nx^{n-1}$$</div>
+      <p>For any real number n.</p>
+      <button class="copy-btn" data-latex="\\frac{d}{dx}[x^n] = nx^{n-1}">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Product Rule</h3>
+      <div class="formula">$$\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)$$</div>
+      <p>Derivative of a product of two functions.</p>
+      <button class="copy-btn" data-latex="\\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Chain Rule</h3>
+      <div class="formula">$$\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$$</div>
+      <p>Derivative of composite functions.</p>
+      <button class="copy-btn" data-latex="\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Quotient Rule</h3>
+      <div class="formula">$$\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$$</div>
+      <p>Derivative of a quotient of functions.</p>
+      <button class="copy-btn" data-latex="\\frac{d}{dx}\\left[\\frac{f(x)}{g(x)}\\right] = \\frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Exponential Function</h3>
+      <div class="formula">$$\frac{d}{dx}[e^x] = e^x$$</div>
+      <p>The exponential function is its own derivative.</p>
+      <button class="copy-btn" data-latex="\\frac{d}{dx}[e^x] = e^x">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Natural Logarithm</h3>
+      <div class="formula">$$\frac{d}{dx}[\ln(x)] = \frac{1}{x}$$</div>
+      <p>Derivative of the natural logarithm.</p>
+      <button class="copy-btn" data-latex="\\frac{d}{dx}[\\ln(x)] = \\frac{1}{x}">Copy LaTeX</button>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Load KaTeX for math rendering
+  import('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js').then(() => {
+    import('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js').then(() => {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false}
+        ]
+      });
+    });
+  });
+
+  // Add event listeners after DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    copyButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const latex = this.getAttribute('data-latex');
+        navigator.clipboard.writeText(latex).then(() => {
+          this.textContent = 'Copied!';
+          setTimeout(() => this.textContent = 'Copy LaTeX', 1500);
+        });
+      });
+    });
+  });
+</script>
+
+<script src="../script.js"></script>
+
+<style>
+  .formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .formula-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .formula-card h3 {
+    margin: 0 0 1rem 0;
+    color: #2563eb;
+  }
+  
+  .formula {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+  
+  .copy-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .copy-btn:hover {
+    background: #1d4ed8;
+  }
+</style>
+
+</body>
+</html> 

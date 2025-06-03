@@ -1,0 +1,98 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+% Page setup
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{Formula Reference Library}
+\fancyfoot[C]{\thepage}
+
+% Section formatting
+\titleformat{\section}[block]{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[block]{\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Custom list formatting
+\setlist[itemize]{label=$\bullet$, leftmargin=1.5em}
+
+\begin{document}
+
+\title{\textbf{Formula Reference Library}}
+\author{}
+\date{}
+\maketitle
+
+\section{Mathematics}
+
+\subsection{Arithmetic \& Number Theory}
+
+\subsubsection{Sequences}
+
+\begin{itemize}
+\item \textbf{math\_arith\_sequence\_01} -- Arithmetic Sequence (n-th Term): 
+\[a_n = a_1 + (n-1)d\]
+Here $n$ is the term number, $a_1$ is the first term, and $d$ is the common difference. This formula gives the $n$-th term of an arithmetic sequence (constant difference between consecutive terms).
+
+\item \textbf{math\_arith\_sequence\_02} -- Geometric Sequence (n-th Term): 
+\[a_n = a_1 \cdot r^{n-1}\]
+In this formula, $a_1$ is the first term and $r$ is the common ratio between terms. It provides the $n$-th term of a geometric sequence (each term is obtained by multiplying the previous term by $r$).
+\end{itemize}
+
+\subsubsection{Series (Summations)}
+
+\begin{itemize}
+\item \textbf{math\_arith\_series\_01} -- Sum of First $n$ Integers: 
+\[1 + 2 + \cdots + n = \frac{n(n+1)}{2}\]
+Here $n$ is a positive integer. It yields the sum of the first $n$ natural numbers.
+
+\item \textbf{math\_arith\_series\_02} -- Sum of First $n$ Squares: 
+\[1^2 + 2^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}\]
+In this formula, $n$ is a positive integer. It calculates the sum of the squares of the first $n$ natural numbers.
+
+\item \textbf{math\_arith\_series\_03} -- Sum of First $n$ Cubes: 
+\[1^3 + 2^3 + \cdots + n^3 = \left(\frac{n(n+1)}{2}\right)^2\]
+Here $n$ is a positive integer. It gives the sum of the cubes of the first $n$ natural numbers (which equals the square of the sum of the first $n$ numbers).
+
+\item \textbf{math\_arith\_series\_04} -- Arithmetic Series (Finite Sum): 
+\[S_n = \frac{n}{2}\big(2a_1 + (n-1)d\big)\]
+Here $n$ is the number of terms, $a_1$ is the first term, and $d$ is the common difference. This formula computes the sum $S_n$ of the first $n$ terms of an arithmetic progression.
+
+\item \textbf{math\_arith\_series\_05} -- Geometric Series (Finite Sum): 
+\[S_n = a_1\frac{r^n - 1}{r - 1} \quad \text{(for } r \neq 1\text{)}\]
+In this formula, $n$ is the number of terms, $a_1$ is the first term, and $r$ is the common ratio. It gives the sum of the first $n$ terms of a geometric series.
+
+\item \textbf{math\_arith\_series\_06} -- Infinite Geometric Series: 
+\[S_{\infty} = \frac{a_1}{1 - r} \quad \text{(valid if } |r| < 1\text{)}\]
+Here $a_1$ is the first term and $r$ is the common ratio in absolute value less than 1. This formula provides the sum of an infinite geometric series that converges.
+\end{itemize}
+
+\subsubsection{Number Theory}
+
+\begin{itemize}
+\item \textbf{math\_arith\_number\_theory\_01} -- GCD--LCM Relationship: 
+\[\text{lcm}(a,b) = \frac{a \cdot b}{\gcd(a,b)}\]
+Here $a$ and $b$ are positive integers, $\gcd(a,b)$ is their greatest common divisor, and $\text{lcm}(a,b)$ is their least common multiple. This formula relates the product of two integers to the product of their GCD and LCM.
+\end{itemize}
+
+\subsection{Algebra}
+
+\subsubsection{Quadratic Equations}
+
+\begin{itemize}
+\item \textbf{math\_algebra\_quad\_01} -- Quadratic Formula: 
+\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+Here $a$, $b$, and $c$ are coefficients of the quadratic equation $ax^2 + bx + c = 0$, and $x$ represents the variable. This formula gives the two solutions (roots) for $x$ in a quadratic equation.
+
+\item \textbf{math\_algebra\_quad\_02} -- Discriminant: 
+\[D = b^2 - 4ac\]
+In this expression, $a$, $b$, $c$ are coefficients of a quadratic $ax^2+bx+c=0$. The discriminant $D$ indicates the nature of the roots: if $D>0$ (two distinct real roots), $D=0$ (one real double root), or $D<0$ (two complex conjugate roots).
+\end{itemize}
+
+\end{document}

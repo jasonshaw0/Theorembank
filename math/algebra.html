@@ -3,20 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title></title>
+  <title>Basic Algebra - Formula Reference</title>
   <link rel="stylesheet" href="../style.css" />
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [['\\[', '\\]']]
-      },
-      svg: { fontCache: 'global' }
-    };
-  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
 </head>
 <body>
 
@@ -66,94 +55,129 @@
 </aside>
 
 <main class="content">
-  <h1>Algebra</h1>
-  <p>Essential formulas and concepts in algebra</p>
+  <h1>Basic Algebra</h1>
+  <p>Fundamental algebraic formulas and identities.</p>
 
-  <div class="formula-card-container">
-    
-    <div class="formula-card" id="quadratic-formula">
+  <div class="formula-grid">
+    <div class="formula-card">
       <h3>Quadratic Formula</h3>
-      <button class="copy-btn" data-tex="x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of \(y = ax^2+bx+c\) intersecting the \(x\)-axis at \(x\) values given by this formula (the roots).</p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
+      <div class="formula">$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$</div>
+      <p>Solutions to ax² + bx + c = 0</p>
+      <button class="copy-btn" data-latex="x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}">Copy LaTeX</button>
     </div>
-    
-    <div class="formula-card" id="binomial-theorem">
+
+    <div class="formula-card">
+      <h3>Difference of Squares</h3>
+      <div class="formula">$$a^2 - b^2 = (a+b)(a-b)$$</div>
+      <p>Factorization of difference of squares.</p>
+      <button class="copy-btn" data-latex="a^2 - b^2 = (a+b)(a-b)">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
+      <h3>Perfect Square Trinomial</h3>
+      <div class="formula">$$(a \pm b)^2 = a^2 \pm 2ab + b^2$$</div>
+      <p>Expansion of perfect squares.</p>
+      <button class="copy-btn" data-latex="(a \\pm b)^2 = a^2 \\pm 2ab + b^2">Copy LaTeX</button>
+    </div>
+
+    <div class="formula-card">
       <h3>Binomial Theorem</h3>
-      <button class="copy-btn" data-tex="(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\((a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.</p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
+      <div class="formula">$$(a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k$$</div>
+      <p>General expansion of binomials.</p>
+      <button class="copy-btn" data-latex="(a + b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k">Copy LaTeX</button>
     </div>
-    
-    <div class="formula-card" id="common-factoring-identity-difference-of-squares">
-      <h3>Common Factoring Identity (Difference of Squares)</h3>
-      <button class="copy-btn" data-tex="a^2 - b^2 = (a+b)(a-b)" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(a^2 - b^2 = (a+b)(a-b)\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        <li>\(a and b are any expressions or numbers.\)</li>
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side \(a\) and side \(b\).</p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
+
+    <div class="formula-card">
+      <h3>Logarithm Properties</h3>
+      <div class="formula">$$\log_a(xy) = \log_a(x) + \log_a(y)$$</div>
+      <div class="formula">$$\log_a\left(\frac{x}{y}\right) = \log_a(x) - \log_a(y)$$</div>
+      <button class="copy-btn" data-latex="\\log_a(xy) = \\log_a(x) + \\log_a(y)">Copy LaTeX</button>
     </div>
-    
-    <div class="formula-card" id="combination-formula">
-      <h3>Combination Formula</h3>
-      <button class="copy-btn" data-tex="\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}" title="Copy LaTeX code">📋</button>
-      <div class="mathjax-expression">\(\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}\)</div>
-      
-      <h4>Variables:</h4>
-      <ul class="variables">
-        
-      </ul>
-      
-      <h4>Description/Usage:</h4>
-      <p class="description">Computes the number of ways to choose \(k\) items from \(n\) without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.</p>
-      
-      
-      <div class="visual-placeholder">Mathematical concept visualization</div>
-      
-      
-      
+
+    <div class="formula-card">
+      <h3>Arithmetic Sequence</h3>
+      <div class="formula">$$a_n = a_1 + (n-1)d$$</div>
+      <div class="formula">$$S_n = \frac{n}{2}(2a_1 + (n-1)d)$$</div>
+      <p>nth term and sum of arithmetic sequence.</p>
+      <button class="copy-btn" data-latex="a_n = a_1 + (n-1)d">Copy LaTeX</button>
     </div>
-    
   </div>
 </main>
 
+<script>
+  // Load KaTeX for math rendering
+  import('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js').then(() => {
+    import('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js').then(() => {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false}
+        ]
+      });
+    });
+  });
+
+  // Add event listeners after DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    copyButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const latex = this.getAttribute('data-latex');
+        navigator.clipboard.writeText(latex).then(() => {
+          this.textContent = 'Copied!';
+          setTimeout(() => this.textContent = 'Copy LaTeX', 1500);
+        });
+      });
+    });
+  });
+</script>
+
 <script src="../script.js"></script>
+
+<style>
+  .formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .formula-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .formula-card h3 {
+    margin: 0 0 1rem 0;
+    color: #2563eb;
+  }
+  
+  .formula {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+  
+  .copy-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .copy-btn:hover {
+    background: #1d4ed8;
+  }
+</style>
+
 </body>
 </html> 

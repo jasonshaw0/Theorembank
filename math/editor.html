@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Live Math Editor | Formula Reference</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <style>
+    .editor-container {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+    
+    .editor-container h2 {
+      margin-top: 0;
+      color: var(--accent);
+      border-bottom: 2px solid var(--panel-border);
+      padding-bottom: 12px;
+    }
+    
+    math-field {
+      display: block;
+      min-height: 2.2em;
+      font-size: 1.2rem;
+      width: 100%;
+      border: 2px solid var(--panel-border);
+      border-radius: 8px;
+      padding: 12px;
+      margin: 16px 0;
+      background: var(--code-bg);
+      transition: border-color 0.3s ease;
+    }
+    
+    math-field:focus {
+      border-color: var(--accent);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    }
+    
+    .editor-buttons {
+      display: flex;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    
+    .editor-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+    
+    .editor-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+    
+    .editor-btn.success {
+      background: var(--success);
+    }
+    
+    .preview-container {
+      background: var(--code-bg);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+      min-height: 60px;
+      border-left: 4px solid var(--accent);
+    }
+    
+    .preview-label {
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    
+    .latex-code {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 6px;
+      padding: 12px;
+      font-family: monospace;
+      font-size: 14px;
+      margin: 8px 0;
+      color: var(--fg);
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+<div class="mobile-header">
+  <button id="hamburger-menu">☰ Menu</button>
+  <button id="theme-toggle" title="Toggle theme (Ctrl+J)">🌙</button>
+</div>
+
+<aside class="sidebar">
+  <nav>
+    <ul class="sidebar-nav">
+      <!-- Mathematics Section -->
+      <li class="section-header">Mathematics</li>
+      <li><a href="../math/index.html" class="nav-link">Mathematics Home</a></li>
+      <li><a href="../math/arithmetic.html" class="nav-link">Arithmetic</a></li>
+      <li><a href="../math/number_theory.html" class="nav-link">Number Theory</a></li>
+      <li><a href="../math/algebra.html" class="nav-link">Algebra</a></li>
+      <li><a href="../math/geometry.html" class="nav-link">Geometry</a></li>
+      <li><a href="../math/trigonometry.html" class="nav-link">Trigonometry</a></li>
+      <li><a href="../math/analytic_geometry.html" class="nav-link">Analytic Geometry</a></li>
+      <li><a href="../math/differential_geometry.html" class="nav-link">Differential Geometry</a></li>
+      <li><a href="../math/calculus.html" class="nav-link">Calculus</a></li>
+      <li><a href="../math/vector_calculus.html" class="nav-link">Vector Calculus</a></li>
+      <li><a href="../math/linear_algebra.html" class="nav-link">Linear Algebra</a></li>
+      <li><a href="../math/abstract_algebra.html" class="nav-link">Abstract Algebra</a></li>
+      <li><a href="../math/probability.html" class="nav-link">Probability</a></li>
+      <li><a href="../math/statistics.html" class="nav-link">Statistics</a></li>
+      <li><a href="../math/logic.html" class="nav-link">Logic</a></li>
+      <li><a href="../math/set_theory.html" class="nav-link">Set Theory</a></li>
+      <li><a href="../math/topology.html" class="nav-link">Topology</a></li>
+      <li><a href="../math/differential_equations.html" class="nav-link">Differential Equations</a></li>
+      
+      <!-- Tools Section -->
+      <li class="section-header">Tools</li>
+      <li><a href="../math/editor.html" class="nav-link active">🧮 Live Math Editor</a></li>
+      
+      <!-- Physics Section -->
+      <li class="section-header">Physics</li>
+      <li><a href="../physics/index.html" class="nav-link">Physics Home</a></li>
+      <li><a href="../physics/mechanics.html" class="nav-link">Mechanics</a></li>
+      <li><a href="../physics/thermodynamics.html" class="nav-link">Thermodynamics</a></li>
+      <li><a href="../physics/electromagnetism.html" class="nav-link">Electromagnetism</a></li>
+      <li><a href="../physics/optics.html" class="nav-link">Optics</a></li>
+      <li><a href="../physics/waves-and-oscillations.html" class="nav-link">Waves & Oscillations</a></li>
+      <li><a href="../physics/quantum-mechanics.html" class="nav-link">Quantum Mechanics</a></li>
+      <li><a href="../physics/relativity.html" class="nav-link">Relativity</a></li>
+      <li><a href="../physics/fluid-mechanics.html" class="nav-link">Fluid Mechanics</a></li>
+      <li><a href="../physics/nuclear-physics.html" class="nav-link">Nuclear Physics</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="content">
+  <h1>🧮 Live Math Editor</h1>
+  <p>Type any mathematical expression below to see it rendered instantly. Use LaTeX syntax or click on the toolbar buttons for common symbols.</p>
+
+  <div class="editor-container">
+    <h2>Math Input</h2>
+    <math-field id="liveEditor" placeholder="Type your math expression here...">x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</math-field>
+    
+    <div class="editor-buttons">
+      <button id="copyLatexBtn" class="editor-btn">📋 Copy LaTeX</button>
+      <button id="clearBtn" class="editor-btn">🗑️ Clear</button>
+      <button id="exampleBtn" class="editor-btn">✨ Load Example</button>
+    </div>
+  </div>
+
+  <div class="editor-container">
+    <h2>Rendered Output</h2>
+    <div class="preview-label">Preview:</div>
+    <div class="preview-container" id="mathPreview">
+      <!-- Rendered math will appear here -->
+    </div>
+  </div>
+
+  <div class="editor-container">
+    <h2>LaTeX Code</h2>
+    <div class="preview-label">Generated LaTeX:</div>
+    <div class="latex-code" id="latexCode">
+      <!-- LaTeX code will appear here -->
+    </div>
+  </div>
+
+  <div class="editor-container">
+    <h2>Quick Reference</h2>
+    <p><strong>Common LaTeX commands:</strong></p>
+    <ul>
+      <li><code>\frac{a}{b}</code> - Fractions</li>
+      <li><code>x^2</code> - Superscripts</li>
+      <li><code>x_1</code> - Subscripts</li>
+      <li><code>\sqrt{x}</code> - Square root</li>
+      <li><code>\int</code> - Integrals</li>
+      <li><code>\sum</code> - Summation</li>
+      <li><code>\alpha, \beta, \gamma</code> - Greek letters</li>
+      <li><code>\sin, \cos, \tan</code> - Trig functions</li>
+    </ul>
+  </div>
+</main>
+
+<script type="module">
+  import 'https://unpkg.com/mathlive?module';
+  
+  const editor = document.getElementById('liveEditor');
+  const mathPreview = document.getElementById('mathPreview');
+  const latexCode = document.getElementById('latexCode');
+  const copyLatexBtn = document.getElementById('copyLatexBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const exampleBtn = document.getElementById('exampleBtn');
+  
+  // Examples to cycle through
+  const examples = [
+    'x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}',
+    '\\int_{-\\infty}^{\\infty} e^{-x^2} dx = \\sqrt{\\pi}',
+    '\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}',
+    'E = mc^2',
+    '\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1',
+    'F = ma',
+    '\\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\epsilon_0}'
+  ];
+  let currentExampleIndex = 0;
+  
+  function updatePreview() {
+    const latex = editor.getValue('latex');
+    latexCode.textContent = latex;
+    
+    // Update MathJax preview
+    mathPreview.innerHTML = `\\[${latex}\\]`;
+    
+    // Re-render MathJax
+    if (window.MathJax && window.MathJax.typesetPromise) {
+      window.MathJax.typesetPromise([mathPreview]).catch(err => {
+        console.log('MathJax rendering error:', err);
+        mathPreview.innerHTML = '<em style="color: #dc2626;">Invalid LaTeX expression</em>';
+      });
+    }
+  }
+  
+  // Update preview when editor content changes
+  editor.addEventListener('input', updatePreview);
+  
+  // Copy LaTeX button
+  copyLatexBtn.addEventListener('click', async () => {
+    const latex = editor.getValue('latex');
+    try {
+      await navigator.clipboard.writeText(latex);
+      const originalText = copyLatexBtn.textContent;
+      copyLatexBtn.textContent = '✅ Copied!';
+      copyLatexBtn.classList.add('success');
+      setTimeout(() => {
+        copyLatexBtn.textContent = originalText;
+        copyLatexBtn.classList.remove('success');
+      }, 1500);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  });
+  
+  // Clear button
+  clearBtn.addEventListener('click', () => {
+    editor.setValue('');
+    updatePreview();
+  });
+  
+  // Example button
+  exampleBtn.addEventListener('click', () => {
+    editor.setValue(examples[currentExampleIndex]);
+    currentExampleIndex = (currentExampleIndex + 1) % examples.length;
+    updatePreview();
+  });
+  
+  // Initial preview update
+  setTimeout(updatePreview, 1000); // Wait for MathJax to load
+</script>
+
+<script src="../script.js"></script>
+</body>
+</html> 

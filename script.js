@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ----- Formula Search (Ctrl+K) ----- */
   const allCards = [...document.querySelectorAll(".formula-card")];
   let searchBox = null;
+  const sidebarSearchBox = document.querySelector('.sidebar .search-box');
   
   function search(query) {
     if (!query.trim()) {
@@ -94,6 +95,31 @@ document.addEventListener("DOMContentLoaded", () => {
     allCards.forEach(c => {
       const hit = re.test(c.innerText);
       c.style.display = hit ? "block" : "none";
+    });
+  }
+  
+  // Enhanced sidebar search functionality
+  if (sidebarSearchBox) {
+    sidebarSearchBox.addEventListener('input', (e) => {
+      search(e.target.value);
+    });
+    
+    sidebarSearchBox.addEventListener('focus', () => {
+      sidebarSearchBox.style.borderColor = 'var(--accent)';
+      sidebarSearchBox.style.boxShadow = '0 0 0 3px rgba(79, 70, 229, 0.1)';
+    });
+    
+    sidebarSearchBox.addEventListener('blur', () => {
+      sidebarSearchBox.style.borderColor = 'var(--panel-border)';
+      sidebarSearchBox.style.boxShadow = 'none';
+    });
+    
+    sidebarSearchBox.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        sidebarSearchBox.value = '';
+        search('');
+        sidebarSearchBox.blur();
+      }
     });
   }
   

@@ -1,0 +1,990 @@
+
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Comprehensive Mathematics and Physics Formula Reference}
+
+\section*{Mathematics}
+
+\subsection*{Arithmetic}
+
+\textbf{Sum of the first $n$ natural numbers:} $1 + 2 + \cdots + n = \frac{n(n+1)}{2}$.
+
+\textit{Variables:} $n$ is a positive integer.
+
+\textit{Description:} Gives the sum of all natural numbers from $1$ up to $n$. Often illustrated by pairing terms (e.g. $1+n$, $2+(n-1)$, etc.) to simplify the addition.
+
+\textbf{Arithmetic sequence (nth term):} $a_n = a_1 + (n-1)d$.
+
+\textit{Variables:} $a_n$ is the $n$th term of the sequence, $a_1$ is the first term, $d$ is the common difference, and $n$ is the term index.
+
+\textit{Description:} Defines the general term of an arithmetic progression (constant difference between consecutive terms). A linear graph represents the sequence values.
+
+\textbf{Arithmetic series (sum of first $n$ terms of an AP):} $S_n = \frac{n}{2}(2a_1 + (n-1)d)$.
+
+\textit{Variables:} $S_n$ is the sum of the first $n$ terms, $a_1$ is the first term, $d$ is the common difference, $n$ is the number of terms.
+
+\textit{Description:} Calculates the sum of an arithmetic progression. Often visualized by pairing terms from ends toward the center (which all yield the same sum).
+
+\subsection*{Number Theory}
+
+\textbf{Fermat's Little Theorem:} $a^{p-1} \equiv 1 \pmod p$.
+
+\textit{Variables:} $p$ is a prime number, $a$ is an integer not divisible by $p$.
+
+\textit{Description:} In modular arithmetic, this theorem states that if $p$ is prime, then $a^{p-1}$ leaves a remainder of $1$ upon division by $p$. It’s fundamental for simplifying exponents mod $p$.
+
+\textbf{Euler's Totient (Phi) Formula:} $\varphi(n) = n \displaystyle\prod_{p \mid n}\Big(1 - \frac{1}{p}\Big)$.
+
+\textit{Variables:} $n$ is a positive integer, and the product is over each prime $p$ dividing $n$.
+
+\textit{Description:} Computes Euler’s totient $\varphi(n)$, the number of integers up to $n$ that are coprime with $n$. For example, if $n$ has prime factors, you subtract their fractions to get the count. Often used in advanced number theory and cryptography.
+
+\subsection*{Algebra}
+
+\textbf{Quadratic Formula:} $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+
+\textit{Variables:} $a, b, c$ are coefficients of a quadratic equation $ax^2 + bx + c = 0$ (with $a\neq 0$); $x$ represents the solutions (roots) of the equation.
+
+\textit{Description:} Gives the solutions for a quadratic equation of any form. It is typically illustrated by the parabola of $y = ax^2+bx+c$ intersecting the $x$-axis at $x$ values given by this formula (the roots).
+
+\textbf{Binomial Theorem:} $(a + b)^n = \sum_{k=0}^{n}\binom{n}{k} a^{n-k} b^k$.
+
+\textit{Variables:} $n$ is a non-negative integer, $a$ and $b$ are terms of the binomial, and $\binom{n}{k} = \frac{n!}{k!(n-k)!}$ is the binomial coefficient (number of ways to choose $k$ items from $n$).
+
+\textit{Description:} Expands a binomial raised to an integer power into a sum of terms. Often visualized using Pascal’s Triangle for binomial coefficients.
+
+\textbf{Sum of a Geometric Series (finite):} $S_n = a \frac{1 - r^n}{1 - r}$ (for $r \neq 1$).
+
+\textit{Variables:} $a$ is the first term of the geometric series, $r$ is the common ratio, and $n$ is the number of terms.
+
+\textit{Description:} Calculates the sum of the first $n$ terms of a geometric progression. If $|r|<1$, as $n \to \infty$, the series converges to $S_{\infty} = \frac{a}{1-r}$. A geometric series can be represented by successively smaller segments or areas to illustrate convergence.
+
+\textbf{Common Factoring Identity (Difference of Squares):} $a^2 - b^2 = (a+b)(a-b)$.
+
+\textit{Variables:} $a$ and $b$ are any expressions or numbers.
+
+\textit{Description:} Fundamental algebraic identity used to factor the difference between two squares. It’s often demonstrated graphically by the difference in areas of squares of side $a$ and side $b$.
+
+\textbf{Combination Formula:} $\displaystyle \binom{n}{k} = \frac{n!}{k!(n-k)!}$.
+
+\textit{Variables:} $n$ is the total number of items, $k$ is the number of items to choose, and $n!$ (factorial) is $n \times (n-1) \times \cdots \times 1$.
+
+\textit{Description:} Computes the number of ways to choose $k$ items from $n$ without order. This formula is central in combinatorics and appears in binomial expansions and probability calculations.
+
+\subsection*{Geometry (Euclidean)}
+
+\subsubsection*{Plane Geometry}
+
+\textbf{Pythagorean Theorem:} $c^2 = a^2 + b^2$.
+
+\textit{Variables:} $a$ and $b$ are the lengths of the legs (perpendicular sides) of a right triangle, and $c$ is the length of the hypotenuse (side opposite the right angle).
+
+\textit{Description:} Relates the side lengths of a right-angled triangle. It is used to find the third side given the other two. \textit{Visual:} Typically shown as three squares on the sides of a right triangle, with the sum of the areas of the smaller two squares equal to the area of the largest square on the hypotenuse.
+
+\textbf{Sum of Interior Angles (Polygon):} $S_{\text{angles}} = (n - 2)\times 180^\circ$.
+
+\textit{Variables:} $n$ is the number of sides of a polygon.
+
+\textit{Description:} Calculates the total sum of interior angles of an $n$-sided polygon (in degrees). For example, a triangle ($n=3$) has $180^\circ$, a quadrilateral ($n=4$) has $360^\circ$, etc. This is often visualized by dividing the polygon into $(n-2)$ triangles.
+
+\textbf{Area of Common Shapes:} Rectangle $A = L \times W$; Triangle $A = \frac{1}{2} b h$; Circle $A = \pi r^2$; Trapezoid $A = \frac{1}{2}(a+b)\,h$.
+
+\textit{Variables:} $L$ and $W$ are the length and width of a rectangle; $b$ is base and $h$ is height of a triangle (height is perpendicular to the base); $r$ is the radius of a circle; for a trapezoid, $a$ and $b$ are the lengths of the two parallel sides, and $h$ is the distance between those sides.
+
+\textit{Description:} Formulas for areas of basic plane figures. \textit{Visual:} Each formula corresponds to a shape (rectangle, triangle, circle, trapezoid) where area can be shown by grid counting or dissection arguments.
+
+\textbf{Perimeter/Circumference:} Rectangle $P = 2(L+W)$; Triangle $P = a + b + c$; Circle circumference $C = 2\pi r$.
+
+\textit{Variables:} $L, W$ are rectangle sides; $a,b,c$ are side lengths of a triangle; $r$ is circle radius.
+
+\textit{Description:} Computes the total distance around common shapes. The circle’s perimeter (circumference) is proportional to its diameter ($C = \pi D$ as well). \textit{Visual:} Represented by outlining the shape’s boundary.
+
+\textbf{Heron's Formula (Triangle Area by Sides):} $A = \sqrt{s(s-a)(s-b)(s-c)}$.
+
+\textit{Variables:} $a, b, c$ are side lengths of a triangle; $s = \frac{a+b+c}{2}$ is the semi-perimeter (half the perimeter).
+
+\textit{Description:} Calculates the area of a triangle using only side lengths. Useful when the height is unknown. Often demonstrated with geometric dissection or by constructing an auxiliary height.
+
+\subsubsection*{Solid Geometry}
+
+\textbf{Volume of a Rectangular Prism (Cuboid):} $V = L \times W \times H$. \textit{(Cube is a special case with $V=a^3$ for side $a$.)}
+
+\textit{Variables:} $L, W, H$ are the length, width, and height of the rectangular solid (for a cube, all three are equal to $a$).
+
+\textit{Description:} Computes the volume (space inside) of a box-shaped object. Visualized as counting unit cubes that fill a rectangular box.
+
+\textbf{Volume of a Cylinder:} $V = \pi r^2 h$.
+
+\textit{Variables:} $r$ is the base radius, $h$ is the height of the cylinder.
+
+\textit{Description:} Volume of a circular cylinder (like a can) equals base area $\pi r^2$ times height. \textit{Visual:} Often depicted as stacking circles to form the cylinder.
+
+\textbf{Volume of a Cone/Pyramid:} $V = \frac{1}{3} A_{\text{base}} \, h$. For a circular cone, $V=\frac{1}{3}\pi r^2 h$.
+
+\textit{Variables:} $A_{\text{base}}$ is the area of the base, $h$ is height (perpendicular to base). For a cone specifically, $r$ is base radius.
+
+\textit{Description:} The volume of any pyramid (base with triangular sides meeting at a point) is one-third the base area times height. Visual proof involves stacking three congruent pyramids to fill a prism.
+
+\textbf{Volume of a Sphere:} $V = \frac{4}{3}\pi r^3$.
+
+\textit{Variables:} $r$ is the radius of the sphere.
+
+\textit{Description:} Gives the volume inside a sphere (ball). \textit{Visual:} Often derived by calculus or by the method of exhaustion; can be illustrated by comparing to cylinder-cone combinations.
+
+\subsection*{Trigonometry}
+
+\textbf{Trigonometric Ratios (right triangle definitions):} $\displaystyle \sin\theta = \frac{\text{opposite}}{\text{hypotenuse}},\quad \cos\theta = \frac{\text{adjacent}}{\text{hypotenuse}},\quad \tan\theta = \frac{\text{opposite}}{\text{adjacent}}$.
+
+\textit{Variables:} $\theta$ is an angle in a right triangle. "Opposite", "adjacent", "hypotenuse" refer to side lengths relative to $\theta$.
+
+\textit{Description:} Defines sine, cosine, and tangent as ratios of sides in a right-angled triangle. \textit{Visual:} Typically shown on a right triangle with $\theta$ labeled, and sides marked accordingly.
+
+\textbf{Pythagorean Identity:} $\sin^2\theta + \cos^2\theta = 1$.
+
+\textit{Variables:} $\theta$ is an angle (in radians or degrees).
+
+\textit{Description:} Fundamental identity relating sine and cosine of the same angle. It is derived from the Pythagorean theorem on the unit circle ($\sin\theta$ and $\cos\theta$ being legs of a right triangle with hypotenuse 1). This identity underlies many other trigonometric relations.
+
+\textbf{Law of Sines (for any triangle):} $\displaystyle \frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}$.
+
+\textit{Variables:} $A, B, C$ are the angles of a triangle, and $a, b, c$ are the side lengths opposite those angles, respectively.
+
+\textit{Description:} Relates the ratios of each side length to the sine of its opposite angle; useful for solving general (non-right) triangles. Usually accompanied by a triangle diagram showing angles and opposite sides.
+
+\textbf{Law of Cosines:} $c^2 = a^2 + b^2 - 2ab\cos C$.
+
+\textit{Variables:} $a, b, c$ are side lengths of a triangle, and $C$ is the angle opposite side $c$.
+
+\textit{Description:} Generalizes the Pythagorean theorem to any triangle. It finds a third side or an angle, useful when the Law of Sines is ambiguous or not applicable. Visualized by dropping perpendiculars in a non-right triangle to derive the relation.
+
+\textbf{Angle Addition Formulas:} $\displaystyle \sin(\alpha+\beta) = \sin\alpha\,\cos\beta + \cos\alpha\,\sin\beta$;  $\displaystyle \cos(\alpha+\beta) = \cos\alpha\,\cos\beta - \sin\alpha\,\sin\beta$.
+
+\textit{Variables:} $\alpha, \beta$ are angles (in any units, but radians for calculus contexts).
+
+\textit{Description:} These formulas give the sine or cosine of a sum of two angles in terms of trig functions of the individual angles. They are often used to derive double-angle formulas (by setting $\alpha=\beta$) or to simplify trigonometric expressions. \textit{Visual:} Can be demonstrated by constructing right triangles or using unit circle diagrams for angles $\alpha$ and $\beta$.
+
+\textbf{Euler’s Formula (complex plane):} $e^{i\theta} = \cos\theta + i\,\sin\theta$.
+
+\textit{Variables:} $\theta$ is an angle in radians; $i$ is the imaginary unit ($i^2 = -1$); $e$ is the base of natural logarithms.
+
+\textit{Description:} Connects exponential functions and trigonometric functions. It describes a point on the unit circle in the complex plane. A special case is $e^{i\pi} + 1 = 0$, known as Euler's identity. \textit{Visual:} Often interpreted as a vector of length 1 at angle $\theta$ in the complex plane, showing circular motion.
+
+\subsection*{Analytic Geometry}
+
+\textbf{Distance Between Two Points (2D):} $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.
+
+\textit{Variables:} $(x_1, y_1)$ and $(x_2, y_2)$ are the coordinates of the two points.
+
+\textit{Description:} Calculates the straight-line distance between two points in the plane, derived from the Pythagorean theorem. \textit{Visual:} Represented by a right triangle drawn between the two points with horizontal and vertical legs.
+
+\textbf{Midpoint of Two Points:} $M = \Big( \frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2} \Big)$.
+
+\textit{Variables:} $(x_1, y_1)$ and $(x_2, y_2)$ are the coordinates of the endpoints of a line segment; $M$ is the midpoint coordinates.
+
+\textit{Description:} Gives the coordinate of the point exactly in the middle of two given points. \textit{Visual:} Shows that the midpoint’s coordinates are the average of the endpoints’ coordinates.
+
+\textbf{Slope of a Line:} $m = \frac{y_2 - y_1}{x_2 - x_1}$.
+
+\textit{Variables:} $(x_1, y_1)$ and $(x_2, y_2)$ are two distinct points on a line; $m$ is the slope.
+
+\textit{Description:} Measures the steepness or inclination of a line as the ratio of vertical change to horizontal change. \textit{Visual:} Represented as rise over run on a line graph.
+
+\textbf{Equation of a Line (Slope-Intercept Form):} $y = m x + b$.
+
+\textit{Variables:} $m$ is the slope of the line, $b$ is the $y$-intercept (the $y$ value when $x=0$), $x,y$ are the coordinates of any point on the line.
+
+\textit{Description:} Represents a line in the plane with slope $m$ and intercept $b$. The graph is a straight line crossing the $y$-axis at $(0,b)$.
+
+\textbf{Circle (Standard Equation):} $(x - h)^2 + (y - k)^2 = r^2$.
+
+\textit{Variables:} $(h, k)$ is the center of the circle, $r$ is the radius, $(x, y)$ is any point on the circle.
+
+\textit{Description:} Describes all points that are a fixed distance $r$ from a center $(h,k)$. \textit{Visual:} A circle on the coordinate plane centered at $(h,k)$ with radius $r$.
+
+\textbf{Ellipse (Standard Form):} $\displaystyle \frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$.
+
+\textit{Variables:} $(h,k)$ is the center of the ellipse, $a$ is the semi-major radius (horizontal if $a>b$), $b$ is the semi-minor radius (vertical if $a>b$).
+
+\textit{Description:} Represents an ellipse – the set of points for which the sum of distances to two foci is constant. If $a = b$, this reduces to a circle. \textit{Visual:} An ellipse drawn on a coordinate grid, showing its major and minor axes.
+
+\textbf{Hyperbola (Standard Form):} $\displaystyle \frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1$ (horizontal hyperbola).
+
+\textit{Variables:} $(h,k)$ is the center, $2a$ is the distance between vertices (on the transverse axis), $2b$ is the distance between co-vertices (on the conjugate axis).
+
+\textit{Description:} Represents a hyperbola – the set of points for which the absolute difference of distances to two foci is constant. \textit{Visual:} A pair of open curves (two branches) mirrored about the center on a coordinate plane.
+
+\textbf{Equation of a Plane (3D):} $Ax + By + Cz + D = 0$.
+
+\textit{Variables:} $A, B, C, D$ are constants defining the plane; $(x,y,z)$ is any point on the plane. (The vector $(A,B,C)$ is normal perpendicular to the plane.)
+
+\textit{Description:} General form of a plane in three-dimensional space. Any point satisfying this linear equation lies on the plane. \textit{Visual:} Shown as a flat sheet extending in 3D, with the normal vector illustrated.
+
+\subsection*{Differential Geometry}
+
+\textbf{Curvature of a Plane Curve:} $\displaystyle \kappa(x) = \frac{|y''(x)|}{\big(1 + [y'(x)]^2\big)^{3/2}}$.
+
+\textit{Variables:} $\kappa(x)$ is the curvature at a given point on the curve $y(x)$. $y'$ and $y''$ are the first and second derivatives of $y$ with respect to $x$.
+
+\textit{Description:} Measures how sharply a curve bends at a point. A larger $\kappa$ means a tighter curve (smaller radius of curvature $R=1/\kappa$). \textit{Visual:} Often illustrated by the osculating circle at a point on the curve (the circle that best approximates the curve near that point).
+
+\textbf{Arc Length of a Curve:} $L = \displaystyle \int_{x=a}^{b} \sqrt{1 + [y'(x)]^2}\,dx$.
+
+\textit{Variables:} $y'(x)$ is the derivative (slope) of the curve $y(x)$; the integral is evaluated from $x=a$ to $x=b$, the $x$-coordinates of the endpoints of the curve segment.
+
+\textit{Description:} Computes the length of a curve between two points. This comes from adding up infinitesimal line segments $\sqrt{dx^2+dy^2}$. \textit{Visual:} Represents approximating a curved line by many tiny straight segments.
+
+\subsection*{Calculus}
+
+\subsubsection*{Differentiation}
+
+\textbf{Definition of Derivative:} $f'(x) = \displaystyle \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$.
+
+\textit{Variables:} $f(x)$ is a function, $f'(x)$ is its derivative. $h$ is an increment in $x$ (approaching 0 in the limit).
+
+\textit{Description:} Defines the derivative as the instantaneous rate of change or slope of the function $f(x)$ at point $x$. Graphically, it’s the slope of the tangent line to $y=f(x)$ at $x$.
+
+\textbf{Power Rule (for derivatives):} $\displaystyle \frac{d}{dx}\big(x^n\big) = n x^{n-1}$.
+
+\textit{Variables:} $n$ is a constant exponent, $x$ is the variable.
+
+\textit{Description:} Provides a quick way to differentiate monomials. For example, if $f(x)=x^5$, then $f'(x)=5x^4$. This rule is fundamental for polynomial differentiation.
+
+\textbf{Product \& Quotient Rules:} If $u(x)$ and $v(x)$ are functions: $(uv)' = u'v + uv'$;  $\displaystyle \Big(\frac{u}{v}\Big)' = \frac{u'v - uv'}{v^2}$.
+
+\textit{Variables:} $u$ and $v$ are functions of $x$; $u'$ and $v'$ are their derivatives.
+
+\textit{Description:} These rules allow differentiation of products or quotients of two functions. For example, the quotient rule helps differentiate rational functions. Each is often derived from the limit definition of derivative.
+
+\textbf{Chain Rule:} If $y = f(u)$ and $u = g(x)$, then $\displaystyle \frac{dy}{dx} = \frac{dy}{du}\frac{du}{dx}$. Equivalently, $(f(g(x)))' = f'(g(x))\cdot g'(x)$.
+
+\textit{Variables:} $g(x)$ is an “inner” function and $f(u)$ is the “outer” function; $dy/du$ is derivative of $f$ with respect to its input, and $du/dx$ is derivative of $g$ with respect to $x$.
+
+\textit{Description:} Allows differentiation of composite functions. It essentially says the rate of change of $y$ w.r.t $x$ is the product of the rate of change of $y$ w.r.t $u$ and $u$ w.r.t $x$. Often visualized with function composition diagrams.
+
+\textbf{Derivatives of Common Functions:} $\frac{d}{dx}e^x = e^x$;  $\displaystyle \frac{d}{dx}\ln x = \frac{1}{x}$;  $\displaystyle \frac{d}{dx}\sin x = \cos x$;  $\displaystyle \frac{d}{dx}\cos x = -\sin x$;  $\displaystyle \frac{d}{dx}a^x = a^x \ln a$.
+
+\textit{Variables:} $x$ is the variable (for $\ln x$ assume $x>0$); $a$ is a positive constant base for $a^x$.
+
+\textit{Description:} These are standard differentiation results. They show, for example, exponential functions are their own derivative, and the slope of $\sin x$ at any point is $\cos x$. Such facts are often memorized or proved using the limit definition.
+
+\subsubsection*{Integration}
+
+\textbf{Indefinite Integral (Power Rule):} $\displaystyle \int x^n\,dx = \frac{x^{n+1}}{n+1} + C \qquad(n \neq -1)$.
+
+\textit{Variables:} $n$ is a constant exponent (not $-1$); $C$ is the constant of integration (since antiderivatives are determined up to an additive constant).
+
+\textit{Description:} Provides the antiderivative for a power of $x$. For example, $\int x^2 dx = \frac{x^3}{3}+C$. It’s the reverse process of differentiation.
+
+\textbf{Integrals of Common Functions:} $\displaystyle \int e^x dx = e^x + C$;  $\displaystyle \int \frac{1}{x}dx = \ln|x| + C$;  $\displaystyle \int \sin x\,dx = -\cos x + C$;  $\displaystyle \int \cos x\,dx = \sin x + C$.
+
+\textit{Variables:} $x$ is the variable of integration; $C$ is the integration constant.
+
+\textit{Description:} Standard antiderivatives that are often memorized. They follow directly from the corresponding derivative rules (since integration is the inverse operation of differentiation).
+
+\textbf{Integration by Parts:} $\displaystyle \int u\,dv = uv - \int v\,du$.
+
+\textit{Variables:} $u$ and $v$ are functions of $x$ such that $du$ and $dv$ are their differentials (derivatives times $dx$). Often one sets $u=f(x)$ and $dv = g(x)dx$.
+
+\textit{Description:} An integration technique based on the product rule for derivatives. It is useful for integrals of a product of functions (e.g., $x e^x$, or $x\sin x$). One function is chosen as $u$ to differentiate, and the other as $dv$ to integrate.
+
+\textbf{Fundamental Theorem of Calculus:} If $F(x)$ is an antiderivative of $f(x)$, then $\displaystyle \int_{a}^{b} f(x)\,dx = F(b) - F(a)$.
+
+\textit{Variables:} $f(x)$ is a continuous function on $[a,b]$, and $F'(x) = f(x)$. $a$ and $b$ are the limits of integration.
+
+\textit{Description:} Connects differentiation and integration, showing that the definite integral of a rate of change gives the total change. Also implies $\frac{d}{dx}\int_{a}^{x} f(t)\,dt = f(x)$. \textit{Visual:} Interprets the area under $f(x)$ from $a$ to $b$ via antiderivative values at the boundaries.
+
+\subsection*{Vector Calculus}
+
+\subsubsection*{Vector Operations}
+
+\textbf{Gradient (of a scalar field):} $\displaystyle \nabla f = \Big(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\Big)$.
+
+\textit{Variables:} $f(x,y,z)$ is a scalar function of position; $\partial f/\partial x$ is the partial derivative of $f$ with respect to $x$ (holding other variables constant), similarly for $y, z$.
+
+\textit{Description:} The gradient is a vector field that points in the direction of greatest increase of $f$ and whose magnitude is the rate of increase. Often visualized with level sets: $\nabla f$ is perpendicular to contour lines (in 2D) or surfaces (in 3D).
+
+\textbf{Divergence (of a vector field):} $\displaystyle \nabla\cdot \mathbf{F} = \frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z}$.
+
+\textit{Variables:} $\mathbf{F}(x,y,z) = \langle P, Q, R\rangle$ is a vector field with components $P(x,y,z)$, $Q(x,y,z)$, $R(x,y,z)$.
+
+\textit{Description:} Divergence is a scalar field representing the net rate of "outflow" from an infinitesimal volume at each point. Positive divergence indicates a source (flow expanding outward), negative indicates a sink. \textit{Visual:} Often shown with field lines diverging from or converging to a point.
+
+\textbf{Curl (of a vector field):} $\displaystyle \nabla \times \mathbf{F} = \Big(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}, \frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}, \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\Big)$.
+
+\textit{Variables:} $\mathbf{F} = \langle P, Q, R\rangle$ as above. Each component of curl is a combination of partial derivatives of $P, Q, R$.
+
+\textit{Description:} Curl is a vector field representing the rotation or swirling strength of $\mathbf{F}$ around a point. If curl is zero, the field is irrotational. \textit{Visual:} Depicted by small loops or arrows indicating local rotation (e.g., the curl of a fluid velocity field corresponds to vortices).
+
+\textbf{Laplacian:} $\displaystyle \nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}$.
+
+\textit{Variables:} $f$ is a twice-differentiable scalar function of $x,y,z$.
+
+\textit{Description:} The Laplacian $\nabla^2 f$ (also written $\Delta f$) is the divergence of the gradient of $f$. It appears in many physical equations (heat equation, wave equation, Laplace's equation $\nabla^2 f=0$). It measures how $f$ at a point compares to its average in an infinitesimal neighborhood (zero for harmonic functions).
+
+\subsubsection*{Integral Theorems}
+
+\textbf{Green’s Theorem (in the plane):} $\displaystyle \iint_{D}\Big(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\Big)\,dA = \oint_{\partial D} \big(P\,dx + Q\,dy\big)$.
+
+\textit{Variables:} $P(x,y)$ and $Q(x,y)$ are functions defining a 2D vector field $\mathbf{F}=\langle P,Q\rangle$. $D$ is a region in the plane and $\partial D$ its closed boundary curve (oriented positively).
+
+\textit{Description:} Relates a double integral over region $D$ to a line integral around its boundary. It’s a special case of Stokes’ Theorem in 2D, often used to convert between circulation (line integral) and curl (area integral). \textit{Visual:} Depicts a curve enclosing region $D$ and small oriented loops canceling interior to show equivalence.
+
+\textbf{Stokes’ Theorem:} $\displaystyle \iint_{S} (\nabla \times \mathbf{F})\cdot d\mathbf{S} = \oint_{\partial S} \mathbf{F}\cdot d\mathbf{\ell}$.
+
+\textit{Variables:} $\mathbf{F}$ is a vector field, $S$ is a surface in space, and $\partial S$ is the closed boundary curve of $S$. $(\nabla \times \mathbf{F})\cdot d\mathbf{S}$ is the normal component of curl across an area element of $S$, and $\mathbf{F}\cdot d\mathbf{\ell}$ is the tangent component of $\mathbf{F}$ along the boundary curve.
+
+\textit{Description:} Generalizes Green’s Theorem to 3D. It relates the flux of curl of $\mathbf{F}$ through a surface $S$ to the circulation of $\mathbf{F}$ around the boundary of $S$. It’s often visualized by dividing $S$ into small patches: the tiny circulations around each patch’s boundary sum to the total circulation around the outer edge.
+
+\textbf{Divergence Theorem (Gauss’s Theorem):} $\displaystyle \iiint_{V} (\nabla \cdot \mathbf{F})\,dV = \iint_{\partial V} \mathbf{F}\cdot d\mathbf{A}$.
+
+\textit{Variables:} $\mathbf{F}=\langle P,Q,R\rangle$ is a vector field, $V$ is a volume in space, and $\partial V$ is the closed surface bounding that volume. $d\mathbf{A}$ is an outward pointing area element on the surface.
+
+\textit{Description:} Relates the flux of a vector field out of a closed surface to the volume integral of the divergence over the region inside. In essence, it formalizes that the total "outflow" from a volume equals the sum of all sources inside. \textit{Visual:} Often shown with field lines emanating from or converging into a closed surface, equating counting of lines crossing the surface to the divergence sum inside.
+
+\subsection*{Linear Algebra}
+
+\textbf{Determinant of a $2\times2$ Matrix:} For $\displaystyle M=\begin{pmatrix}a & b\\ c & d\end{pmatrix}$, $\det(M) = ad - bc$.
+
+\textit{Variables:} $a,b,c,d$ are entries of the matrix $M$.
+
+\textit{Description:} The determinant is a scalar representing the scaling factor of the linear transformation defined by $M$ (and orientation flip if negative). For $2\times2$, it’s the area scaling of the unit square. If $\det(M)=0$, the matrix is singular (no inverse). \textit{Visual:} Interpreted as area of the parallelogram spanned by column (or row) vectors of the matrix.
+
+\textbf{Cramer’s Rule (solution of linear system):} For a system $A\mathbf{x}=\mathbf{b}$, the solution components are $x_i = \dfrac{\det(A_i)}{\det(A)}$.
+
+\textit{Variables:} $A$ is an $n\times n$ coefficient matrix with $\det(A)\neq0$. $A_i$ is the matrix formed by replacing the $i$-th column of $A$ with the constant vector $\mathbf{b}$. $x_i$ is the $i$-th unknown in solution vector $\mathbf{x}$.
+
+\textit{Description:} Provides an explicit formula for the solution of $n$ linear equations in $n$ unknowns using determinants. It’s practical for theoretical use or small $n$, but computationally expensive for large $n$.
+
+\textbf{Eigenvalue Equation:} $\det(A - \lambda I) = 0$.
+
+\textit{Variables:} $A$ is a square matrix, $\lambda$ is an eigenvalue, and $I$ is the identity matrix of the same size as $A$.
+
+\textit{Description:} The condition for $\lambda$ to be an eigenvalue of $A$. Expanding $\det(A-\lambda I)=0$ yields a polynomial (characteristic polynomial) in $\lambda$; its roots are the eigenvalues. For each eigenvalue, there is a non-zero vector $\mathbf{v}$ (eigenvector) satisfying $A\mathbf{v} = \lambda \mathbf{v}$.
+
+\textbf{Dot Product:} $\mathbf{u}\cdot \mathbf{v} = u_x v_x + u_y v_y + u_z v_z = |\mathbf{u}|\;|\mathbf{v}|\cos\theta$.
+
+\textit{Variables:} $\mathbf{u}, \mathbf{v}$ are vectors (given by components or magnitude-direction); $u_x$ is the $x$-component of $\mathbf{u}$, etc. $|\mathbf{u}|$ denotes the magnitude (length) of $\mathbf{u}$, and $\theta$ is the angle between $\mathbf{u}$ and $\mathbf{v}$.
+
+\textit{Description:} Produces a scalar equal to the sum of component-wise products. It measures how much one vector extends in the direction of another. If the dot product is zero, vectors are perpendicular (orthogonal). \textit{Visual:} Projection of one vector onto another: $\mathbf{u}\cdot \mathbf{v} = |\mathbf{u}|\;|\mathbf{v}|\cos\theta$.
+
+\textbf{Cross Product (3D vectors):} $\mathbf{u} \times \mathbf{v} = (u_y v_z - u_z v_y,\; u_z v_x - u_x v_z,\; u_x v_y - u_y v_x)$.
+
+\textit{Variables:} $\mathbf{u}=\langle u_x,u_y,u_z\rangle$, $\mathbf{v}=\langle v_x,v_y,v_z\rangle$ are 3-dimensional vectors.
+
+\textit{Description:} Produces a new vector perpendicular to both $\mathbf{u}$ and $\mathbf{v}$ (following the right-hand rule for direction). Its magnitude is $|\mathbf{u}\times \mathbf{v}| = |\mathbf{u}|\;|\mathbf{v}|\sin\theta$, which equals the area of the parallelogram spanned by $\mathbf{u}, \mathbf{v}$. \textit{Visual:} Shown by oriented area (parallelogram) and the orthogonal vector representing the cross product.
+
+\subsection*{Abstract Algebra}
+
+\textbf{Lagrange’s Theorem (Group Theory):} $|H|$ divides $|G|$.
+
+\textit{Variables:} $G$ is a finite group and $H$ is any subgroup of $G$; $|G|$ denotes the number of elements (order) of $G$, and $|H|$ is the order of $H$.
+
+\textit{Description:} The size of any subgroup $H$ of a finite group $G$ is a factor of the size of $G$. For example, if a group has 60 elements, any subgroup could have 1,2,3,4,5,6,10,12,15,20,30 or 60 elements (divisors of 60). This is often illustrated with symmetries or permutation groups.
+
+\textbf{Orbit-Stabilizer Theorem:} $|\mathrm{Orb}(x)| \cdot |\mathrm{Stab}(x)| = |G|$.
+
+\textit{Variables:} $G$ is a finite group acting on a set; $\mathrm{Orb}(x)$ is the orbit of an element $x$ (the set of images of $x$ under all group elements); $\mathrm{Stab}(x)$ is the stabilizer subgroup of $x$ (elements of $G$ that keep $x$ fixed). $|\cdot|$ denotes set size.
+
+\textit{Description:} Relates the size of an orbit of an element to the size of its stabilizer and the whole group. It’s a foundational result in group actions, often used to count objects via Burnside’s lemma. Think of splitting the group's action into independent moves on $x$ (orbit size) and those that do nothing to $x$ (stabilizer).
+
+\subsection*{Probability}
+
+\textbf{Probability (classical definition):} $P(A) = \dfrac{\text{number of favorable outcomes}}{\text{number of possible outcomes}}$.
+
+\textit{Variables:} $A$ is an event in a finite sample space with equally likely outcomes.
+
+\textit{Description:} Gives the probability of event $A$ by ratio if all outcomes are equally likely. For example, the probability of rolling a 5 on a fair six-sided die is $1/6$. \textit{Visual:} Often shown by highlighting favorable outcomes within the total outcome space.
+
+\textbf{Complement Rule:} $P(A^c) = 1 - P(A)$.
+
+\textit{Variables:} $A^c$ (or $\neg A$) is the complement of event $A$, meaning $A$ does not occur.
+
+\textit{Description:} The probability that $A$ \textbf{does not} happen is one minus the probability that it does happen. Useful for calculating probabilities of “at least one” type events by subtracting the probability of none.
+
+\textbf{Addition Rule (Union of Events):} $P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
+
+\textit{Variables:} $A$ and $B$ are two events. $A \cap B$ is the intersection (both $A$ and $B$ occur), $A \cup B$ is the union (either $A$ or $B$ or both occur).
+
+\textit{Description:} Gives the probability that at least one of events $A$ or $B$ occurs. If $A$ and $B$ are mutually exclusive (cannot occur together), the formula simplifies to $P(A)+P(B)$ since $P(A\cap B)=0$. Often illustrated with a Venn diagram.
+
+\textbf{Conditional Probability:} $P(A \mid B) = \dfrac{P(A \cap B)}{P(B)}$.
+
+\textit{Variables:} $P(A\mid B)$ is the probability of event $A$ given that event $B$ has occurred. $P(A \cap B)$ is the probability that both $A$ and $B$ occur, $P(B)$ is the probability of $B$ (assuming $P(B)\neq0$).
+
+\textit{Description:} Updates the probability of $A$ under the condition that $B$ is known to have happened. For example, the probability it’s raining given that the sky is cloudy. Visually explained using a restricted sample space (just $B$ outcomes).
+
+\textbf{Bayes’ Theorem:} $P(A \mid B) = \dfrac{P(B \mid A)\,P(A)}{P(B)}$.
+
+\textit{Variables:} $A$ and $B$ are events, with $P(B)\neq0$. $P(B\mid A)$ is the likelihood of $B$ given $A$, $P(A)$ is the prior probability of $A$, and $P(A\mid B)$ is the posterior probability of $A$ given $B$.
+
+\textit{Description:} Allows inversion of conditional probabilities. It’s fundamental in statistical inference, relating the probability of a cause $A$ given effect $B$ to the probability of effect given cause. Often visualized with probability trees or Bayes’ boxes.
+
+\textbf{Binomial Distribution (Probability of $k$ successes):} $P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$.
+
+\textit{Variables:} $n$ is the number of independent trials, $p$ is the probability of success on each trial, and $k$ is the number of successes ($X$ is a binomial random variable). $\binom{n}{k}$ is the combination count.
+
+\textit{Description:} Gives the probability of exactly $k$ successes in $n$ Bernoulli trials. For example, the chance of getting exactly 3 heads in 5 fair coin flips. The distribution’s probabilities can be visualized with a histogram or Pascal’s triangle (for small $n$).
+
+\textbf{Expected Value (Mean) of a Discrete Random Variable:} $E[X] = \sum_{i} x_i\, P(X = x_i)$.
+
+\textit{Variables:} $X$ is a random variable that takes values $x_i$ with probability $P(X=x_i)$.
+
+\textit{Description:} Computes the long-run average outcome of $X$ by weighting each possible value by its probability. For example, the expected value of a fair die roll is $1\cdot(1/6)+2\cdot(1/6)+\cdots+6\cdot(1/6)=3.5$. Often thought of as the balance point of the distribution.
+
+\textbf{Variance of a Random Variable:} $\displaystyle \mathrm{Var}(X) = E\!\big[(X - \mu)^2\big] = E[X^2] - \mu^2$, where $\mu = E[X]$.
+
+\textit{Variables:} $X$ has mean $\mu$. $E[X^2]$ is the expected value of $X^2$.
+
+\textit{Description:} Measures the spread or dispersion of the random variable’s values around the mean. The second expression $E[X^2] - \mu^2$ is often easier to compute. A higher variance means outcomes are more spread out. \textit{Visual:} Illustrated by how widely data points or a probability distribution are scattered around the mean.
+
+\subsection*{Statistics}
+
+\textbf{Arithmetic Mean (Average):} $\displaystyle \bar{x} = \frac{x_1 + x_2 + \cdots + x_n}{n}$.
+
+\textit{Variables:} $x_1, x_2, \dots, x_n$ are data values and $n$ is the number of observations. $\bar{x}$ (read “x-bar”) is the sample mean.
+
+\textit{Description:} Gives the central tendency of a data set as the sum of values divided by count. It’s the balance point of the data distribution. \textit{Visual:} Often shown on a number line or histogram as the center of mass of all points.
+
+\textbf{Standard Deviation (Population):} $\displaystyle \sigma = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \mu)^2}{N}}$.
+
+\textit{Variables:} $x_1, \dots, x_N$ are all data points in the population, $\mu$ is the population mean, $N$ is the number of data points, and $\sigma$ is the standard deviation.
+
+\textit{Description:} The standard deviation is the square root of variance. It represents the typical distance of data points from the mean. A smaller $\sigma$ means data are tightly clustered around $\mu$, while a larger $\sigma$ indicates more spread. \textit{Visual:} Often depicted as the width of a bell curve or error bars in data plots.
+
+\textbf{Normal Distribution (Gaussian PDF):} $\displaystyle f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\!\Big[-\frac{(x-\mu)^2}{2\sigma^2}\Big]$.
+
+\textit{Variables:} $\mu$ is the mean (center of the distribution), $\sigma$ is the standard deviation (controls spread). The exponential term involves $(x-\mu)^2$ which is the squared deviation from the mean.
+
+\textit{Description:} The probability density function of a normal distribution. It forms the characteristic “bell curve.” About 68% of values lie within $1\sigma$ of $\mu$, 95% within $2\sigma$, 99.7% within $3\sigma$ (“68-95-99.7 rule”). \textit{Visual:} Bell curve graph centered at $\mu$.
+
+\textbf{z-Score (Standard Score):} $z = \frac{x - \mu}{\sigma}$.
+
+\textit{Variables:} $x$ is a raw score, $\mu$ is the mean of the distribution, $\sigma$ is the standard deviation.
+
+\textit{Description:} Converts a value to standard units indicating how many standard deviations $x$ is above ($z>0$) or below ($z<0$) the mean. It’s used to compare different distributions or to look up probabilities from standard normal tables. \textit{Visual:} Shown on a normalized bell curve where $\mu$ corresponds to $z=0$, and each increment of 1 in $z$ marks one standard deviation.
+
+\subsection*{Logic}
+
+\textbf{Logical Equivalences:}
+
+\textit{De Morgan’s Laws:} $\neg(p \wedge q) \equiv (\neg p) \vee (\neg q)$;  $\neg(p \vee q) \equiv (\neg p) \wedge (\neg q)$.
+
+\textit{Implication:} $p \to q \equiv (\neg p) \vee q$.
+
+\textit{Double Negation:} $\neg(\neg p) \equiv p$.
+
+\textit{Variables:} $p, q$ are propositions (statements that are true or false); $\neg$ is NOT, $\wedge$ is AND, $\vee$ is OR, $\to$ is one-way implication.
+
+\textit{Description:} These are rules for transforming logical expressions. De Morgan’s laws show how to distribute a negation across AND/OR. The implication equivalence is used to simplify or form contrapositive statements. Double negation says a double “not” cancels out. \textit{Visual:} Often verified with truth tables.
+
+\textbf{Number of Truth Assignments:} $2^n$.
+
+\textit{Variables:} $n$ is the number of distinct boolean variables/propositions.
+
+\textit{Description:} If you have $n$ independent true/false propositions, there are $2^n$ possible combinations of truth values. For example, 3 binary variables can have $2^3 = 8$ configurations (as seen in a truth table with 8 rows).
+
+\subsection*{Set Theory}
+
+\textbf{Union-Intersection (Inclusion-Exclusion for two sets):} $|A \cup B| = |A| + |B| - |A \cap B|$.
+
+\textit{Variables:} $A$ and $B$ are sets; $|X|$ denotes the number of elements in set $X$.
+
+\textit{Description:} Calculates the size of the union of two sets by adding their sizes and subtracting the overlap (which was counted twice). This principle generalizes to more sets with alternating plus and minus of intersections (inclusion-exclusion principle). \textit{Visual:} Often shown with a Venn diagram highlighting areas of $A$ and $B$.
+
+\textbf{Size of Power Set:} $| \mathcal{P}(A) | = 2^{|A|}$.
+
+\textit{Variables:} $A$ is any set; $\mathcal{P}(A)$ (power set of $A$) is the set of all subsets of $A$; $|A|$ is the number of elements in $A$.
+
+\textit{Description:} The number of possible subsets of a set $A$ is $2^{|A|}$ (each element either in or out of a subset). For instance, a set with 3 elements has $2^3=8$ subsets. \textit{Visual:} Often listed out for small sets to show the pattern (each element doubles the subsets).
+
+\textbf{De Morgan’s Laws (for sets):} $(A \cap B)^c = A^c \cup B^c$;  $(A \cup B)^c = A^c \cap B^c$.
+
+\textit{Variables:} $A^c$ is the complement of set $A$ (everything not in $A$, within a universal set context).
+
+\textit{Description:} Laws connecting set operations with complements, analogous to the logical form. They are useful for simplifying expressions involving unions, intersections, and complements. \textit{Visual:} Can be represented with shaded Venn diagrams, showing that the complement of an overlap equals the union of complements, etc.
+
+\subsection*{Topology}
+
+\textbf{Euler’s Formula for Polyhedra:} $V - E + F = 2$.
+
+\textit{Variables:} $V$ is the number of vertices, $E$ the number of edges, $F$ the number of faces of a convex polyhedron (or planar connected graph).
+
+\textit{Description:} A classic result relating the counts of fundamental elements of polyhedra (e.g., a cube has $V=8, E=12, F=6$, and indeed $8-12+6=2$). This is often shown by deforming the polyhedron to a network on a sphere or plane. It generalizes to $V-E+F=2-2g$ for surfaces of higher genus $g$.
+
+\textbf{Euler Characteristic of Surfaces:} $\chi = 2 - 2g$.
+
+\textit{Variables:} $\chi$ is the Euler characteristic, and $g$ is the genus (number of “holes”) of a closed surface. For example, a torus (donut shape) has $g=1$ and $\chi = 0$.
+
+\textit{Description:} Relates a topological invariant $\chi$ of a surface to its genus. It generalizes Euler’s polyhedron formula to surfaces: a sphere ($g=0$) has $\chi=2$, a torus ($g=1$) has $\chi=0$, etc. It’s a foundational formula in algebraic topology, often visualized by deforming surfaces.
+
+\subsection*{Differential Equations}
+
+\textbf{First-Order Linear ODE (general solution):} For $y' + P(x)\,y = Q(x)$, the solution is
+\[
+y(x) = e^{-\int P(x)\,dx}\Big(\int Q(x)\,e^{\int P(x)\,dx}dx + C\Big).
+\]
+
+\textit{Variables:} $y' = \frac{dy}{dx}$, $P(x)$ and $Q(x)$ are given coefficient and source functions, $C$ is an arbitrary constant (from integration).
+
+\textit{Description:} This formula gives the general solution using an integrating factor $\mu(x)=e^{\int P\,dx}$. It is taught as the method to solve any first-order linear differential equation. The solution comprises the homogeneous solution (factor $e^{-\int P dx}$) and a particular solution (the integral part).
+
+\textbf{Constant-Coefficient 2nd-Order ODE:} For $y'' + a\,y' + b\,y = 0$, solve the characteristic equation $r^2 + a r + b = 0$.
+
+\begin{itemize}
+\item If roots are $r_1, r_2$ (distinct): $y(x) = C_1 e^{r_1 x} + C_2 e^{r_2 x}$.
+\end{itemize}
+
+\textit{Variables:} $y'' = \frac{d^2y}{dx^2}$, $a, b$ are constants, $r_{1,2}$ are roots of the quadratic. $C_1, C_2$ are constants determined by initial conditions.
+
+\textit{Description:} This gives the general solution of a homogeneous linear second-order ODE with constant coefficients. If roots are repeated ($r_1=r_2$), then $y(x) = (C_1 + C_2 x)e^{r_1 x}$; if complex, $y(x)=e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)$ for root $\alpha \pm i\beta$.
+
+\textbf{Exponential Growth/Decay:} $\displaystyle \frac{dy}{dt} = k\,y \quad\implies\quad y(t) = C\,e^{k t}$.
+
+\textit{Variables:} $y(t)$ is the quantity as a function of time $t$, $k$ is the growth ($k>0$) or decay ($k<0$) rate constant, $C$ is the initial amount $y(0)$.
+
+\textit{Description:} The differential equation states that the rate of change of $y$ is proportional to its current amount. The solution is an exponential law. Examples: radioactive decay (negative $k$), population growth (positive $k$). The graph is an exponential curve increasing or decreasing over time.
+
+\textbf{Simple Harmonic Motion (solution):} $x'' + \omega^2 x = 0 \quad\implies\quad x(t) = A \cos(\omega t) + B \sin(\omega t)$.
+
+\textit{Variables:} $x(t)$ is the displacement as a function of time, $\omega$ is the angular frequency ($\omega = 2\pi f$, with $f$ frequency), and $A, B$ are constants determined by initial conditions (they can be written as amplitude and phase alternatively).
+
+\textit{Description:} This second-order ODE describes oscillatory motion with no damping or driving forces (e.g., mass on a spring, small-angle pendulum). The general solution is a combination of sine and cosine at frequency $\omega$. The motion can be visualized as a cosine wave (if starting at max displacement) or sine wave (if starting at equilibrium with velocity).
+
+\textbf{Separation of Variables (general method):} If $\frac{dy}{dx} = g(x)\,h(y)$, then $\displaystyle \int \frac{1}{h(y)}\,dy = \int g(x)\,dx + C$.
+
+\textit{Description:} This is the strategy for solving separable differential equations by integrating both sides after algebraically separating $y$ terms and $x$ terms. For example, $dy/dx = x\,y$ can be rewritten as $\frac{1}{y}dy = x\,dx$ and integrated to give $\ln|y| = \frac{x^2}{2} + C$.
+
+\section*{Physics}
+
+\subsection*{Mechanics}
+
+\subsubsection*{Kinematics (Motion in a Straight Line)}
+
+\textbf{Equations of Constant Acceleration:} $v = v_0 + a t$; $\displaystyle \Delta x = v_0 t + \tfrac{1}{2}a t^2$; $v^2 = v_0^2 + 2a\,\Delta x$.
+
+\textit{Variables:} $v_0$ = initial velocity, $v$ = final velocity after time $t$, $a$ = constant acceleration, $\Delta x$ = displacement (change in position) in time $t$.
+
+\textit{Description:} These equations govern linear motion with constant acceleration (e.g., free-fall under gravity ignoring air resistance). They are often demonstrated with motion graphs (velocity-time yielding displacement as area, etc.) or experiments like inclined planes.
+
+\textbf{Projectile Range (level ground):} $R = \frac{v_0^2 \sin(2\theta)}{g}$.
+
+\textit{Variables:} $v_0$ = launch speed, $\theta$ = launch angle above horizontal, $g$ = acceleration due to gravity (approximately 9.8 m/s² downward).
+
+\textit{Description:} Gives the horizontal distance (range) of a projectile launched on level ground (initial and final heights equal) neglecting air resistance. Max range occurs at $\theta=45^\circ$. \textit{Visual:} Parabolic trajectory of a projectile; range is the horizontal span of the parabola.
+
+\textbf{Centripetal Acceleration \& Force (Uniform Circular Motion):} $a_c = \frac{v^2}{r}$;  $F_c = \frac{m\,v^2}{r}$.
+
+\textit{Variables:} $v$ = speed along the circular path, $r$ = radius of the circle, $m$ = mass of the object. $a_c$ points toward the center of the circle; $F_c$ is the net inward force required (centripetal force).
+
+\textit{Description:} In circular motion, an object constantly accelerates toward the center to change direction. These formulas are illustrated by objects twirling on strings or cars taking a turn, with force diagrams showing inward (centripetal) force.
+
+\subsubsection*{Dynamics (Forces and Newton's Laws)}
+
+\textbf{Newton’s Second Law:} $\mathbf{F}_{\text{net}} = m \mathbf{a}$.
+
+\textit{Variables:} $m$ = mass of an object, $\mathbf{a}$ = acceleration vector of the object, $\mathbf{F}_{\text{net}}$ = net force vector acting on the object (sum of all forces). In scalar form for one dimension: $F_{\text{net}} = m a$.
+
+\textit{Description:} Fundamental law relating force, mass, and acceleration. It implies acceleration is proportional to net force and inversely proportional to mass. \textit{Visual:} Often illustrated by free-body diagrams showing forces on an object and the resulting acceleration (e.g., pushing a cart vs. a heavy car with the same force).
+
+\textbf{Weight (Force due to Gravity):} $W = m g$.
+
+\textit{Variables:} $W$ is weight (force), $m$ is mass, $g$ is acceleration due to gravity (on Earth, $g \approx 9.8\,\text{m/s}^2$ downward).
+
+\textit{Description:} Weight is the gravitational force exerted on a mass by Earth (or another celestial body). It differs from mass; mass is constant, weight depends on local $g$. \textit{Visual:} Spring scale readings for an object on Earth vs. Moon (mass same, weight different because $g$ differs).
+
+\textbf{Momentum:} $\displaystyle \mathbf{p} = m \mathbf{v}$. \& \textbf{Impulse:} $\mathbf{J} = \Delta \mathbf{p} = \mathbf{F}_{\text{avg}}\,\Delta t$.
+
+\textit{Variables:} $\mathbf{p}$ = momentum vector, $m$ = mass, $\mathbf{v}$ = velocity. $\mathbf{J}$ = impulse (vector), $\Delta \mathbf{p}$ = change in momentum, $\mathbf{F}_{\text{avg}}$ = average force applied, $\Delta t$ = time interval of force application.
+
+\textit{Description:} Momentum is the quantity of motion (mass times velocity). Impulse is the effect of a force acting over time, equal to the change in momentum. These are illustrated by collisions: e.g., a longer impact time reduces force for the same momentum change (crumple zones in cars).
+
+\textbf{Work (Constant Force):} $W = F\,d \,\cos\theta$.
+
+\textit{Variables:} $F$ = magnitude of the constant force applied, $d$ = displacement of the object, $\theta$ = angle between the force direction and displacement direction.
+
+\textit{Description:} Work is energy transfer by a force. This formula computes work done by a constant force $F$ moving an object through displacement $d$. If force is in the same direction as motion ($\cos\theta=1$), $W=Fd$. \textit{Visual:} Shown by the area under a force-distance graph or situations like pushing a box along a surface.
+
+\textbf{Kinetic \& Potential Energy:} $K = \tfrac{1}{2} m v^2$;  $U_g = m g h$;  $U_s = \tfrac{1}{2} k x^2$.
+
+\textit{Variables:} $K$ = kinetic energy; $m$ = mass, $v$ = speed. $U_g$ = gravitational potential energy (near Earth’s surface); $h$ = height above a reference level. $U_s$ = elastic (spring) potential energy; $k$ = spring constant, $x$ = compression/stretch from equilibrium.
+
+\textit{Description:} Kinetic energy is the energy of motion. Gravitational $U_g$ is energy stored by raising an object in a gravitational field. Elastic $U_s$ is energy stored in a stretched/compressed spring. \textit{Visual:} Roller coaster exchanges $U_g$ and $K$; a moving mass compressing a spring stores energy as $U_s$.
+
+\textbf{Power:} $P = \frac{W}{t} = F v \cos\theta$.
+
+\textit{Variables:} $W$ = work done, $t$ = time, so $W/t$ is the work rate. Alternatively, $F$ = force, $v$ = velocity, $\theta$ angle between force and velocity (so $Fv\cos\theta$ is the instantaneous power by that force).
+
+\textit{Description:} Power is the rate of energy transfer or work done per second (measured in Watts). For example, 1 watt = 1 joule/second. The $Fv$ form is useful for constant forces (e.g., power required to lift an object at constant speed). Often visualized with mechanical engines or electrical power calculations.
+
+\textbf{Newton’s Law of Universal Gravitation:} $F = G \frac{m_1 m_2}{r^2}$.
+
+\textit{Variables:} $m_1, m_2$ = masses of two objects, $r$ = distance between their centers, $F$ = magnitude of gravitational force between them, $G$ = universal gravitational constant ($6.674\times10^{-11}\,\text{N·m}^2/\text{kg}^2$).
+
+\textit{Description:} Every mass exerts an attractive force on every other mass. This inverse-square law explains planetary orbits, moon’s gravity, etc. \textit{Visual:} Often shown with two masses and an arrow depicting force on each, or field lines radiating from a mass.
+
+\textbf{Gravitational Potential Energy (two masses):} $U(r) = -\,G \frac{m_1 m_2}{r}$.
+
+\textit{Variables:} Same $m_1, m_2, r, G$ as above. The negative sign indicates that the potential energy is zero at infinite separation and becomes more negative as masses come closer (bound state).
+
+\textit{Description:} Energy associated with two masses in a gravitational field. As $r$ decreases, $U$ decreases (becomes more negative), meaning work would be required to separate them. Often visualized as a well or curve approaching 0 at infinity and dipping down as $r$ decreases.
+
+\textbf{Friction (Max static \& kinetic):} $f_s \le \mu_s N$;  $f_k = \mu_k N$.
+
+\textit{Variables:} $f_s$ = static friction force (can vary up to a maximum), $f_k$ = kinetic friction force (constant when sliding), $\mu_s$ = coefficient of static friction, $\mu_k$ = coefficient of kinetic friction, $N$ = normal force (perpendicular force between surfaces).
+
+\textit{Description:} Empirical formulas for friction. Static friction adjusts to prevent motion until a threshold ($\mu_s N$) is reached; kinetic friction opposes motion with roughly constant magnitude once sliding. \textit{Visual:} Box on an incline – as angle increases, component of weight parallel to surface increases until it equals $\mu_s N$ and the box starts sliding; then kinetic friction $\mu_k N$ applies.
+
+\subsubsection*{Rotational Mechanics}
+
+\textbf{Torque (Moment of Force):} $\boldsymbol{\tau} = \mathbf{r} \times \mathbf{F}$ (vector), magnitude $\tau = r F \sin\theta$.
+
+\textit{Variables:} $\mathbf{r}$ = position vector from pivot to point of force application, $\mathbf{F}$ = force vector, $\theta$ = angle between $\mathbf{r}$ and $\mathbf{F}$.
+
+\textit{Description:} Torque measures the tendency of a force to rotate an object about an axis. The cross product form gives direction (perpendicular to plane of $\mathbf{r}$ and $\mathbf{F}$ following right-hand rule). Magnitude is force times lever arm (perpendicular distance $r\sin\theta$). \textit{Visual:} Wrench turning a bolt: a force farther from the bolt (larger $r$) yields more torque.
+
+\textbf{Moment of Inertia (for discrete masses):} $I = \sum m_i r_i^2$. \textit{(For a continuous body, $I=\int r^2 \,dm$.)}
+
+\textit{Variables:} $m_i$ are point masses in the object, $r_i$ is each mass’s distance to the axis of rotation. $I$ depends on the axis chosen.
+
+\textit{Description:} Moment of inertia is rotational inertia, representing how mass is distributed relative to the axis. It appears in rotational dynamics ($I$ plays the role of $m$). For example, a solid disk vs. a hoop of equal mass have different $I$ about the center (hoop has more mass at perimeter, larger $I$). \textit{Visual:} Often given for common shapes (e.g., $I=\frac{1}{2}MR^2$ for a solid disk about center).
+
+\textbf{Rotational Dynamics:} $\tau_{\text{net}} = I \alpha$.
+
+\textit{Variables:} $\tau_{\text{net}}$ = net torque on an object, $I$ = moment of inertia about the rotation axis, $\alpha$ = angular acceleration.
+
+\textit{Description:} This is the rotational analogue of $F=ma$. It states that net torque produces angular acceleration proportional to the moment of inertia. For example, it requires more torque to spin up a heavier or more extended object at the same rate. \textit{Visual:} Flywheel or merry-go-round: more torque needed to achieve a given spin if mass is larger or distributed farther out.
+
+\textbf{Angular Momentum (rotational):} $L = I \omega$.
+
+\textit{Variables:} $L$ = angular momentum of a rotating rigid body, $I$ = moment of inertia, $\omega$ = angular velocity. \textit{(More generally, for a particle $L = \mathbf{r}\times m\mathbf{v}$ about a point.)}
+
+\textit{Description:} Analogous to linear momentum $p=mv$. It’s conserved in a closed system with no external torque (conservation of angular momentum explains why an ice skater spins faster pulling arms in, since $I$ decreases, $\omega$ increases to keep $L$ constant). \textit{Visual:} Spinning figure skater or rotating chair experiments.
+
+\textbf{Rotational Kinetic Energy:} $K_{\text{rot}} = \tfrac{1}{2} I \omega^2$.
+
+\textit{Variables:} $I$ = moment of inertia, $\omega$ = angular speed.
+
+\textit{Description:} The kinetic energy due to rotation. If an object both translates and rotates (like a rolling wheel), total kinetic energy is sum of translational $\frac12mv^2$ and rotational $\frac12I\omega^2$. \textit{Visual:} A rolling cylinder: energy partitioned into motion of center of mass and spin about center.
+
+\subsection*{Thermodynamics}
+
+\subsubsection*{Laws of Thermodynamics \& Entropy}
+
+\textbf{First Law of Thermodynamics:} $\displaystyle \Delta U = Q - W$.
+
+\textit{Variables:} $\Delta U$ = change in internal energy of a system, $Q$ = heat added \textbf{to} the system, $W$ = work done \textbf{by} the system (on the surroundings).
+
+\textit{Description:} Energy conservation in thermodynamic processes. If heat is added to a system, it can either raise internal energy or do external work. Sign conventions: if work is done \textbf{by} the system, $W$ is positive (hence internal energy decreases by that amount if $Q$ is fixed). \textit{Visual:} Piston: heat in, gas can expand (do work lifting weight) and/or increase temperature (internal energy).
+
+\textbf{Boltzmann’s Entropy Formula:} $S = k_B \ln \Omega$.
+
+\textit{Variables:} $S$ = entropy of a system, $\Omega$ = number of microstates (ways the system’s molecules can be arranged consistently with the macroscopic state), $k_B$ = Boltzmann’s constant ($1.38\times10^{-23}$ J/K).
+
+\textit{Description:} Relates entropy (disorder or information content) to the number of microscopic configurations. More microstates $\Omega$ (i.e., more disorder) means higher entropy. Engraved on Boltzmann’s tomb, it underpins the statistical definition of entropy. \textit{Visual:} Often explained with gas in a box: more volume or energy gives exponentially more arrangements of molecules, hence higher $S$.
+
+\subsubsection*{Gas Laws and Thermal Processes}
+
+\textbf{Ideal Gas Law:} $P V = n R T$.
+
+\textit{Variables:} $P$ = pressure, $V$ = volume, $n$ = number of moles of gas, $T$ = absolute temperature (Kelvin), $R$ = ideal gas constant ($8.314\,\text{J/(mol·K)}$).
+
+\textit{Description:} Equation of state for an ideal gas (point particles, no intermolecular forces). It combines Boyle’s law, Charles’s law, etc. Tells, for example, how pressure increases with temperature if volume is fixed. \textit{Visual:} Often shown with a piston: heating the gas (increasing $T$) at constant $V$ raises $P$ (piston pushes harder).
+
+\textbf{Thermal Expansion (Linear):} $\Delta L = \alpha L_0 \Delta T$.
+
+\textit{Variables:} $L_0$ = original length of an object, $\Delta L$ = change in length due to temperature change, $\Delta T$ = temperature change, $\alpha$ = coefficient of linear expansion (material-specific).
+
+\textit{Description:} Materials expand when heated. This formula (for small $\Delta T$) approximates how much a rod or length $L_0$ will elongate with temperature. There’s a similar formula for volume expansion: $\Delta V = \beta V_0 \Delta T$ with $\beta \approx 3\alpha$. \textit{Visual:} Gaps in railway tracks or bridges to accommodate expansion in hot weather.
+
+\textbf{Heat and Specific Heat:} $Q = m c \,\Delta T$; \textit{Phase Change:} $Q = m L$.
+
+\textit{Variables:} $Q$ = heat added or removed, $m$ = mass of the substance, $c$ = specific heat capacity, $\Delta T$ = temperature change. $L$ = latent heat (heat per mass for phase change, e.g., fusion or vaporization).
+
+\textit{Description:} The first formula calculates heat for a temperature change (no phase change): e.g., how much heat to warm water by 20°C. The second gives heat required for a phase change (at constant temperature), e.g., melting ice or boiling water. \textit{Visual:} Calorimetry: mixing hot and cold water, or heating curves showing temperature plateau during phase transitions.
+
+\textbf{Carnot Engine Efficiency (Max Theoretical):} $\displaystyle \eta_{\text{Carnot}} = 1 - \frac{T_c}{T_h}$.
+
+\textit{Variables:} $T_h$ = absolute temperature of the hot reservoir, $T_c$ = absolute temperature of the cold reservoir (in Kelvin). $\eta$ = efficiency (fraction of input heat converted to work).
+
+\textit{Description:} The Carnot efficiency is the upper limit for any heat engine operating between two temperatures. It shows that 100\% efficiency is impossible unless $T_c = 0$ K (unattainable). Real engines have lower efficiency due to irreversibilities. \textit{Visual:} Depicted with a Carnot cycle diagram or two thermal reservoirs with heat flow and work output.
+
+\subsection*{Electromagnetism}
+
+\subsubsection*{Electrostatics and Circuits}
+
+\textbf{Coulomb’s Law:} $F = k\,\frac{q_1 q_2}{r^2}$.
+
+\textit{Variables:} $q_1, q_2$ = charges of two point objects, $r$ = distance between them, $F$ = magnitude of electric force. $k = 8.99\times10^9\,\text{N·m}^2/\text{C}^2$ (Coulomb’s constant, equal to $1/(4\pi\varepsilon_0)$).
+
+\textit{Description:} Gives the electrostatic force between two charges. The force is attractive if charges are opposite, repulsive if like-signed. It is an inverse-square law similar in form to gravity. \textit{Visual:} Field lines emanating from a positive charge and terminating on a negative charge, with force vectors between charges.
+
+\textbf{Electric Field of Point Charge:} $E = k\,\frac{q}{r^2}$.
+
+\textit{Variables:} $q$ = source charge, $r$ = distance from the charge, $E$ = electric field magnitude at that distance (radially outward for $q>0$, inward for $q<0$).
+
+\textit{Description:} The electric field is force per unit charge. For a point charge, it diminishes with distance squared. \textit{Visual:} Field lines radiating uniformly from an isolated charge; the density of lines (and thus field strength) decreases with $r^2$.
+
+\textbf{Electric Potential (Point Charge):} $V = k\,\frac{q}{r}$.
+
+\textit{Variables:} $q$ = point charge, $r$ = distance from the charge, $V$ = electric potential (voltage) at that point relative to infinity.
+
+\textit{Description:} The electric potential is the potential energy per unit charge. For a point charge, it falls off as $1/r$. Differences in $V$ between two points give the work per charge to move between those points. \textit{Visual:} Equipotential surfaces (spheres around a point charge) where $V$ is constant on each sphere.
+
+\textbf{Capacitance (Parallel Plate):} $C = \dfrac{\varepsilon_0 A}{d}$.
+
+\textit{Variables:} $C$ = capacitance, $A$ = area of each plate, $d$ = separation between plates, $\varepsilon_0$ = permittivity of free space ($8.85\times10^{-12}$ F/m). \textit{(If a dielectric is present, $C = \kappa \varepsilon_0 A/d$ where $\kappa$ is dielectric constant.)}
+
+\textit{Description:} Capacitance is the ability to store charge per unit voltage ($C=Q/V$). For parallel plates, larger area or smaller gap yields bigger $C$. This formula is a basic design equation for capacitors. \textit{Visual:} Two parallel conducting plates: field exists between them, and charge $+Q$ and $-Q$ on plates relates to voltage $V$ via $C=Q/V$.
+
+\textbf{Ohm’s Law:} $V = I R$.
+
+\textit{Variables:} $V$ = voltage (potential difference across a resistor or circuit element), $I$ = current through it, $R$ = resistance.
+
+\textit{Description:} Linear relation defining resistance; it states that the voltage across a conductor is proportional to the current through it, with $R$ as proportionality constant (in ohms $\Omega$). This holds for ohmic materials where $R$ is constant. \textit{Visual:} Plot of $V$ vs $I$ is a straight line with slope $R$. Also illustrated by a simple circuit: a battery, resistor, and measured current.
+
+\textbf{Resistors in Series \& Parallel:} $R_{\text{series}} = R_1+R_2+\cdots$;  $\displaystyle \frac{1}{R_{\text{parallel}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots$.
+
+\textit{Variables:} $R_{\text{series}}$ is the equivalent resistance of resistors connected end-to-end (series); $R_{\text{parallel}}$ is the equivalent of resistors connected to the same nodes (parallel).
+
+\textit{Description:} In series, resistances add (the path is sequential, so it’s harder for current to flow). In parallel, the conductances ($1/R$) add, meaning the combined resistance is lower than any single branch (multiple paths for current). \textit{Visual:} Circuit diagrams showing series vs parallel connections, with an ammeter showing same current in series or voltage same in parallel.
+
+\textbf{Electrical Power:} $P = V I = I^2 R = \frac{V^2}{R}$.
+
+\textit{Variables:} $P$ = power (rate of electrical energy consumption or production), $V$ = voltage across a component, $I$ = current through it, $R$ = resistance (if using that form).
+
+\textit{Description:} Different forms of the power formula useful depending on known quantities. For instance, a 60 W light bulb on household 120 V draws $I = P/V = 0.5$ A. The formulas also explain joule heating: $I^2R$ is heat dissipated in a resistor. \textit{Visual:} Brightness of bulbs related to power; fuse ratings to handle $I^2R$ heating.
+
+\subsubsection*{Magnetism and Induction}
+
+\textbf{Lorentz Force (on a charge):} $\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})$.
+
+\textit{Variables:} $q$ = charge of particle, $\mathbf{E}$ = electric field, $\mathbf{B}$ = magnetic field, $\mathbf{v}$ = velocity of the charge. The electric part $q\mathbf{E}$ is along field lines; the magnetic part $q(\mathbf{v}\times\mathbf{B})$ is perpendicular to both $\mathbf{v}$ and $\mathbf{B}$.
+
+\textit{Description:} Combined force exerted by electric and magnetic fields on a moving charge. In absence of $\mathbf{E}$, a charged particle circles or spirals around magnetic field lines (force perpendicular to motion causes centripetal motion). \textit{Visual:} Electron moving through perpendicular $\mathbf{E}$ and $\mathbf{B}$ fields (Thomson’s experiment or velocity selector): $\mathbf{E}$ forces straight, $\mathbf{B}$ curves path.
+
+\textbf{Maxwell’s Equations (integral form):}
+
+\begin{itemize}
+\item \textit{Gauss’s Law (Electric):} $\displaystyle \oint_{\text{closed surface}} \mathbf{E}\cdot d\mathbf{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}$. (Electric flux through a closed surface equals charge enclosed over $\varepsilon_0$.)
+\item \textit{Gauss’s Law (Magnetic):} $\displaystyle \oint_{\text{closed surface}} \mathbf{B}\cdot d\mathbf{A} = 0$. (No net magnetic “charge”; magnetic field lines are continuous loops, flux out equals flux in.)
+\item \textit{Faraday’s Law (Induction):} $\displaystyle \oint_{\mathcal{C}} \mathbf{E}\cdot d\boldsymbol{\ell} = -\frac{d\Phi_B}{dt}$. (A changing magnetic flux $\Phi_B$ through loop $\mathcal{C}$ induces an emf (voltage) around the loop; minus sign per Lenz’s law indicates induced $\mathbf{E}$ opposes the change.)
+\item \textit{Ampère–Maxwell Law:} $\displaystyle \oint_{\mathcal{C}} \mathbf{B}\cdot d\boldsymbol{\ell} = \mu_0 I_{\text{enc}} + \mu_0\varepsilon_0 \frac{d\Phi_E}{dt}$. (Magnetic fields are generated by electric currents $I_{\text{enc}}$ and by changing electric flux $\Phi_E$ (displacement current term).)
+\end{itemize}
+
+\textit{Variables:} $d\mathbf{A}$ is an element of area (vector) on a closed surface, $Q_{\text{enc}}$ charge enclosed. $d\boldsymbol{\ell}$ is an element along a closed loop $\mathcal{C}$. $\Phi_B = \int_S \mathbf{B}\cdot d\mathbf{A}$ is magnetic flux through a surface $S$, and $\Phi_E$ is electric flux. $\mu_0$ is permeability of free space ($4\pi \times 10^{-7}$ N/A²).
+
+\textit{Description:} Maxwell’s four equations unify electricity and magnetism. They are often visualized individually: Gauss’s laws with field lines emanating from charges or forming loops; Faraday’s with a magnet moving through a coil generating current; Ampère’s with magnetic field loops around a current and the added term for changing electric field (predicting electromagnetic waves).
+
+\textbf{Speed of Light from EM Constants:} $c = \dfrac{1}{\sqrt{\mu_0\,\varepsilon_0}}$.
+
+\textit{Variables:} $\mu_0$ and $\varepsilon_0$ are the permeability and permittivity of free space, respectively; $c$ is the speed of light in vacuum ($\approx3\times10^8$ m/s).
+
+\textit{Description:} Shows that electromagnetic waves propagate at speed $c$ in vacuum, as predicted by Maxwell (the product $\mu_0\varepsilon_0$ comes from the ratio of electric to magnetic units). It ties together electromagnetic constants with the fundamental constant $c$. \textit{Visual:} Often referenced when showing the electromagnetic spectrum or the propagation of light waves.
+
+\subsection*{Optics}
+
+\textbf{Snell’s Law (Refraction):} $n_1 \sin \theta_1 = n_2 \sin \theta_2$.
+
+\textit{Variables:} $n_1, n_2$ = refractive indices of medium 1 and 2, $\theta_1$ = angle of incidence (from the normal in medium 1), $\theta_2$ = angle of refraction (in medium 2).
+
+\textit{Description:} Governs how a light ray bends when crossing an interface between two media. If $n_2>n_1$ (going into a more optically dense medium), $\theta_2 < \theta_1$ (ray bends toward normal). \textit{Visual:} A straw in water looks bent due to refraction; Snell’s law quantifies the bending.
+
+\textbf{Thin Lens/Mirror Equation:} $\displaystyle \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$.
+
+\textit{Variables:} $f$ = focal length of a lens or mirror, $d_o$ = object distance (distance from object to lens/mirror), $d_i$ = image distance (distance from lens/mirror to the image formed). (Sign conventions apply for virtual images, etc.)
+
+\textit{Description:} Relates object distance, image distance, and focal length for paraxial rays. It works for converging lenses/mirrors (positive $f$) and diverging (using sign conventions with negative $f$). Often used with magnification formula for locating images. \textit{Visual:} Ray diagrams for a lens forming an image, where distances and focal points are marked.
+
+\textbf{Magnification:} $m = \frac{h_i}{h_o} = -\frac{d_i}{d_o}$.
+
+\textit{Variables:} $h_o$ = object height, $h_i$ = image height, $d_o$ = object distance, $d_i$ = image distance. The negative sign indicates that a positive $m$ (image upright) comes with a negative $d_i$ in sign convention (virtual image for lenses, etc.), and a negative $m$ means the image is inverted.
+
+\textit{Description:} The magnification $m$ tells how large the image is relative to the object and whether it’s inverted (negative $m$) or upright (positive $m$). For example, $|m|=2$ means the image is twice as tall as the object. \textit{Visual:} Ray diagram showing an inverted image smaller than the object (e.g., a distant object through a convex lens yields a small inverted real image, $m$ negative and $|m|<1$).
+
+\textbf{Lensmaker’s Formula:} $\displaystyle \frac{1}{f} = (n-1)\Big(\frac{1}{R_1} - \frac{1}{R_2}\Big)$.
+
+\textit{Variables:} $f$ = focal length of a thin lens in air, $n$ = refractive index of lens material, $R_1$ and $R_2$ = radii of curvature of the two lens surfaces (convention: $R_1$ is radius of surface facing the object, positive if center of curvature is on opposite side of incoming light).
+
+\textit{Description:} Determines $f$ from lens shape and material. For example, a symmetric bi-convex lens ($R_1 = R_2 = R$) in air has $1/f = 2(n-1)/R$. It explains how stronger curvature (smaller $R$) or higher $n$ gives a shorter focal length (more powerful lens). \textit{Visual:} Cross-section of a lens with curvature radii marked, focusing parallel rays to a focal point.
+
+\textbf{Double-Slit Interference:} $d \sin\theta = m \lambda$ (for bright fringes).
+
+\textit{Variables:} $d$ = distance between two slits, $\lambda$ = wavelength of light, $\theta$ = angle to a bright fringe from the central axis, $m$ = order of the fringe (integer, $m=0$ central, $m=1$ first order, etc.).
+
+\textit{Description:} Condition for constructive interference in a double-slit experiment: paths from the two slits differ by an integer multiple of $\lambda$. It results in bright fringes on a screen at angle $\theta$. Dark fringes occur at half-integer multiples. \textit{Visual:} Interference pattern of light and dark bands on a screen, with geometry showing path difference between slits to a given fringe.
+
+\subsection*{Waves and Oscillations}
+
+\textbf{Wave Speed:} $v = f \,\lambda$.
+
+\textit{Variables:} $v$ = phase speed of the wave, $f$ = frequency (cycles per second), $\lambda$ = wavelength (distance between consecutive identical points, e.g., crest to crest).
+
+\textit{Description:} Fundamental relation for any periodic wave, linking how fast the disturbance moves to its frequency and spatial period. For example, if $f$ increases (more oscillations per second), $\lambda$ must decrease for $v$ to stay the same (like sound in air at constant temperature). \textit{Visual:} A sinusoidal wave on a string, with markers showing one wavelength and how many pass per second (frequency).
+
+\textbf{Period and Frequency:} $T = \frac{1}{f}$.
+
+\textit{Variables:} $T$ = period (time for one complete cycle), $f$ = frequency.
+
+\textit{Description:} Simply the reciprocal relationship between how long one cycle takes and how many cycles occur per second. If a pendulum swings back and forth in 2 seconds ($T=2$ s), its frequency is $0.5$ Hz. \textit{Visual:} A time plot of an oscillation showing one full cycle over period $T$, and annotating frequency as 1 cycle per $T$ seconds.
+
+\textbf{Pendulum (small angle) Period:} $T = 2\pi \sqrt{\frac{L}{g}}$.
+
+\textit{Variables:} $L$ = length of a simple pendulum (mass on a string), $g$ = acceleration due to gravity. (This formula assumes small oscillation amplitude so that motion is approximately simple harmonic.)
+
+\textit{Description:} Gives the time for one complete swing back-and-forth of a pendulum (for small angles). It shows period is independent of mass and amplitude (for small angles) and increases with the square root of length. \textit{Visual:} A pendulum diagram, with one swing highlighted and time noted, showing that a longer pendulum swings slower.
+
+\textbf{Mass-Spring Oscillator Period:} $T = 2\pi \sqrt{\frac{m}{k}}$.
+
+\textit{Variables:} $m$ = mass attached to spring, $k$ = spring force constant (stiffness).
+
+\textit{Description:} The period of an object of mass $m$ oscillating on a spring (assuming no damping). A stiffer spring ($k$ large) gives a shorter period (faster oscillation), while a heavier mass gives a longer period. \textit{Visual:} Mass bobbing on a spring, with one full up-down cycle timed.
+
+\textbf{Wave Equation (one dimension):} $\displaystyle \frac{\partial^2 y}{\partial t^2} = v^2\,\frac{\partial^2 y}{\partial x^2}$.
+
+\textit{Variables:} $y(x,t)$ describes the wave displacement as function of position $x$ and time $t$. $v$ = wave speed (assumed constant here).
+
+\textit{Description:} A differential equation that $y(x,t)$ satisfies for many physical waves (on a string, sound, light in 1D). It states that the acceleration of a small segment (left side) is proportional to the curvature of the wave shape (right side) with factor $v^2$. Solutions are typically $y(x,t)=f(x-vt)+g(x+vt)$ (waves traveling right and left). \textit{Visual:} Often shown by a rope or string with labeled small element illustrating forces leading to the equation.
+
+\textbf{Sound Intensity Level (Decibels):} $\displaystyle \beta = 10 \log_{10}\!\frac{I}{I_0}\,\text{dB}$.
+
+\textit{Variables:} $\beta$ = sound level in decibels (dB), $I$ = sound intensity (power per area of the sound wave), $I_0$ = reference intensity ($10^{-12}$ W/m², roughly the threshold of human hearing at 1 kHz).
+
+\textit{Description:} Converts a wide range of sound intensity into a logarithmic scale that correlates with perceived loudness. An increase of 10 dB means intensity is 10 times higher (approx. twice as loud to the human ear). \textit{Visual:} Comparison of common sounds: whisper ~20 dB, normal conversation ~60 dB, rock concert ~110 dB, etc.
+
+\subsection*{Quantum Mechanics}
+
+\textbf{Planck-Einstein Relation:} $E = h\,f$.
+
+\textit{Variables:} $E$ = energy of a photon (or quantum of electromagnetic radiation), $f$ = frequency of the radiation, $h$ = Planck’s constant ($6.626\times10^{-34}$ J·s). Often written $E = \hbar \omega$ as well, where $\omega = 2\pi f$ and $\hbar = h/(2\pi)$.
+
+\textit{Description:} Indicates that electromagnetic radiation is quantized into photons, each with energy proportional to frequency. Higher frequency (e.g., X-rays) means higher energy per photon than lower frequency (e.g., radio waves). \textit{Visual:} Shown by photon energy levels: red light photons (lower $f$) carry less energy than blue light photons (higher $f$).
+
+\textbf{de Broglie Wavelength:} $\displaystyle \lambda = \frac{h}{p}$.
+
+\textit{Variables:} $\lambda$ = wavelength associated with a particle (de Broglie wavelength), $h$ = Planck’s constant, $p$ = momentum of the particle.
+
+\textit{Description:} Assigns wave-like behavior to matter: any particle with momentum has an associated wavelength. For macroscopic objects $p$ is huge so $\lambda$ is negligible; for electrons, this predicts electron diffraction patterns (confirmed by experiments). \textit{Visual:} Often depicted by electrons passing through a double-slit and producing an interference pattern, illustrating their wave nature.
+
+\textbf{Schrödinger’s Equation (Time-Independent):} $-\frac{\hbar^2}{2m}\nabla^2 \psi + V \psi = E \psi$.
+
+\textit{Variables:} $\psi(\mathbf{r})$ is the wavefunction of a particle (spatial part), $m$ = particle mass, $V(\mathbf{r})$ = potential energy function, $E$ = total energy (eigenvalue), $\nabla^2$ = Laplacian operator. $\hbar = h/(2\pi)$.
+
+\textit{Description:} Fundamental equation of quantum mechanics (stationary states version). It’s an eigenvalue equation: solving it gives allowed energy levels $E$ and corresponding wavefunctions $\psi$ for a quantum system (e.g., electron in an atom). \textit{Visual:} Often illustrated by energy level diagrams for an electron in a potential well or the hydrogen atom, where $\psi$ might be visualized as orbital shapes.
+
+\textbf{Heisenberg Uncertainty Principle:} $\displaystyle \Delta x\,\Delta p \ge \frac{\hbar}{2}$.
+
+\textit{Variables:} $\Delta x$ = uncertainty (standard deviation) in position, $\Delta p$ = uncertainty in momentum along the same direction. $\hbar = h/(2\pi)$. There are similar relations for energy and time: $\Delta E\,\Delta t \ge \frac{\hbar}{2}$.
+
+\textit{Description:} There’s a fundamental limit to how precisely we can simultaneously know certain pairs of observables (like position and momentum). This is not due to measurement flaws, but inherent to quantum systems. \textit{Visual:} Often depicted with a thought experiment like shining light on an electron: to locate it precisely ($\Delta x$ small) you impart uncertainty to its momentum via photon kick ($\Delta p$ large), and vice versa.
+
+\textbf{Photoelectric Effect (Energy Conservation):} $K_{\text{max}} = h f - \phi$.
+
+\textit{Variables:} $K_{\text{max}}$ = maximum kinetic energy of emitted photoelectrons from a material, $h f$ = energy of incident photon (with frequency $f$), $\phi$ = work function of the material (minimum energy needed to liberate an electron from the surface).
+
+\textit{Description:} Explains that if a photon’s energy exceeds the material’s work function, the excess becomes the kinetic energy of the ejected electron. If $h f < \phi$, no electrons are emitted. This equation provided evidence that light comes in quantized packets (photons). \textit{Visual:} UV light shining on a metal plate and electrons being ejected, with a retarding potential used to measure $K_{\text{max}}$.
+
+\subsection*{Relativity}
+
+\subsubsection*{Special Relativity}
+
+\textbf{Time Dilation:} $\displaystyle \Delta t = \gamma\, \Delta t_0$, where $\displaystyle \gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$.
+
+\textit{Variables:} $\Delta t_0$ is the proper time between two events (time measured in the rest frame of the clock or process), $\Delta t$ is the longer time interval measured by an observer moving relative to that clock at speed $v$. $c$ = speed of light.
+
+\textit{Description:} Moving clocks tick slower as seen by a stationary observer. For example, muons traveling fast in the atmosphere live longer (from our perspective) than muons at rest. At everyday speeds $v \ll c$, $\gamma \approx 1$ (time dilation negligible). \textit{Visual:} Often illustrated by a light clock on a moving spaceship: light travels a longer diagonal path for an outside observer, leading to a longer period compared to the ship’s frame.
+
+\textbf{Length Contraction:} $L = \frac{L_0}{\gamma} = L_0 \sqrt{1 - \frac{v^2}{c^2}}$.
+
+\textit{Variables:} $L_0$ = proper length (measured in the rest frame of the object), $L$ = length measured in a frame where the object moves at speed $v$ relative to the observer, $\gamma$ as defined above.
+
+\textit{Description:} Objects are measured to be shorter along the direction of motion relative to an observer for whom they are moving. For instance, a fast-moving rod or spaceship appears foreshortened. Like time dilation, this effect is only significant at speeds close to $c$. \textit{Visual:} A passing train with a meter stick drawn on it appears contracted to an outside observer.
+
+\textbf{Mass–Energy Equivalence:} $E = m c^2$.
+
+\textit{Variables:} $E$ = energy equivalent of mass $m$ at rest, $c$ = speed of light. (If including kinetic energy for a moving particle, total energy $E = \gamma m c^2$, and $E^2 = (pc)^2 + (m c^2)^2$ generally.)
+
+\textit{Description:} Shows mass is a concentrated form of energy. A small amount of mass can convert to a huge amount of energy (because $c^2$ is large). This underlies nuclear reactions where binding energy differences (mass defects) release energy. \textit{Visual:} Often represented by nuclear fusion/fission diagrams or annihilation of matter-antimatter yielding photons.
+
+\textbf{Relativistic Momentum:} $\displaystyle p = \gamma m v = \frac{m v}{\sqrt{1 - v^2/c^2}}$.
+
+\textit{Variables:} $p$ = momentum of an object moving at speed $v$, $m$ = rest mass, $\gamma$ as above.
+
+\textit{Description:} At high speeds, momentum grows faster than linearly with $v$ because $\gamma$ increases steeply as $v$ approaches $c$. This prevents massive objects from reaching $c$ (would require infinite energy/momentum). At low speeds ($v \ll c$), $\gamma \approx 1$ and $p \approx m v$, recovering the classical formula. \textit{Visual:} Plot of momentum vs velocity showing divergence near $c$.
+
+\textbf{Lorentz Transformation (1D, for coordinates):} $x' = \gamma (x - v t)$;  $t' = \gamma \Big(t - \frac{v}{c^2} x\Big)$.
+
+\textit{Variables:} $(t, x)$ are time and position of an event in one inertial frame, $(t', x')$ in another frame moving at constant velocity $v$ relative to the first (along the $x$-axis). $\gamma$ as defined earlier.
+
+\textit{Description:} These equations transform coordinates between two inertial frames in uniform relative motion. They ensure that the speed of light is constant in all frames and mix space and time (hence time is not absolute). One outcome is relativity of simultaneity: events simultaneous in one frame ($\Delta t=0$) may not be in another ($\Delta t' \neq 0$). \textit{Visual:} Often depicted as two observers (one on a train moving at speed $v$, one on a platform) measuring positions and times of events like lightning strikes, and comparing via Lorentz formulas.
+
+\subsubsection*{General Relativity}
+
+\textbf{Schwarzschild Radius (Black Hole):} $r_s = \frac{2 G M}{c^2}$.
+
+\textit{Variables:} $M$ = mass of a (spherically symmetric, non-rotating) object, $G$ = gravitational constant, $c$ = speed of light, $r_s$ = Schwarzschild radius.
+
+\textit{Description:} If an object of mass $M$ is compressed within this radius, its escape velocity exceeds $c$ and it becomes a black hole. For example, the Earth’s $r_s$ is ~9 mm, the Sun’s ~3 km. This formula comes from General Relativity’s solution for spacetime around a mass. \textit{Visual:} Represented by the size of the event horizon around a black hole of mass $M$. E.g., depict how far from the center light cannot escape.
+
+\textbf{Gravitational Time Dilation (weak field):} $t_f = t_p \sqrt{1 - \frac{2GM}{r c^2}}$.
+
+\textit{Variables:} $t_p$ is proper time (time measured by a clock at radius $r$ in gravitational field), $t_f$ is time measured by a far-away observer, $M$ is mass of gravitating body, $r$ is radial position of the clock (from center of mass).
+
+\textit{Description:} Clocks deeper in a gravitational well (closer to a mass) run slower relative to clocks far away. This is a prediction of GR (even the GPS satellites must correct for this and special relativistic effects to synchronize with Earth clocks). When $r$ is very large (far away), the factor tends to 1 (no dilation). \textit{Visual:} Often explained with a gravitational well diagram or comparing identical atomic clocks on a mountain vs at sea level.
+
+\subsection*{Fluid Mechanics}
+
+\textbf{Hydrostatic Pressure:} $P = P_0 + \rho g h$.
+
+\textit{Variables:} $P$ = pressure at depth $h$, $P_0$ = pressure at the surface (e.g., atmospheric pressure at $h=0$), $\rho$ = fluid density (assumed constant), $g$ = acceleration due to gravity, $h$ = depth below the surface.
+
+\textit{Description:} Pressure in a static fluid increases linearly with depth. This is why deep water has higher pressure. For example, every 10 m of water adds about 1 atmosphere of pressure. \textit{Visual:} A water column with pressure gauges at different depths showing increasing readings; also explains why dams are thicker at the bottom.
+
+\textbf{Buoyant Force (Archimedes’ Principle):} $F_b = \rho_{\text{fluid}}\, V_{\text{disp}}\, g$.
+
+\textit{Variables:} $F_b$ = buoyant force (upward force on an object submerged in fluid), $\rho_{\text{fluid}}$ = density of the fluid, $V_{\text{disp}}$ = volume of fluid displaced by the object, $g$ = gravitational acceleration.
+
+\textit{Description:} Any object in a fluid experiences an upward force equal to the weight of fluid it displaces. This principle explains floating: if $F_b$ equals the object’s weight, it floats (weight of displaced fluid = weight of object). \textit{Visual:} A block in water: shows displaced water volume and forces, or a ship floating with a marked displacement volume.
+
+\textbf{Equation of Continuity:} $A_1 v_1 = A_2 v_2$.
+
+\textit{Variables:} $A_1, A_2$ are cross-sectional areas of a flow tube at two locations, $v_1, v_2$ are fluid speeds at those locations (for an incompressible fluid).
+
+\textit{Description:} Expresses mass conservation in steady flow: the volume flow rate $A v$ is constant along a streamline. If a pipe narrows (smaller $A$), the fluid speed $v$ increases. \textit{Visual:} Diagram of water flowing from a wide pipe into a narrow pipe, with velocity vectors showing speed-up in the narrow section.
+
+\textbf{Bernoulli’s Equation:} $P + \tfrac{1}{2}\rho v^2 + \rho g h = \text{constant}$ (along a streamline, steady incompressible flow).
+
+\textit{Variables:} $P$ = pressure, $\rho$ = fluid density, $v$ = flow speed, $h$ = height relative to a reference. Each term has units of pressure (energy per volume): $P$ (static pressure), $\frac{1}{2}\rho v^2$ (dynamic pressure), $\rho g h$ (gravitational head or pressure from height).
+
+\textit{Description:} Energy conservation in fluid flow: the sum of pressure energy, kinetic energy per volume, and potential energy per volume is constant along a streamline (ignoring viscosity). It explains phenomena like lift in airplane wings (faster flow, lower pressure on top) or why pressure drops in a constriction (Venturi effect). \textit{Visual:} Fluid flowing through a pipe that rises and falls and narrows, with gauges or piezometer tubes indicating pressure changes: high speed -> low pressure, high elevation -> low pressure.
+
+\subsection*{Nuclear Physics}
+
+\textbf{Radioactive Decay (Exponential Law):} $N(t) = N_0\, e^{-\lambda t}$.
+
+\textit{Variables:} $N(t)$ = number of undecayed nuclei at time $t$, $N_0$ = initial number at $t=0$, $\lambda$ = decay constant (probability of decay per nucleus per unit time).
+
+\textit{Description:} Characterizes random decay of radioactive nuclei. After time $t$, the fraction remaining is $e^{-\lambda t}$. This leads to the definition of half-life. \textit{Visual:} Decay curve graph showing an exponential decrease, e.g., a sample losing half its atoms every certain period.
+
+\textbf{Half-Life Relation:} $t_{1/2} = \frac{\ln 2}{\lambda}$.
+
+\textit{Variables:} $t_{1/2}$ = half-life (time for half the nuclei to decay), $\lambda$ = decay constant.
+
+\textit{Description:} Connects the decay constant with the more commonly cited half-life. If $\lambda$ is large (fast decay), the half-life is short. This formula comes from setting $N(t_{1/2}) = N_0/2$ in the decay law. \textit{Visual:} Often illustrated with successive half-life intervals: after each $t_{1/2}$, the remaining quantity halves (e.g., 100\% → 50\% → 25\% → 12.5\%, etc.).
+
+\textbf{Decay Activity:} $A = \lambda N$.
+
+\textit{Variables:} $A$ = activity (decay rate, number of decays per second), $\lambda$ = decay constant, $N$ = number of radioactive nuclei present.
+
+\textit{Description:} The activity is proportional to how many atoms are available to decay. Combining with $N(t)$ expression shows $A(t) = A_0 e^{-\lambda t}$. This formula is used to compute current activity given the amount of substance (e.g., in becquerels or curies). \textit{Visual:} Radioactive sample with Geiger counter clicking — more nuclei means more clicks per second proportionally.
+
+\textbf{Mass Defect \& Binding Energy:} $\Delta E = \Delta m\,c^2$.
+
+\textit{Variables:} $\Delta m$ = mass defect (difference between sum of individual nucleons’ mass and actual nucleus mass), $\Delta E$ = equivalent binding energy that holds the nucleus together, $c$ = speed of light.
+
+\textit{Description:} In nuclear reactions, mass can convert to energy. Binding energy is the energy required to break a nucleus into individual protons and neutrons, and it shows up as a slight loss of mass when nucleons bind (mass defect). For example, in fission/fusion a small $\Delta m$ yields huge $\Delta E$. \textit{Visual:} Graph of binding energy per nucleon vs mass number (peaks at iron), illustrating which nuclei release energy via fission or fusion due to differences in binding energy.
+
+\end{document}

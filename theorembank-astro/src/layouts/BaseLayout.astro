@@ -1,0 +1,46 @@
+---
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title ? `${title} | Theorembank` : 'Theorembank'}</title>
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/astro.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1><a href="/">Theorembank</a></h1>
+        <input type="search" placeholder="Search formulas…" aria-label="Search formulas" />
+      </div>
+      
+      <nav>
+        <ul class="sidebar-nav">
+          <li class="section-header">Mathematics</li>
+          <li><a class="nav-link" href="/math/algebra/basic">Basic Algebra</a></li>
+          <li><a class="nav-link" href="/math/geometry/euclidean">Geometry</a></li>
+          <li><a class="nav-link" href="/math/trigonometry/identities">Trigonometry</a></li>
+          <li class="nav-link section-header">Calculus</li>
+          <li><a class="nav-link subsection" href="/math/calculus/derivatives">Derivatives</a></li>
+          <li><a class="nav-link subsection" href="/math/calculus/integration">Integration</a></li>
+          <li><a class="nav-link subsection" href="/math/calculus/series">Series &amp; Sequences</a></li>
+
+          <li class="section-header">Physics</li>
+          <li><a class="nav-link" href="/physics/mechanics/kinematics">Kinematics</a></li>
+          <li><a class="nav-link" href="/physics/em/electrostatics">Electrostatics</a></li>
+        </ul>
+
+        <div class="sidebar-footer" style="padding:0 24px;">
+          <a href="/editor" class="nav-link" style="background:var(--accent);color:white;border-radius:6px;text-align:center;">🧮 Live Math Editor</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main>
+      <slot />
+    </main>
+  </body>
+</html> 
