@@ -77,4 +77,4 @@ def rebuild_site():
     print("Site rebuilt successfully!")
 
 if __name__ == "__main__":
-    rebuild_site() 
+    rebuild_site()

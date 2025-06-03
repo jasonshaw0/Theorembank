@@ -303,4 +303,4 @@ body{margin:0;display:flex;background:var(--bg);color:var(--fg);font:16px/1.6 sy
   .sidebar,.mobile-header,.copy-btn,.search-box{display:none!important}
   .content{margin-left:0;width:100%;padding:20px}
   .formula-card{break-inside:avoid;margin-bottom:20px;box-shadow:none;border:1px solid #ddd}
-} 
+}
